@@ -71,4 +71,16 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
     }
+
+    #region Rotation
+
+    private void RotationDirector()
+    {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            //Do somethings
+        }
+    }
+
+    #endregion
 }
