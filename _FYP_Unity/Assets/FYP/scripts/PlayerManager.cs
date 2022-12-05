@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
-    public GameObject heart1, heart2, heart3,  heart4, heart5, heart6, heart7, heart8, heart9, heart10;
+    public GameObject heart1, heart2, heart3, heart4, heart5, heart6, heart7, heart8, heart9, heart10;
    
 
     [SerializeField] int health = 6, maxHealth = 6;
