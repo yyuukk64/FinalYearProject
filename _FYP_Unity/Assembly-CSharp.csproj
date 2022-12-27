@@ -125,28 +125,46 @@
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\VS_InstancedIndirect.cginc" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\FAE_Sunshaft.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\PigmentMapComposite.shader" />
+    <None Include="Assets\Fantasy Adventure Environment\Changelog.txt" />
     <None Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\FAE_Foliage.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\FAE_TreeTrunk.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\FAE_FogSheet.shader" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\FAE_Cliff_Coverage.shader" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\FAE_TreeBranch.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Fantasy Adventure Environment\_DemoScenes\Source\_These assets are not officially included, only produced for the demo scene.txt" />
+    <None Include="Assets\Fantasy Adventure Environment\_DemoScenes\Source\FAE_WaterfallFoam.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\FAE_Water.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\FAE_TreeBillboard.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Fantasy Adventure Environment\PostProcessingAssets\Readme.txt" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\FAE_Grass.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\FAE_Cliff.shader" />
+    <None Include="Assets\Fantasy Adventure Environment\_DemoScenes\Source\FAE_Waterfall.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Fantasy Adventure Environment\Shaders\FAE_SunshaftParticle.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
   </ItemGroup>
@@ -768,6 +786,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="sc.fae.editor.csproj">
+      <Project>{C8CD3986-999B-2D56-ABE4-F26D948F52C3}</Project>
+      <Name>sc.fae.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.fae.runtime.csproj">
+      <Project>{C3E08266-FDDA-42CE-6DEB-9EF3C26E511F}</Project>
+      <Name>sc.fae.runtime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
