@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float sprintSpeed;
 
+    [SerializeField] GameObject PlayerBody;
+
     public Transform orientation;
 
     float horizontalInput;
@@ -35,6 +37,70 @@ public class PlayerMovement : MonoBehaviour
         SpeedControl();
 
         rb.drag = 5;
+
+        #region Rotation
+        if (Input.GetKey(KeyCode.W))
+        {
+            if (Input.GetKey(KeyCode.D))
+            {
+                RotationDirector(45f);
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                RotationDirector(-45f);
+            }
+            else
+            {
+                RotationDirector(0f);
+            }
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            
+            if (Input.GetKey(KeyCode.W))
+            {
+                RotationDirector(-45f);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                RotationDirector(-135f);
+            }
+            else
+            {
+                RotationDirector(-90f);
+            }
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            if(Input.GetKey(KeyCode.S))
+            {
+                RotationDirector(135f);
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                RotationDirector(45f);
+            }
+            else
+            {
+                RotationDirector(90f);
+            }
+        }
+        if(Input.GetKey(KeyCode.S))
+        {
+            if (Input.GetKey(KeyCode.D))
+            {
+                RotationDirector(135f);
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                RotationDirector(-135f);
+            }
+            else
+            {
+                RotationDirector(180f);
+            }
+        }
+        #endregion
     }
 
     private void FixedUpdate()
@@ -72,15 +138,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    #region Rotation
-
-    private void RotationDirector()
+    private void RotationDirector(float rotY)
     {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            //Do somethings
-        }
+        
+            PlayerBody.transform.rotation = Quaternion.Euler(0, rotY, 0);
+        
     }
-
-    #endregion
 }
