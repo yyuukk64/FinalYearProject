@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Interactor : MonoBehaviour
 {
     [SerializeField] private Transform interactionPoint;
@@ -23,6 +22,7 @@ public class Interactor : MonoBehaviour
             colliders, interactableMask);
 
         /*
+
             if (numFound > 0)
             {
                 interactable = colliders[0].GetComponent<Interactable>();
@@ -42,6 +42,7 @@ public class Interactor : MonoBehaviour
             if (interactable != null) interactable = null;
             if (interactablePromptUI.IsDisplayed) interactablePromptUI.Close();
         }
+        
         */
     }
 
