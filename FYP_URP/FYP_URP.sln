@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.fae.runtime", "sc.fae.ru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.fae.editor", "sc.fae.editor.csproj", "{93B0D84A-9551-E70A-84F4-7F860E13FC4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllIn1VfxDemoScriptAssemblies", "AllIn1VfxDemoScriptAssemblies.csproj", "{1107AEC4-3955-0E9A-048D-C1062AA84160}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllIn1VfxAssmebly", "AllIn1VfxAssmebly.csproj", "{64C3A0AC-5A96-C7AA-E148-63C38F63C4C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllIn1VfxTexDemoAssembly", "AllIn1VfxTexDemoAssembly.csproj", "{65B326DE-4BEC-5BFE-39D0-2153E7C6E992}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{7E4EAE96-CB8B-B5C3-7650-6E4EA689A674}"
 EndProject
 Global
@@ -27,6 +33,18 @@ Global
 		{93B0D84A-9551-E70A-84F4-7F860E13FC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93B0D84A-9551-E70A-84F4-7F860E13FC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93B0D84A-9551-E70A-84F4-7F860E13FC4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1107AEC4-3955-0E9A-048D-C1062AA84160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1107AEC4-3955-0E9A-048D-C1062AA84160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1107AEC4-3955-0E9A-048D-C1062AA84160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1107AEC4-3955-0E9A-048D-C1062AA84160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C3A0AC-5A96-C7AA-E148-63C38F63C4C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C3A0AC-5A96-C7AA-E148-63C38F63C4C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C3A0AC-5A96-C7AA-E148-63C38F63C4C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C3A0AC-5A96-C7AA-E148-63C38F63C4C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65B326DE-4BEC-5BFE-39D0-2153E7C6E992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65B326DE-4BEC-5BFE-39D0-2153E7C6E992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65B326DE-4BEC-5BFE-39D0-2153E7C6E992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65B326DE-4BEC-5BFE-39D0-2153E7C6E992}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E4EAE96-CB8B-B5C3-7650-6E4EA689A674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E4EAE96-CB8B-B5C3-7650-6E4EA689A674}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E4EAE96-CB8B-B5C3-7650-6E4EA689A674}.Release|Any CPU.ActiveCfg = Release|Any CPU
