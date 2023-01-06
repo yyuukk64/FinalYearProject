@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
     [Header("Movement")]
     public float moveSpeed;
@@ -23,6 +23,16 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
 
     public bool canMove = true;
+
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.playerPosition = this.transform.position;
+    }
 
     private void Start()
     {

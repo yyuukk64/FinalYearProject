@@ -3,13 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour, IDataPersistence
 {
     [SerializeField] GameObject[] heart = new GameObject[10];
     [SerializeField] Image[] heartState = new Image[10];
 
-    public int health = 6, maxHealth = 6;
+    public int health, maxHealth = 6;
     public Sprite heartFull, heartHalf, heartEmpty;
+
+    public void LoadData(GameData data)
+    {
+        this.health = data.health;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.health = this.health;
+    }
 
     // Start is called before the first frame update
     void Start()
