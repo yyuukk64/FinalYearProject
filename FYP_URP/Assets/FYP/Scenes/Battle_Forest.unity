@@ -26090,7 +26090,6 @@ Transform:
   - {fileID: 2055201887}
   - {fileID: 112448225}
   - {fileID: 348035613}
-  - {fileID: 1476959779}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26498,11 +26497,6 @@ MeshFilter:
 Transform:
   m_CorrespondingSourceObject: {fileID: 457264, guid: c3b3b094d9b00dc44bb64172916547ae, type: 3}
   m_PrefabInstance: {fileID: 1075439034}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1476959779 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5982214542171473012, guid: 41f38f1bfc45c864ebff4c82f67d70b4, type: 3}
-  m_PrefabInstance: {fileID: 1524816071}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1477888655
 GameObject:
@@ -27121,23 +27115,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1459921708}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5982214542171473012, guid: 41f38f1bfc45c864ebff4c82f67d70b4, type: 3}
       propertyPath: m_RootOrder
-      value: 127
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5982214542171473012, guid: 41f38f1bfc45c864ebff4c82f67d70b4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 76.81899
+      value: -16.681007
       objectReference: {fileID: 0}
     - target: {fileID: 5982214542171473012, guid: 41f38f1bfc45c864ebff4c82f67d70b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7875002
+      value: 1.5875002
       objectReference: {fileID: 0}
     - target: {fileID: 5982214542171473012, guid: 41f38f1bfc45c864ebff4c82f67d70b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -61.73049
+      value: -20.630493
       objectReference: {fileID: 0}
     - target: {fileID: 5982214542171473012, guid: 41f38f1bfc45c864ebff4c82f67d70b4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29527,7 +29521,7 @@ Transform:
   - {fileID: 1814177874}
   - {fileID: 283561133}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1637870438
 MonoBehaviour:

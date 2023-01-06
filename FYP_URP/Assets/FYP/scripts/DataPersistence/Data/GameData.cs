@@ -15,7 +15,7 @@ public class GameData
     public GameData() 
     {
         this.health = 6;
-        playerPosition = Vector3.zero;
+        playerPosition = new Vector3(-11.5f, 1.53f, -71.1f);
         playerAttributesData = new AttributesData();
     }
 }
