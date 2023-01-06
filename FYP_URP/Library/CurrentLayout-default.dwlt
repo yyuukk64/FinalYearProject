@@ -20,7 +20,11 @@ MonoBehaviour:
     height: 997
   m_ShowMode: 4
   m_Title: Hierarchy
+<<<<<<< HEAD
   m_RootView: {fileID: 4}
+=======
+  m_RootView: {fileID: 2}
+>>>>>>> parent of a322a851 (added Save & Load System)
   m_MinSize: {x: 875, y: 471}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
@@ -149,6 +153,61 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 6}
+  - {fileID: 9}
+  - {fileID: 10}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1920
+    height: 947
+  m_MinSize: {x: 910, y: 421}
+  m_MaxSize: {x: 22005, y: 10021}
+  vertical: 0
+  controlID: 3079
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 8}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 954
+    height: 947
+  m_MinSize: {x: 201, y: 421}
+  m_MaxSize: {x: 4001, y: 8021}
+  vertical: 1
+  controlID: 3080
+>>>>>>> parent of a322a851 (added Save & Load System)
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -513,9 +572,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: a605ffffb005ffff146bffff5c6bffff626bffff106cffff2e6cffff306cffffc26cffff2e6dffffc8a2ffff44fbffff70fbffff0a870000908c0000bc8c0000d48c0000c0900000c2900000689200006a920000
+=======
+      m_SelectedIDs: c8e7feff
+      m_LastClickedID: -71736
+      m_ExpandedIDs: b4e7feffbee7feffc8e7feff32fafeff3cfafeff46fafefff203fffffc03ffff7007ffff7a07ffffea07fffff407fffffe07ffff7e08ffff8808ffff6a13ffff6e13ffff02d5ffff70fbffff0453000064a80000a2a8000036a90000
+>>>>>>> parent of a322a851 (added Save & Load System)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: BarrierGp
@@ -577,22 +642,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Fantasy Adventure Environment/Prefabs/Trees
+=======
+    - Assets/AllIn1VfxToolkit/Demo & Assets/Demo/Animation
+>>>>>>> parent of a322a851 (added Save & Load System)
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Fantasy Adventure Environment/Prefabs/Trees
+=======
+  - Assets/AllIn1VfxToolkit/Demo & Assets/Demo/Animation
+>>>>>>> parent of a322a851 (added Save & Load System)
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Documents\GitHub\FinalYearProject\FYP_URP
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 8e550000
     m_LastClickedID: 21902
     m_ExpandedIDs: 00000000b84b0000ba4b0000bc4b0000be4b0000c04b0000c24b0000c44b0000c64b0000c84b0000ca4b0000cc4b0000ce4b0000cc4d0000d24d000000ca9a3b
+=======
+    m_SelectedIDs: 42830000
+    m_LastClickedID: 33602
+    m_ExpandedIDs: 000000005c6000005e60000060600000626000006460000066600000686000006a6000006c6000006e60000070600000488300005c8300007c83000000ca9a3b
+>>>>>>> parent of a322a851 (added Save & Load System)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: Settings
@@ -620,7 +699,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000b84b0000ba4b0000bc4b0000be4b0000c04b0000c24b0000c44b0000c64b0000c84b0000ca4b0000cc4b0000ce4b000000ca9a3b
+=======
+    m_ExpandedIDs: 000000005c6000005e60000060600000626000006460000066600000686000006a6000006c6000006e600000706000005c8300007c83000000ca9a3b
+>>>>>>> parent of a322a851 (added Save & Load System)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
