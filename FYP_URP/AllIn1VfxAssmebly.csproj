@@ -53,22 +53,22 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\AllIn1VfxToolkit\Editor\AllIn1VfxEditor.cs" />
     <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1ParticleHelperComponent.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1ParticleHelperSO.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxNoiseCreator.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1GraphicMaterialDuplicate.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxScrollShaderProperty.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\All1VfxRandomTimeSeed.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxScrollShaderTexture.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxBounceAnimation.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1LookAt.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Editor\AllIn1VfxGradientDrawer.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxWindow.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxFakeLightDirSetter.cs" />
     <Compile Include="Assets\AllIn1VfxToolkit\Editor\AllIn1VfxCustomMaterialEditor.cs" />
-    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxComponent.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxFakeLightDirSetter.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxScrollShaderTexture.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1GraphicMaterialDuplicate.cs" />
     <Compile Include="Assets\AllIn1VfxToolkit\Editor\AllIn1ParticleHelperEditor.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Editor\AllIn1VfxGradientDrawer.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1LookAt.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxWindow.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1ParticleHelperSO.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxBounceAnimation.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Editor\AllIn1VfxEditor.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxScrollShaderProperty.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxComponent.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\All1VfxRandomTimeSeed.cs" />
+    <Compile Include="Assets\AllIn1VfxToolkit\Scripts\AllIn1VfxNoiseCreator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AllIn1VfxToolkit\Shaders\Resources\AllIn1VfxBuiltIn.shader" />
@@ -76,6 +76,7 @@
     <None Include="Assets\AllIn1VfxToolkit\AllIn1VfxAssmebly.asmdef" />
     <None Include="Assets\AllIn1VfxToolkit\Shaders\Resources\AllIn1VfxFunctions.cginc" />
     <None Include="Assets\AllIn1VfxToolkit\Shaders\All1VfxZWriteGpuInstancing.shader" />
+    <None Include="Assets\AllIn1VfxToolkit\Shaders\Resources\AllIn1VfxURP.shader" />
     <None Include="Assets\AllIn1VfxToolkit\Shaders\EditorShaders\Resources\AllIn1VfxFractalNoise.shader" />
     <None Include="Assets\AllIn1VfxToolkit\Shaders\All1VfxZWrite.shader" />
     <None Include="Assets\AllIn1VfxToolkit\!README.txt" />

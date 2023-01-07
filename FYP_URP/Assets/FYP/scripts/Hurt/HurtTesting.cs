@@ -24,7 +24,7 @@ public class HurtTesting : MonoBehaviour
         {
             HurtPlayer(Item.GetComponent<HurtTesting>().hurt);
         }
-        Item.SetActive(false);
+        //Item.SetActive(false);
     }
 
 
