@@ -5302,5 +5302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd1f7e58a553db4aaf99130b8c371ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 6341276250819153336}
-  hurt: 2
+  BeAttackDetector: {fileID: 6341276250819153336}
+  ImpactEffect: {fileID: 4463263344844591667, guid: 48759159f554dae42b3cac0a25dd998c, type: 3}
+  Player: {fileID: 0}
+  Damage: 2
