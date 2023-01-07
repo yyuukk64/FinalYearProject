@@ -838,6 +838,18 @@
       <Project>{08A12E9D-BE66-A1A0-DA62-A6FE6D79D304}</Project>
       <Name>sc.fae.runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="AllIn1VfxDemoScriptAssemblies.csproj">
+      <Project>{1107AEC4-3955-0E9A-048D-C1062AA84160}</Project>
+      <Name>AllIn1VfxDemoScriptAssemblies</Name>
+    </ProjectReference>
+    <ProjectReference Include="AllIn1VfxAssmebly.csproj">
+      <Project>{64C3A0AC-5A96-C7AA-E148-63C38F63C4C4}</Project>
+      <Name>AllIn1VfxAssmebly</Name>
+    </ProjectReference>
+    <ProjectReference Include="AllIn1VfxTexDemoAssembly.csproj">
+      <Project>{65B326DE-4BEC-5BFE-39D0-2153E7C6E992}</Project>
+      <Name>AllIn1VfxTexDemoAssembly</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
