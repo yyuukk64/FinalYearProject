@@ -47,70 +47,72 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         SpeedControl();
 
         rb.drag = 5;
-
-        #region Rotation
-        if (Input.GetKey(KeyCode.W))
+        if (canMove)
         {
-            if (Input.GetKey(KeyCode.D))
-            {
-                RotationDirector(45f);
-            }
-            else if (Input.GetKey(KeyCode.A))
-            {
-                RotationDirector(-45f);
-            }
-            else
-            {
-                RotationDirector(0f);
-            }
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            
+            #region Rotation
             if (Input.GetKey(KeyCode.W))
             {
-                RotationDirector(-45f);
+                if (Input.GetKey(KeyCode.D))
+                {
+                    RotationDirector(45f);
+                }
+                else if (Input.GetKey(KeyCode.A))
+                {
+                    RotationDirector(-45f);
+                }
+                else
+                {
+                    RotationDirector(0f);
+                }
             }
-            else if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.A))
             {
-                RotationDirector(-135f);
+
+                if (Input.GetKey(KeyCode.W))
+                {
+                    RotationDirector(-45f);
+                }
+                else if (Input.GetKey(KeyCode.S))
+                {
+                    RotationDirector(-135f);
+                }
+                else
+                {
+                    RotationDirector(-90f);
+                }
             }
-            else
-            {
-                RotationDirector(-90f);
-            }
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            if(Input.GetKey(KeyCode.S))
-            {
-                RotationDirector(135f);
-            }
-            else if (Input.GetKey(KeyCode.W))
-            {
-                RotationDirector(45f);
-            }
-            else
-            {
-                RotationDirector(90f);
-            }
-        }
-        if(Input.GetKey(KeyCode.S))
-        {
             if (Input.GetKey(KeyCode.D))
             {
-                RotationDirector(135f);
+                if (Input.GetKey(KeyCode.S))
+                {
+                    RotationDirector(135f);
+                }
+                else if (Input.GetKey(KeyCode.W))
+                {
+                    RotationDirector(45f);
+                }
+                else
+                {
+                    RotationDirector(90f);
+                }
             }
-            else if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.S))
             {
-                RotationDirector(-135f);
+                if (Input.GetKey(KeyCode.D))
+                {
+                    RotationDirector(135f);
+                }
+                else if (Input.GetKey(KeyCode.A))
+                {
+                    RotationDirector(-135f);
+                }
+                else
+                {
+                    RotationDirector(180f);
+                }
             }
-            else
-            {
-                RotationDirector(180f);
-            }
+            #endregion
         }
-        #endregion
     }
 
     private void FixedUpdate()
@@ -123,8 +125,12 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     private void MyInput()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        if (canMove)
+        {
+            horizontalInput = Input.GetAxisRaw("Horizontal");
+            verticalInput = Input.GetAxisRaw("Vertical");
+        }
+
 
     }
 

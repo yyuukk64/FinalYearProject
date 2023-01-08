@@ -14,6 +14,9 @@ public class GeneralEnemy : MonoBehaviour
     [SerializeField] List<Vector3> _SoulPos;
     [Space()]
     [SerializeField] int SoulNumberReq;
+    [Space()]
+    public int MinMoney;
+    public int MaxMoney;
 
     BattleMNG BMNG;
 
@@ -22,6 +25,7 @@ public class GeneralEnemy : MonoBehaviour
     {
         BMNG = FindObjectOfType<BattleMNG>();
         _Player = BMNG._Player;
+        BMNG._Enemy = _Enemy;
         Initially();
     }
 
@@ -39,6 +43,7 @@ public class GeneralEnemy : MonoBehaviour
             BMNG.isWin = true;
             Debug.Log("You win!!!");
             //Do something...
+            BMNG.Win();
         }
     }
 
@@ -51,8 +56,4 @@ public class GeneralEnemy : MonoBehaviour
         }
         
     }
-
-    
-
-
 }

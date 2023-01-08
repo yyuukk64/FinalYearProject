@@ -30,8 +30,11 @@ public class BeAttacked : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            HurtPlayer(this.GetComponent<BeAttacked>().Damage);
-            Instantiate(ImpactEffect, Player.transform.position + new Vector3(0f, 1.4f, 1.4f), Quaternion.identity);
+            if (!BMNG.isWin)
+            {
+                HurtPlayer(this.GetComponent<BeAttacked>().Damage);
+                Instantiate(ImpactEffect, Player.transform.position + new Vector3(0f, 1.4f, 1.4f), Quaternion.identity);
+            }
         }
         //Item.SetActive(false);
     }

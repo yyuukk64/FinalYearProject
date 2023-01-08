@@ -8,17 +8,23 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
     [SerializeField] GameObject[] heart = new GameObject[10];
     [SerializeField] Image[] heartState = new Image[10];
 
-    public int health, maxHealth = 6;
+    public int Money = 0;
+
+    public int health, MaxHealth = 6;
     public Sprite heartFull, heartHalf, heartEmpty;
 
     public void LoadData(GameData data)
     {
         this.health = data.health;
+        this.Money = data.Money;
+        this.MaxHealth = data.MaxHealth;
     }
 
     public void SaveData(GameData data)
     {
         data.health = this.health;
+        data.Money = this.Money;
+        data.MaxHealth = this.MaxHealth;
     }
 
     // Start is called before the first frame update
@@ -33,9 +39,9 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
     // Update is called once per frame
     void Update()
     {
-        if(health > maxHealth)
+        if(health > MaxHealth)
         {
-            health = maxHealth;
+            health = MaxHealth;
         }
         ShowHeart();
         ShowHealth();
@@ -43,38 +49,38 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
 
     public void AddMaxHealth(int MaxHealthToAdd)
     {
-        maxHealth += MaxHealthToAdd;
-        health = maxHealth;     //fully recover
+        MaxHealth += MaxHealthToAdd;
+        health = MaxHealth;     //fully recover
 
         
     }
     void ShowHeart()
     {
-        if (maxHealth >= 8)
+        if (MaxHealth >= 8)
         {
             heart[3].SetActive(true);
         }
-        if (maxHealth >= 10)
+        if (MaxHealth >= 10)
         {
             heart[4].SetActive(true);
         }
-        if (maxHealth >= 12)
+        if (MaxHealth >= 12)
         {
             heart[5].SetActive(true);
         }
-        if (maxHealth >= 14)
+        if (MaxHealth >= 14)
         {
             heart[6].SetActive(true);
         }
-        if (maxHealth >= 16)
+        if (MaxHealth >= 16)
         {
             heart[7].SetActive(true);
         }
-        if (maxHealth >= 18)
+        if (MaxHealth >= 18)
         {
             heart[8].SetActive(true);
         }
-        if (maxHealth >= 20)
+        if (MaxHealth >= 20)
         {
             heart[9].SetActive(true);
         }

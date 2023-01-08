@@ -7,6 +7,8 @@ public class GameData
 {
     public long lastUpdated;
     public int health;
+    public int MaxHealth;
+    public int Money;
     public Vector3 playerPosition;
     public AttributesData playerAttributesData;
 
@@ -15,6 +17,8 @@ public class GameData
     public GameData() 
     {
         this.health = 6;
+        this.MaxHealth = 6;
+        this.Money = 0;
         playerPosition = new Vector3(-11.5f, 1.53f, -71.1f);
         playerAttributesData = new AttributesData();
     }

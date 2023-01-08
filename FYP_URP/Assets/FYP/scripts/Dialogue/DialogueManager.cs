@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     [Header("World space Conversation bubble")]
     public GameObject ConvBubbleCanva;
     public Text worldDialogue;
+    public bool isAllow = true;
 
     private string myName;
     private string[] mySentences;
