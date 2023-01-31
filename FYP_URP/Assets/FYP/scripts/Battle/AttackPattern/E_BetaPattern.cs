@@ -20,7 +20,7 @@ public class E_BetaPattern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!BMNG.isWin && !CD)
+        if (!BMNG.isWin && !CD && !BMNG.isLost)
         {
             StartCoroutine(RandomAttackPattern(Random.RandomRange(0, 5)));
             Debug.Log("Fire!!!");

@@ -9,6 +9,9 @@ public class MainMenu : Menu
     [Header("Menu Navigation")]
     [SerializeField] private SaveSlotsMenu saveSlotsMenu;
 
+    [Header("Menu Object")]
+    [SerializeField] GameObject Title;
+
     [Header("Menu Buttons")]
     [SerializeField] private Button newGameButton;
     [SerializeField] private Button continueGameButton;

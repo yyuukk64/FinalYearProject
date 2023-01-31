@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerManager : MonoBehaviour, IDataPersistence
 {
@@ -9,6 +10,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
     [SerializeField] Image[] heartState = new Image[10];
 
     public int Money = 0;
+    [SerializeField] TextMeshProUGUI txtCoin;
 
     public int health, MaxHealth = 6;
     public Sprite heartFull, heartHalf, heartEmpty;
@@ -45,6 +47,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
         }
         ShowHeart();
         ShowHealth();
+        txtCoin.text = Money.ToString();
     }
 
     public void AddMaxHealth(int MaxHealthToAdd)
@@ -303,7 +306,7 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
                 heartState[i].sprite = heartEmpty;
             }
         }
-        if (health == 0)
+        if (health <= 0)
         {
             for (int i = 0; i <10 ; i++)
             {

@@ -13,7 +13,7 @@ public class GeneralEnemy : MonoBehaviour
     [SerializeField] Vector3 _EnemyPos;
     [SerializeField] List<Vector3> _SoulPos;
     [Space()]
-    [SerializeField] int SoulNumberReq;
+    public int SoulNumberReq;
     [Space()]
     public int MinMoney;
     public int MaxMoney;

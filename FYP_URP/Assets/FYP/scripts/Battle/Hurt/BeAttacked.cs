@@ -30,7 +30,7 @@ public class BeAttacked : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            if (!BMNG.isWin)
+            if (!BMNG.isWin && !BMNG.isLost)
             {
                 HurtPlayer(this.GetComponent<BeAttacked>().Damage);
                 Instantiate(ImpactEffect, Player.transform.position + new Vector3(0f, 1.4f, 1.4f), Quaternion.identity);
