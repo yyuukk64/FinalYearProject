@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 31f5d641c64fe53469c69b349282f65f
+  m_OcclusionCullingData: {fileID: 36300000, guid: eefc354f52311c941b0844d55ed0af5d, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -1933,6 +1933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EBtn_Canvas: {fileID: 247058330}
+  canChange: 0
   SceneName: Lobby
 --- !u!4 &168025447
 Transform:

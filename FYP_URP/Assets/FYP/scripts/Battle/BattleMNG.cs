@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class BattleMNG : MonoBehaviour
 {
-
-
     public GameObject _Player;
     [Header("The Enemy would be met in this area")]
     public GameObject[] _EnemyList;

@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 842c6493a10d0a24d808e0676909114b
+  m_OcclusionCullingData: {fileID: 36300000, guid: 9700fd4863ee70b4fbaf53009f748f75, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -1462,6 +1462,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -31.07
       objectReference: {fileID: 0}
+    - target: {fileID: 1117404483159644831, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 1787580048215605265, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1529,6 +1533,10 @@ PrefabInstance:
     - target: {fileID: 5579661632670456514, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 7.212
+      objectReference: {fileID: 0}
+    - target: {fileID: 5982025542977878643, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6217027615016772727, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1602,6 +1610,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 55.165
       objectReference: {fileID: 0}
+    - target: {fileID: 6704875789452459725, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 6833310993416554090, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1649,6 +1661,10 @@ PrefabInstance:
     - target: {fileID: 7278063578340465170, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
       propertyPath: m_Name
       value: Tree roots
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515733304249220054, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
@@ -11048,6 +11064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EBtn_Canvas: {fileID: 1037286090}
+  canChange: 0
   SceneName: Route1
 --- !u!65 &703808912
 BoxCollider:
@@ -12006,6 +12023,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1111692496}
     m_Modifications:
+    - target: {fileID: 2882688538255654929, guid: 7fa59b950b8ac954ab4ebc290bdfea84, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 4606932507546215501, guid: 7fa59b950b8ac954ab4ebc290bdfea84, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -23374,6 +23395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TREE
       objectReference: {fileID: 0}
+    - target: {fileID: 8536400945726557719, guid: 666c38df79190094d93250424c941519, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 666c38df79190094d93250424c941519, type: 3}
 --- !u!1 &1450390810
@@ -31076,6 +31101,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1111692496}
     m_Modifications:
+    - target: {fileID: 1861499543386197755, guid: 4769cc12bd57c8e4bb38c4a6a28426e1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 2511467340911019939, guid: 4769cc12bd57c8e4bb38c4a6a28426e1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -31119,6 +31148,10 @@ PrefabInstance:
     - target: {fileID: 2511467340911019939, guid: 4769cc12bd57c8e4bb38c4a6a28426e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6790966776293902016, guid: 4769cc12bd57c8e4bb38c4a6a28426e1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 9116043244881952407, guid: 4769cc12bd57c8e4bb38c4a6a28426e1, type: 3}
       propertyPath: m_Name
@@ -31686,6 +31719,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 31085812}
     m_Modifications:
+    - target: {fileID: 1117404483159644831, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5579661632670456514, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -31742,9 +31779,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 4.02
       objectReference: {fileID: 0}
+    - target: {fileID: 5982025542977878643, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704875789452459725, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7278063578340465170, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
       propertyPath: m_Name
       value: Tree roots
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515733304249220054, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c0cf51e01606642a65e4073bd31f9c, type: 3}

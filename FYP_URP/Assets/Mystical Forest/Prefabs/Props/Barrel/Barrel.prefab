@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!136 &7804583049124073600
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861499543386197755}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.71
-  m_Height: 1.85
-  m_Direction: 2
-  m_Center: {x: -0.0015072525, y: 0, z: 0.87018555}
 --- !u!1 &9116043244881952407
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,73 +53,63 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2511467340911019939}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7359125510685693901, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: -7359125510685693901, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3f0e164e56d64a146b7274cc6490d823, type: 2}
-    - target: {fileID: 919132149155446097, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: 919132149155446097, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_Name
       value: Barrel
       objectReference: {fileID: 0}
-    - target: {fileID: 8835409689826365435, guid: 93a5a3933cd06814ba5ed38ff184bead,
-        type: 3}
+    - target: {fileID: 8144394004440419581, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835409689826365435, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8528f93e5294f3342874ca05fcc745b8, type: 2}
@@ -141,13 +117,25 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
 --- !u!4 &2932500877345893846 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
   m_PrefabInstance: {fileID: 3402732850288806461}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1861499543386197755 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3958013743242298566, guid: 93a5a3933cd06814ba5ed38ff184bead,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 3958013743242298566, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
   m_PrefabInstance: {fileID: 3402732850288806461}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &7804583049124073600
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861499543386197755}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.71
+  m_Height: 1.85
+  m_Direction: 2
+  m_Center: {x: -0.0015072525, y: 0, z: 0.87018555}
