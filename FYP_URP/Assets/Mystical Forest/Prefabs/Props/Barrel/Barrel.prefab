@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4
   m_IsActive: 1
 --- !u!4 &2511467340911019939
 Transform:
@@ -101,13 +101,29 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3f0e164e56d64a146b7274cc6490d823, type: 2}
+    - target: {fileID: -4385017414096259309, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_Name
       value: Barrel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958013743242298566, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743316997197902481, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8144394004440419581, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 18
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 8835409689826365435, guid: 93a5a3933cd06814ba5ed38ff184bead, type: 3}
       propertyPath: m_Materials.Array.data[0]
