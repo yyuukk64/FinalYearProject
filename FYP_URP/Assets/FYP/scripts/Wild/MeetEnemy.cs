@@ -81,7 +81,8 @@ public class MeetEnemy : MonoBehaviour
 
     IEnumerator DelayEnterScene()
     {
+        //CS.savePositionBeforeBattle();
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("Battle_Forest");
+        CS.ChangeScene("Battle_Forest");
     }
 }

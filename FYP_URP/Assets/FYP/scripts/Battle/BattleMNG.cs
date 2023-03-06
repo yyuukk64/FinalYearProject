@@ -38,12 +38,14 @@ public class BattleMNG : MonoBehaviour
     PlayerMovement PMove;
     PlayerManager PM;
     MeetEnemy ME;
+    changeScene changeScene;
 
     // Start is called before the first frame update
     void Start()
     {
         PMove = FindObjectOfType<PlayerMovement>();
         PM = FindObjectOfType<PlayerManager>();
+        changeScene = FindObjectOfType<changeScene>();
 
         //For Stop the BGM while winning
         BattleBGM = GameObject.FindWithTag("BattleBGM");
@@ -101,6 +103,7 @@ public class BattleMNG : MonoBehaviour
         Waiting = false;
     }
 
+    [System.Obsolete]
     public void Win()
     {
         anim.SetBool("Win", true);
@@ -115,6 +118,7 @@ public class BattleMNG : MonoBehaviour
         BattleBGM.SetActive(false);
     }
 
+    [System.Obsolete]
     public void Lost()
     {
         isLost = true;
@@ -133,12 +137,13 @@ public class BattleMNG : MonoBehaviour
 
     public void Back2Wild()
     {
-        SceneManager.LoadScene("Route1");
-        //ME._Player.transform.position = ME.beforeBatPos;
+        changeScene.ChangeScene("Route1");
+        //changeScene.loadPositionAfterBattle();
     }
 
     public void Back2Lobby()
     {
+        //Do something (full recover)
         SceneManager.LoadScene("Lobby");
         //ME._Player.transform.position = ME.beforeBatPos;
     }

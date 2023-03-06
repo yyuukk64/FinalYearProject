@@ -9,6 +9,8 @@ public class changeScene : MonoBehaviour
     public bool canChange = false;
     [SerializeField] string SceneName;
     [SerializeField] GameObject Player;
+    public Transform PositionBeforeEnterBattle;
+    public float x, y, z;
 
     private void Update()
     {
@@ -16,8 +18,7 @@ public class changeScene : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                save();
-                SceneManager.LoadScene(SceneName);
+                ChangeScene(SceneName);
             }
         }
     }
@@ -39,7 +40,7 @@ public class changeScene : MonoBehaviour
             canChange = false;
         }
     }
-
+    /*
     public void save()
     {
         PlayerPrefs.SetInt("CurrentHealth", Player.GetComponent<PlayerManager>().health);
@@ -49,8 +50,30 @@ public class changeScene : MonoBehaviour
 
     public void load()
     {
-        Player.GetComponent<PlayerManager>().health = PlayerPrefs.GetInt("CurrentHealth");
-        Player.GetComponent<PlayerManager>().Money = PlayerPrefs.GetInt("CurrentMoney");
-        Player.GetComponent<PlayerManager>().MaxHealth = PlayerPrefs.GetInt("CurrentMaxHealth");
+        Player.GetComponent<PlayerManager>().health = PlayerPrefs.GetInt("CurrentHealth", 6);
+        Player.GetComponent<PlayerManager>().Money = PlayerPrefs.GetInt("CurrentMoney", 0);
+        Player.GetComponent<PlayerManager>().MaxHealth = PlayerPrefs.GetInt("CurrentMaxHealth", 6);
+    }
+    public void savePositionBeforeBattle()
+    {
+        PlayerPrefs.SetFloat("XPositionBeforeBattle", Player.transform.position.x);
+        PlayerPrefs.SetFloat("YPositionBeforeBattle", Player.transform.position.y);
+        PlayerPrefs.SetFloat("ZPositionBeforeBattle", Player.transform.position.z);
+    }
+
+    public void loadPositionAfterBattle()
+    {
+        x = PlayerPrefs.GetFloat("XPositionBeforeBattle", 0f);
+        y = PlayerPrefs.GetFloat("YPositionBeforeBattle", 0f);
+        z = PlayerPrefs.GetFloat("ZPositionBeforeBattle", 0f);
+        PositionBeforeEnterBattle.position = new Vector3(x, y, z);
+    }
+    */
+    
+
+    public void ChangeScene(string m_SceneName)
+    {
+        //save();
+        SceneManager.LoadScene(m_SceneName);
     }
 }
