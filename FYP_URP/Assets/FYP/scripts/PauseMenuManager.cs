@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class PauseMenu : MonoBehaviour
+public class PauseMenuManager : MonoBehaviour
 {
+    private DataPersistenceManager DPM;
+
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+
+    private void Start()
+    {
+        DPM = FindObjectOfType<DataPersistenceManager>();
+    }
 
     void Update()
     {
@@ -21,6 +28,12 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+
+    public void Save()
+    {
+        DPM.SaveGame();
+    }
+
     public void Resume()
 
     {

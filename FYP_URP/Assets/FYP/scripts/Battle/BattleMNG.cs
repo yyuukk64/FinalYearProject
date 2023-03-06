@@ -25,13 +25,15 @@ public class BattleMNG : MonoBehaviour
     [SerializeField] GameObject winningCanvas;
     Animator anim;
     [HideInInspector] int getMoney;
-    [SerializeField] TextMeshProUGUI txt_Coin;
+    [SerializeField] TextMeshProUGUI txt_GetCoin;
+    
 
     //show souls requirement number
     [SerializeField] TextMeshProUGUI txt_SoulReq;
 
     //Lost Animation
     public bool isLost = false;
+    [SerializeField] TextMeshProUGUI txt_LostCoin;
 
     PlayerMovement PMove;
     PlayerManager PM;
@@ -106,7 +108,7 @@ public class BattleMNG : MonoBehaviour
 
         //get Money
         getMoney = Random.RandomRange(_Enemy.GetComponent<GeneralEnemy>().MinMoney, _Enemy.GetComponent<GeneralEnemy>().MaxMoney);
-        txt_Coin.text = getMoney.ToString();
+        txt_GetCoin.text = getMoney.ToString();
         PM.Money += getMoney;
 
         //Stop Battle BGM
@@ -123,7 +125,7 @@ public class BattleMNG : MonoBehaviour
         getMoney = Random.RandomRange(_Enemy.GetComponent<GeneralEnemy>().MinMoney, _Enemy.GetComponent<GeneralEnemy>().MaxMoney);
         if (getMoney >= PM.Money)
             getMoney = PM.Money;
-        txt_Coin.text = "-" + getMoney.ToString();
+        txt_LostCoin.text = "-" + getMoney.ToString();
         PM.Money -= getMoney;
         
         BattleBGM.SetActive(false);

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8485352540188714606}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,6 +287,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Money: 0
+  txtCoin: {fileID: 0}
   health: 6
   MaxHealth: 6
   heartFull: {fileID: -5403747216940433073, guid: 56167208a4ef74c49b54703f7965869a, type: 3}
@@ -772,6 +773,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7c4a5cf922f0f0740bd86f82c12d7ec4, type: 3}
       propertyPath: m_Name
       value: Charactermain
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c4a5cf922f0f0740bd86f82c12d7ec4, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c4a5cf922f0f0740bd86f82c12d7ec4, type: 3}
