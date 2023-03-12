@@ -73,15 +73,16 @@ public class DataPersistenceManager : MonoBehaviour
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
 
-        if(autoSaveAllow)
+        if (!autoSaveAllow)
+            return;
+        
+        // start up the auto saving coroutine
+        if (autoSaveCoroutine != null) 
         {
-            // start up the auto saving coroutine
-            if (autoSaveCoroutine != null) 
-            {
-                StopCoroutine(autoSaveCoroutine);
-            }
-            autoSaveCoroutine = StartCoroutine(AutoSave());
+            StopCoroutine(autoSaveCoroutine);
         }
+        autoSaveCoroutine = StartCoroutine(AutoSave());
+        
     }
 
     public void ChangeSelectedProfileId(string newProfileId) 

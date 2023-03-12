@@ -10,7 +10,7 @@ public class LobbyManager : MonoBehaviour
     void Start()
     {
         _Player.transform.position = new Vector3(0, 1.53f, -70);
-        _Player.GetComponent<PlayerManager>().health = _Player.GetComponent<PlayerManager>().MaxHealth;
+        _Player.GetComponent<PlayerManager>().health = _Player.GetComponent<PlayerManager>().maxHealth;
     }
 
     // Update is called once per frame

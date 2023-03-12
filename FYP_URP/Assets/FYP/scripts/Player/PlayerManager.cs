@@ -4,29 +4,52 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PlayerManager : MonoBehaviour, IDataPersistence
+public class PlayerManager : MonoBehaviour //, IDataPersistence
 {
     [SerializeField] GameObject[] heart = new GameObject[10];
     [SerializeField] Image[] heartState = new Image[10];
 
-    public int Money = 0;
+    public int coin = 0;
     [SerializeField] TextMeshProUGUI txtCoin;
 
-    public int health, MaxHealth = 6;
+    public int health, maxHealth = 6;
     public Sprite heartFull, heartHalf, heartEmpty;
 
+    /*
     public void LoadData(GameData data)
     {
         this.health = data.health;
-        this.Money = data.Money;
+        this.coin = data.Money;
         this.MaxHealth = data.MaxHealth;
     }
 
     public void SaveData(GameData data)
     {
         data.health = this.health;
-        data.Money = this.Money;
+        data.Money = this.coin;
         data.MaxHealth = this.MaxHealth;
+    }
+
+    */
+
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        health = data.health;
+        maxHealth = data.maxHealth;
+        coin = data.coin;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
     }
 
     // Start is called before the first frame update
@@ -41,49 +64,49 @@ public class PlayerManager : MonoBehaviour, IDataPersistence
     // Update is called once per frame
     void Update()
     {
-        if(health > MaxHealth)
+        if(health > maxHealth)
         {
-            health = MaxHealth;
+            health = maxHealth;
         }
         ShowHeart();
         ShowHealth();
-        txtCoin.text = Money.ToString();
+        txtCoin.text = coin.ToString();
     }
 
     public void AddMaxHealth(int MaxHealthToAdd)
     {
-        MaxHealth += MaxHealthToAdd;
-        health = MaxHealth;     //fully recover
+        maxHealth += MaxHealthToAdd;
+        health = maxHealth;     //fully recover
 
         
     }
     void ShowHeart()
     {
-        if (MaxHealth >= 8)
+        if (maxHealth >= 8)
         {
             heart[3].SetActive(true);
         }
-        if (MaxHealth >= 10)
+        if (maxHealth >= 10)
         {
             heart[4].SetActive(true);
         }
-        if (MaxHealth >= 12)
+        if (maxHealth >= 12)
         {
             heart[5].SetActive(true);
         }
-        if (MaxHealth >= 14)
+        if (maxHealth >= 14)
         {
             heart[6].SetActive(true);
         }
-        if (MaxHealth >= 16)
+        if (maxHealth >= 16)
         {
             heart[7].SetActive(true);
         }
-        if (MaxHealth >= 18)
+        if (maxHealth >= 18)
         {
             heart[8].SetActive(true);
         }
-        if (MaxHealth >= 20)
+        if (maxHealth >= 20)
         {
             heart[9].SetActive(true);
         }
