@@ -15,23 +15,11 @@ public class PlayerManager : MonoBehaviour //, IDataPersistence
     public int health, maxHealth = 6;
     public Sprite heartFull, heartHalf, heartEmpty;
 
-    /*
-    public void LoadData(GameData data)
-    {
-        this.health = data.health;
-        this.coin = data.Money;
-        this.MaxHealth = data.MaxHealth;
-    }
+    public string currentScene;
 
-    public void SaveData(GameData data)
-    {
-        data.health = this.health;
-        data.Money = this.coin;
-        data.MaxHealth = this.MaxHealth;
-    }
+    TemporarilySave m_temporarilySave;
 
-    */
-
+    #region Real Save
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(this);
@@ -45,12 +33,53 @@ public class PlayerManager : MonoBehaviour //, IDataPersistence
         maxHealth = data.maxHealth;
         coin = data.coin;
 
+        //Location
+        currentScene = data.currentScene;
+        //changingScene
+
         Vector3 position;
         position.x = data.position[0];
         position.y = data.position[1];
         position.z = data.position[2];
         transform.position = position;
     }
+
+    #endregion
+
+    #region Temporarily Save
+
+    public void SaveTemprarily(PlayerManager player)
+    {
+        m_temporarilySave = new TemporarilySave(this);
+    }
+
+    public void LoadOnSceneLoaded()
+    {
+        LoadOnEnterBattle();
+
+        this.transform.position = new Vector3(m_temporarilySave.posForGate[0], m_temporarilySave.posForGate[1], m_temporarilySave.posForGate[2]);
+    }
+
+    public void LoadOnEnterBattle()
+    {
+        this.health = m_temporarilySave.health;
+        this.maxHealth = m_temporarilySave.maxHealth;
+        this.coin = m_temporarilySave.coin;
+    }
+
+    public void LoadExitFromBattle()
+    {
+        LoadOnEnterBattle(); 
+
+        this.transform.position = new Vector3(m_temporarilySave.posBeforeBattle[0], m_temporarilySave.posBeforeBattle[1], m_temporarilySave.posBeforeBattle[2]);
+    }
+
+    public void LoadOnLoadGame()
+    {
+
+    }
+
+    #endregion
 
     // Start is called before the first frame update
     void Start()

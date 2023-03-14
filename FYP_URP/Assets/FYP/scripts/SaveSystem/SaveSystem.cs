@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 public class SaveSystem
@@ -30,7 +29,7 @@ public class SaveSystem
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
 
-            return data
+            return data;
         }
         else
         {

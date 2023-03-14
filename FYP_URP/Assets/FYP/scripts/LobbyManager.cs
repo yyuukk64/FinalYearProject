@@ -9,13 +9,8 @@ public class LobbyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Init
         _Player.transform.position = new Vector3(0, 1.53f, -70);
         _Player.GetComponent<PlayerManager>().health = _Player.GetComponent<PlayerManager>().maxHealth;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

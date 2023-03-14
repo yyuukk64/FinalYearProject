@@ -27,7 +27,7 @@ public class MeetEnemy : MonoBehaviour
     PlayerManager PM;
     PlayerMovement PMove;
     BGMLoop bGMLoop;
-    changeScene CS;
+    SceneChangingManager m_sceneChangingManager;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,7 @@ public class MeetEnemy : MonoBehaviour
         PM = FindObjectOfType<PlayerManager>();
         PMove = FindObjectOfType<PlayerMovement>();
         bGMLoop = FindObjectOfType<BGMLoop>();
-        CS = FindObjectOfType<changeScene>();
+        m_sceneChangingManager = FindObjectOfType<SceneChangingManager>();
 
         //make sure player can move
         PMove.canMove = true;
@@ -70,7 +70,7 @@ public class MeetEnemy : MonoBehaviour
             PMove.canMove = false;
 
             //Back to other scene is not allowed
-            CS.canChange = false;
+            m_sceneChangingManager.canChange = false;
 
             anim.SetBool("isEnter", true);
 
@@ -83,6 +83,6 @@ public class MeetEnemy : MonoBehaviour
     {
         //CS.savePositionBeforeBattle();
         yield return new WaitForSeconds(2);
-        CS.ChangeScene("Battle_Forest");
+        m_sceneChangingManager.ChangeScene("Battle_Forest");
     }
 }
