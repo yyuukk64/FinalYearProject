@@ -38,14 +38,14 @@ public class BattleMNG : MonoBehaviour
     PlayerMovement PMove;
     PlayerManager PM;
     MeetEnemy ME;
-    changeScene changeScene;
+    SceneChangingManager m_SceneChanging;
 
     // Start is called before the first frame update
     void Start()
     {
         PMove = FindObjectOfType<PlayerMovement>();
         PM = FindObjectOfType<PlayerManager>();
-        changeScene = FindObjectOfType<changeScene>();
+        m_SceneChanging = FindObjectOfType<SceneChangingManager>();
 
         //For Stop the BGM while winning
         BattleBGM = GameObject.FindWithTag("BattleBGM");
@@ -137,7 +137,7 @@ public class BattleMNG : MonoBehaviour
 
     public void Back2Wild()
     {
-        changeScene.ChangeScene("Route1");
+        m_SceneChanging.ChangeScene("Route1");
         //changeScene.loadPositionAfterBattle();
     }
 

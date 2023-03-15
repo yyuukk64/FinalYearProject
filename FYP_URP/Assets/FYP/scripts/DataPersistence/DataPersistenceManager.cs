@@ -21,7 +21,6 @@ public class DataPersistenceManager : MonoBehaviour
     [SerializeField] private float autoSaveTimeSeconds = 60f;
 
     private GameData gameData;
-    private changeScene changeScene;
     private List<IDataPersistence> dataPersistenceObjects;
     private FileDataHandler dataHandler;
 
@@ -33,7 +32,6 @@ public class DataPersistenceManager : MonoBehaviour
 
     private void Start()
     {
-        changeScene = FindObjectOfType<changeScene>();
     }
 
     private void Awake() 
