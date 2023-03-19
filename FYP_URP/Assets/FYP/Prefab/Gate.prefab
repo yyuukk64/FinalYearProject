@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 433733785325898435}
   - component: {fileID: 433733785325898461}
-  - component: {fileID: 433733785325898434}
+  - component: {fileID: 9014259088092127498}
   m_Layer: 0
-  m_Name: GoOut
+  m_Name: Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.068704, y: 17.141335, z: 9.176912}
   m_Center: {x: 0.13514662, y: -5.5469966, z: -1.9141035}
---- !u!114 &433733785325898434
+--- !u!114 &9014259088092127498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,10 +54,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 433733785325898432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28df188eabfa3d84d873bf7be3683e6e, type: 3}
+  m_Script: {fileID: 11500000, guid: c3f14052d3beccc47b17a07929beed9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EBtn_Canvas: {fileID: 0}
-  canChange: 0
-  SceneName: Route1
   Player: {fileID: 0}
+  EBtn_Canvas: {fileID: 0}
+  SceneName: 
+  EntryPos: {x: 0, y: 0, z: 0}

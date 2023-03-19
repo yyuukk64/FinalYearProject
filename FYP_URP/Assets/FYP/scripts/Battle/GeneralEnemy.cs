@@ -38,7 +38,7 @@ public class GeneralEnemy : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player" && 
-            _Player.GetComponent<TheQueue>()._Queue.Count + 1 >= SoulNumberReq)
+            _Player.GetComponent<TheQueue>()._Queue.Count - 1 >= SoulNumberReq)
         {
             BMNG.isWin = true;
             Debug.Log("You win!!!");

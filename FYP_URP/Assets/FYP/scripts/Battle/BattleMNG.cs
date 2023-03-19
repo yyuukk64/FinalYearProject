@@ -59,6 +59,8 @@ public class BattleMNG : MonoBehaviour
         isLost = false;
         PMove.canMove = true;
         _Player.transform.position = new Vector3(0, 2.65f, 0);
+        _Player.GetComponent<PlayerManager>().LoadOnEnterBattle();
+
 
         float j = Random.Range(0.0f, 100.0f);
         Debug.Log(j);
@@ -137,14 +139,11 @@ public class BattleMNG : MonoBehaviour
 
     public void Back2Wild()
     {
-        m_SceneChanging.ChangeScene("Route1");
-        //changeScene.loadPositionAfterBattle();
+        m_SceneChanging.LoadSceneExitFromBattle();
     }
 
     public void Back2Lobby()
     {
-        //Do something (full recover)
-        SceneManager.LoadScene("Lobby");
-        //ME._Player.transform.position = ME.beforeBatPos;
+        m_SceneChanging.ChangeScene("Lobby");
     }
 }

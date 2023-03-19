@@ -4,20 +4,36 @@ using UnityEngine;
 
 public class Gate : MonoBehaviour
 { 
-    [SerializeField] GameObject Player;
-    [SerializeField] GameObject EBtn_Canvas;
+    //[SerializeField] GameObject Player;
 
+    //Which Scene will be enter by player
     public string SceneName;
+
+    //Where is the spawn position in the next scene
     public Vector3 EntryPos;
 
+    private PlayerManager m_Player;
+    private GameObject player;
     private SceneChangingManager m_sceneManager;
     private TemporarilySave m_temporarilySave;
+
+
+    void Start()
+    {
+        m_sceneManager = FindObjectOfType<SceneChangingManager>();
+        m_temporarilySave = FindObjectOfType<TemporarilySave>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            EBtn_Canvas.SetActive(true);
+            m_sceneManager = FindObjectOfType<SceneChangingManager>();
+            m_temporarilySave = FindObjectOfType<TemporarilySave>();
+
+            player = GameObject.FindWithTag("Player");
+            m_Player = player.GetComponent<PlayerManager>();
+            m_Player.activeEBtnCanvas(true);
             m_sceneManager.canChange = true;
             m_sceneManager.SceneName = SceneName;
 
@@ -31,7 +47,12 @@ public class Gate : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            EBtn_Canvas.SetActive(false);
+            m_sceneManager = FindObjectOfType<SceneChangingManager>();
+            m_temporarilySave = FindObjectOfType<TemporarilySave>();
+
+            player = GameObject.FindWithTag("Player");
+            m_Player = player.GetComponent<PlayerManager>();
+            m_Player.activeEBtnCanvas(false);
             m_sceneManager.canChange = false;
             m_sceneManager.SceneName = null;
         }

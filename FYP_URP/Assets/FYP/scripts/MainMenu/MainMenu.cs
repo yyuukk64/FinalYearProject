@@ -17,11 +17,16 @@ public class MainMenu : Menu
     [SerializeField] private Button continueGameButton;
     [SerializeField] private Button loadGameButton;
 
+    [SerializeField] GameObject m_initialize;
+
+
     private void Start() 
     {
-        DisableButtonsDependingOnData();
+        
+        //DisableButtonsDependingOnData();
     }
 
+    /*
     private void DisableButtonsDependingOnData() 
     {
         if (!DataPersistenceManager.instance.HasGameData()) 
@@ -29,6 +34,13 @@ public class MainMenu : Menu
             continueGameButton.interactable = false;
             loadGameButton.interactable = false;
         }
+    }
+    */
+
+    public void OnBtnNewGameClicked()
+    {
+        m_initialize.GetComponent<Initialize>().Init();
+        SceneManager.LoadScene("Lobby");
     }
 
     public void OnNewGameClicked() 
@@ -62,7 +74,7 @@ public class MainMenu : Menu
     public void ActivateMenu() 
     {
         this.gameObject.SetActive(true);
-        DisableButtonsDependingOnData();
+        //DisableButtonsDependingOnData();
     }
 
     public void DeactivateMenu() 

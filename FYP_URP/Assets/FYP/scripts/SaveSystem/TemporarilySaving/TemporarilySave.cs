@@ -8,22 +8,22 @@ public class TemporarilySave : Singleton<TemporarilySave>
     public int maxHealth;
     public int coin;
 
-    public float[] posBeforeBattle = new float[3];
-    public float[] posForGate = new float[3];
+    public string sceneBeforeBattle;
+    public Vector3 posBeforeBattle;
+    public Vector3 posForGate;
 
     void Start()
     {
         DontDestroyOnLoad(this);
     }
 
-    public TemporarilySave(PlayerManager player)
+    public void TemporarilyData(PlayerManager player)
     {
         health = player.health;
         maxHealth = player.maxHealth;
         coin = player.coin;
 
-        posBeforeBattle[0] = player.transform.position.x;
-        posBeforeBattle[1] = player.transform.position.y;
-        posBeforeBattle[2] = player.transform.position.z;
+        sceneBeforeBattle = player.currentScene;
+        posBeforeBattle = player.transform.position;
     }
 }

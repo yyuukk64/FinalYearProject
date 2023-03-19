@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a938e88bc7ce7249b49f7d4cba68342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EBtnCanvas: {fileID: 8485352541022372331}
   heart:
   - {fileID: 0}
   - {fileID: 0}
@@ -294,6 +295,7 @@ MonoBehaviour:
   heartFull: {fileID: -5403747216940433073, guid: 56167208a4ef74c49b54703f7965869a, type: 3}
   heartHalf: {fileID: 9140446846260144330, guid: 56167208a4ef74c49b54703f7965869a, type: 3}
   heartEmpty: {fileID: 7917636480495289721, guid: 56167208a4ef74c49b54703f7965869a, type: 3}
+  currentScene: 
 --- !u!1 &8485352540643259980
 GameObject:
   m_ObjectHideFlags: 0

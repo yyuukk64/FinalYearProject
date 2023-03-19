@@ -71,16 +71,17 @@
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\FYP\scripts\SceneManagement\SceneChangingManager.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
-    <Compile Include="Assets\FYP\scripts\DataPersistence\IDataPersistence.cs" />
+    <Compile Include="Assets\DataPersistence\IDataPersistence.cs" />
     <Compile Include="Assets\FYP\scripts\SaveSystem\PlayerData.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\FYP\scripts\interactablePromptUI.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\FYP\scripts\MainMenu\Menu.cs" />
+    <Compile Include="Assets\FYP\scripts\SaveSystem\TemporarilySaving\TemporarilySave.cs" />
     <Compile Include="Assets\Mystical Forest\Prefabs\Props\magic crystal\MagicCrystalRotation.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\FYP\scripts\LobbyManager.cs" />
-    <Compile Include="Assets\FYP\scripts\DataPersistence\SerializableTypes\SerializableDictionary.cs" />
+    <Compile Include="Assets\DataPersistence\SerializableTypes\SerializableDictionary.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\FYP\scripts\DialogueBox.cs" />
     <Compile Include="Assets\FYP\scripts\MainMenu\SaveSlot.cs" />
@@ -91,13 +92,13 @@
     <Compile Include="Assets\FYP\scripts\Battle\TheQueue.cs" />
     <Compile Include="Assets\FYP\scripts\NPCSample.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
-    <Compile Include="Assets\FYP\scripts\DataPersistence\Data\AttributesData.cs" />
+    <Compile Include="Assets\DataPersistence\Data\AttributesData.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\FYP\scripts\SaveSystem\SaveSystem.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\FYP\scripts\Battle\Hurt\DelayAttack.cs" />
-    <Compile Include="Assets\FYP\scripts\DataPersistence\Data\GameData.cs" />
+    <Compile Include="Assets\DataPersistence\Data\GameData.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\FYP\scripts\Haert.cs" />
     <Compile Include="Assets\FYP\scripts\Inventories\InventoryItem.cs" />
@@ -120,12 +121,13 @@
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
-    <Compile Include="Assets\FYP\scripts\DataPersistence\DataPersistenceManager.cs" />
+    <Compile Include="Assets\FYP\scripts\SceneManagement\Gate.cs" />
+    <Compile Include="Assets\DataPersistence\DataPersistenceManager.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\FYP\scripts\Inventories\ItemsData.cs" />
     <Compile Include="Assets\FYP\scripts\Interactable.cs" />
     <Compile Include="Assets\FYP\scripts\MainMenu\SaveSlotsMenu.cs" />
-    <Compile Include="Assets\FYP\scripts\DataPersistence\FileDataHandler.cs" />
+    <Compile Include="Assets\DataPersistence\FileDataHandler.cs" />
     <Compile Include="Assets\FYP\scripts\Battle\Collect.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
@@ -135,8 +137,8 @@
     <Compile Include="Assets\FYP\scripts\Battle\AttackPattern\E_BetaPattern.cs" />
     <Compile Include="Assets\FYP\scripts\Battle\Following.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\FYP\scripts\SceneManagement\Gate.cs" />
-    <Compile Include="Assets\FYP\scripts\SaveSystem\TemporarilySaving\TemporarilySave.cs" />
+    <Compile Include="Assets\FYP\scripts\MainMenu\Initialize.cs" />
+    <Compile Include="Assets\FYP\scripts\Wild\WildManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fantasy Adventure Environment\Shaders\VS_InstancedIndirect.cginc" />

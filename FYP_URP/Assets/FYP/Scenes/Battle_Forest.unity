@@ -22151,7 +22151,6 @@ GameObject:
   - component: {fileID: 1157338789}
   - component: {fileID: 1157338788}
   - component: {fileID: 1157338790}
-  - component: {fileID: 1157338791}
   m_Layer: 0
   m_Name: BattleMNG
   m_TagString: Untagged
@@ -22230,26 +22229,6 @@ MonoBehaviour:
   - {fileID: 1757237472}
   BlueBeam: {fileID: 5453526971982300326, guid: 4551e8bc3b86df942b220c0a3b0cc7d1, type: 3}
   IncinerateSpell: {fileID: 5596503320885209267, guid: 287b2e8cd1fc94745adf5fdc87fdc2e9, type: 3}
---- !u!114 &1157338791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157338787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28df188eabfa3d84d873bf7be3683e6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EBtn_Canvas: {fileID: 1037286090}
-  canChange: 0
-  SceneName: 
-  Player: {fileID: 1637870436}
-  PositionBeforeEnterBattle: {fileID: 0}
-  x: 0
-  y: 0
-  z: 0
 --- !u!1 &1166326241
 GameObject:
   m_ObjectHideFlags: 0
@@ -31392,6 +31371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a938e88bc7ce7249b49f7d4cba68342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EBtnCanvas: {fileID: 0}
   heart:
   - {fileID: 414416875}
   - {fileID: 414416874}
@@ -31414,13 +31394,14 @@ MonoBehaviour:
   - {fileID: 414416858}
   - {fileID: 414416857}
   - {fileID: 414416856}
-  Money: 0
+  coin: 0
   txtCoin: {fileID: 414416855}
   health: 6
-  MaxHealth: 6
+  maxHealth: 6
   heartFull: {fileID: -5403747216940433073, guid: 56167208a4ef74c49b54703f7965869a, type: 3}
   heartHalf: {fileID: 9140446846260144330, guid: 56167208a4ef74c49b54703f7965869a, type: 3}
   heartEmpty: {fileID: 7917636480495289721, guid: 56167208a4ef74c49b54703f7965869a, type: 3}
+  currentScene: 
 --- !u!114 &1637870441
 MonoBehaviour:
   m_ObjectHideFlags: 0

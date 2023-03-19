@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class PlayerManager : MonoBehaviour //, IDataPersistence
+public class PlayerManager : Singleton<PlayerManager>
 {
+    [Header("Assign UI Object")]
+    [SerializeField] public GameObject EBtnCanvas;
+
     [SerializeField] GameObject[] heart = new GameObject[10];
     [SerializeField] Image[] heartState = new Image[10];
 
+    [Header("Player Data")]
     public int coin = 0;
     [SerializeField] TextMeshProUGUI txtCoin;
 
@@ -17,7 +22,9 @@ public class PlayerManager : MonoBehaviour //, IDataPersistence
 
     public string currentScene;
 
-    TemporarilySave m_temporarilySave;
+    //public bool showEBtnCanvas = false;
+
+    [SerializeField] TemporarilySave m_temporarilySave;
 
     #region Real Save
     public void SavePlayer()
@@ -48,16 +55,16 @@ public class PlayerManager : MonoBehaviour //, IDataPersistence
 
     #region Temporarily Save
 
-    public void SaveTemprarily(PlayerManager player)
+    public void SaveTemprarily()
     {
-        m_temporarilySave = new TemporarilySave(this);
+        m_temporarilySave.TemporarilyData(this);
     }
 
     public void LoadOnSceneLoaded()
     {
         LoadOnEnterBattle();
 
-        this.transform.position = new Vector3(m_temporarilySave.posForGate[0], m_temporarilySave.posForGate[1], m_temporarilySave.posForGate[2]);
+        this.transform.position = m_temporarilySave.posForGate;
     }
 
     public void LoadOnEnterBattle()
@@ -81,10 +88,25 @@ public class PlayerManager : MonoBehaviour //, IDataPersistence
 
     #endregion
 
+    public void activeEBtnCanvas(bool showEBtnCanvas)
+    {
+        if (showEBtnCanvas)
+        {
+            EBtnCanvas.SetActive(true);
+        }
+        else
+        {
+            EBtnCanvas.SetActive(false);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i<3; i++)
+        Debug.Log("a");
+        m_temporarilySave = FindObjectOfType<TemporarilySave>();
+        currentScene = SceneManager.GetActiveScene().name;
+        for (int i = 0; i<3; i++)
         {
             heart[i].SetActive(true);
         }

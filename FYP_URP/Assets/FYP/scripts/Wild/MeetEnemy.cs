@@ -13,16 +13,9 @@ public class MeetEnemy : MonoBehaviour
     [SerializeField] GameObject _enterBattle;
     Animator anim;
 
-    /*
-    public AudioSource BGM_Forest_Intro;
-    public AudioSource BGM_Forest_Loop;
-    public AudioSource BGM_Battle_Intro;
-    public AudioSource BGM_Battle_Loop;
-    */
-
     Vector3 oldPosition;
     //public Vector3 beforeBatPos;
-    float wolkedDistance;
+    float walkedDistance;
 
     PlayerManager PM;
     PlayerMovement PMove;
@@ -46,15 +39,15 @@ public class MeetEnemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void CheckWalkedDistance()
     {
-        wolkedDistance += Vector3.Distance(_Player.transform.position, oldPosition);
+        walkedDistance += Vector3.Distance(_Player.transform.position, oldPosition);
         oldPosition = _Player.transform.position;
 
-        if(wolkedDistance > 20)
+        if(walkedDistance > 20)
         {
             EnterBattle();
-            wolkedDistance = 0;
+            walkedDistance = 0;
         }
     }
 
@@ -83,6 +76,6 @@ public class MeetEnemy : MonoBehaviour
     {
         //CS.savePositionBeforeBattle();
         yield return new WaitForSeconds(2);
-        m_sceneChangingManager.ChangeScene("Battle_Forest");
+        m_sceneChangingManager.EnterBattleScene("Battle_Forest");
     }
 }
