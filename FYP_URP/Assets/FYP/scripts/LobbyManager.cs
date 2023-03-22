@@ -7,13 +7,14 @@ public class LobbyManager : MonoBehaviour
     [SerializeField] GameObject _Player;
 
     // Start is called before the first frame update
-    public void Init()
+    void Start()
     {
         //Init
         Debug.Log("b");
         _Player = GameObject.FindWithTag("Player");
-        _Player.transform.position = new Vector3(0, 1.53f, -70);
+        _Player.GetComponent<PlayerManager>().Init();
         _Player.GetComponent<PlayerManager>().LoadOnSceneLoaded();
+        _Player.transform.position = new Vector3(0f, 1.53f, -70f);
         _Player.GetComponent<PlayerManager>().health = _Player.GetComponent<PlayerManager>().maxHealth;
     }
 }

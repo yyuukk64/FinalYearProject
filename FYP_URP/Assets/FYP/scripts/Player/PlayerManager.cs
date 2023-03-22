@@ -9,7 +9,6 @@ public class PlayerManager : Singleton<PlayerManager>
 {
     [Header("Assign UI Object")]
     [SerializeField] public GameObject EBtnCanvas;
-
     [SerializeField] GameObject[] heart = new GameObject[10];
     [SerializeField] Image[] heartState = new Image[10];
 
@@ -23,7 +22,7 @@ public class PlayerManager : Singleton<PlayerManager>
     public string currentScene;
 
     //public bool showEBtnCanvas = false;
-
+    
     [SerializeField] TemporarilySave m_temporarilySave;
 
     #region Real Save
@@ -57,6 +56,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public void SaveTemprarily()
     {
+        m_temporarilySave = FindObjectOfType<TemporarilySave>();
         m_temporarilySave.TemporarilyData(this);
     }
 
@@ -101,9 +101,8 @@ public class PlayerManager : Singleton<PlayerManager>
     }
 
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
-        Debug.Log("a");
         m_temporarilySave = FindObjectOfType<TemporarilySave>();
         currentScene = SceneManager.GetActiveScene().name;
         for (int i = 0; i<3; i++)

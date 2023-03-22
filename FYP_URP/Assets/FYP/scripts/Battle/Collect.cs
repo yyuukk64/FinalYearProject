@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Collect : MonoBehaviour
 {
-    Following following;
     TheQueue theQueue;
 
     [SerializeField] GameObject thisGameObject;
@@ -13,14 +12,7 @@ public class Collect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        following = FindObjectOfType<Following>();
         theQueue = FindObjectOfType<TheQueue>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     private void OnTriggerEnter(Collider other)
     {

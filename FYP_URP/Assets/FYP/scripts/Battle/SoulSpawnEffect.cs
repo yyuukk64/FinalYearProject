@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoulSpawn : MonoBehaviour
+public class SoulSpawnEffect : MonoBehaviour
 {
     [SerializeField] GameObject _Soul;
     [SerializeField] GameObject Spawn_Effect;

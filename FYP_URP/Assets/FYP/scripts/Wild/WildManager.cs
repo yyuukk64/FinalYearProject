@@ -15,6 +15,7 @@ public class WildManager : MonoBehaviour
         m_meetEnemy = this.GetComponent<MeetEnemy>();
         m_SceneChangingManager = FindObjectOfType<SceneChangingManager>();
         _player = GameObject.FindWithTag("Player");
+        _player.GetComponent<PlayerManager>().Init();
 
         //load Temporarily data
         if(m_SceneChangingManager.inBattle)

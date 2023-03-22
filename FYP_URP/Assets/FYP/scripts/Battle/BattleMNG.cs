@@ -59,6 +59,7 @@ public class BattleMNG : MonoBehaviour
         isLost = false;
         PMove.canMove = true;
         _Player.transform.position = new Vector3(0, 2.65f, 0);
+        _Player.GetComponent<PlayerManager>().Init();
         _Player.GetComponent<PlayerManager>().LoadOnEnterBattle();
 
 

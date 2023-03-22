@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Following : MonoBehaviour
 {
-    //the object to follow
+    //the object to follow  #defuate following it self = don't following anyone
     public Transform follow;
 
     //max allowed distance
@@ -34,10 +34,13 @@ public class Following : MonoBehaviour
             //Rotate..
             // Determinie which direction to rotate towards 
             Vector3 targetDirection = follow.position - transform.position;
+
             // The step size is equal to speed times frame time.
             float singleStep = speed * Time.deltaTime;
+
             //Rotate the forward vector rowards the target diretion by one step
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
             // Calculate a rotation a step closer to the target and applies rotation to this object
             transform.rotation = Quaternion.LookRotation(newDirection);
         }

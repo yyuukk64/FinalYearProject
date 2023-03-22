@@ -43,8 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319dbc7571cf49848bd2ad88c3aa17c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 0
+  health: 6
+  maxHealth: 6
   coin: 0
-  posBeforeBattle: []
+  sceneBeforeBattle: 
+  posBeforeBattle: {x: 0, y: 0, z: 0}
   posForGate: {x: 0, y: 0, z: 0}
