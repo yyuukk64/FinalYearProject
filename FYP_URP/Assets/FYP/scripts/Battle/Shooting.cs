@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public bool isShooted = false;
+    SoulPooling m_soulPooling;
+
+    [HideInInspector] public bool isShooted = false;
 
     public float speedSetoff = 100f;
+
+    private void Start()
+    {
+        m_soulPooling = FindObjectOfType<SoulPooling>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -27,7 +34,14 @@ public class Shooting : MonoBehaviour
             //hurt Enemy...
 
 
+            return;
+        }
 
+        //if the shooted soul touch the barrier
+        if (other.tag == "Boundary" && isShooted)
+        {
+            this.gameObject.SetActive(false);
+            isShooted = false;
         }
     }
 }

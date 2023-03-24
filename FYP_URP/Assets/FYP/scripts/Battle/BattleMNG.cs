@@ -39,6 +39,7 @@ public class BattleMNG : MonoBehaviour
     PlayerManager PM;
     MeetEnemy ME;
     SceneChangingManager m_SceneChanging;
+    SoulPooling m_soulPooling;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,7 @@ public class BattleMNG : MonoBehaviour
         PMove = FindObjectOfType<PlayerMovement>();
         PM = FindObjectOfType<PlayerManager>();
         m_SceneChanging = FindObjectOfType<SceneChangingManager>();
+        m_soulPooling = this.GetComponent<SoulPooling>();
 
         //For Stop the BGM while winning
         BattleBGM = GameObject.FindWithTag("BattleBGM");
@@ -101,7 +103,8 @@ public class BattleMNG : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         var position = new Vector3(Random.Range(-40.0f, 40.0f), 2, Random.Range(-30.0f, 30.0f));
-        Instantiate(_Soul, position, Quaternion.identity);
+
+        m_soulPooling.callSoulSpawn(position);
 
         Waiting = false;
     }

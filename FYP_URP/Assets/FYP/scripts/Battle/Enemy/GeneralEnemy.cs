@@ -6,19 +6,25 @@ public class GeneralEnemy : MonoBehaviour
 {
     [Header("Game Object")]
     [SerializeField] GameObject _Enemy;
-    [SerializeField] GameObject _Soul; 
     [SerializeField] GameObject _Player; 
+
     [Space()]
+
     [Header("Initail Setting")]
     [SerializeField] Vector3 _EnemyPos;
     [SerializeField] List<Vector3> _SoulPos;
+
     [Space()]
+
     public int SoulNumberReq;
+
     [Space()]
+
     public int MinMoney;
     public int MaxMoney;
 
     BattleMNG BMNG;
+    SoulPooling m_soulPooling;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +32,7 @@ public class GeneralEnemy : MonoBehaviour
         BMNG = FindObjectOfType<BattleMNG>();
         _Player = BMNG._Player;
         BMNG._Enemy = _Enemy;
+        m_soulPooling = FindObjectOfType<SoulPooling>();
         Initially();
     }
 
@@ -52,7 +59,7 @@ public class GeneralEnemy : MonoBehaviour
         _Enemy.transform.position = _EnemyPos;
         for (int i = 0; i < _SoulPos.Count; i++)
         {
-            Instantiate(_Soul, _SoulPos[i], Quaternion.identity);
+            m_soulPooling.callSoulSpawn(_SoulPos[i]);
         }
         
     }
