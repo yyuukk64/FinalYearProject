@@ -47,7 +47,7 @@ public class SceneChangingManager : Singleton<SceneChangingManager>
         player = GameObject.FindWithTag("Player");
         m_player = player.GetComponent<PlayerManager>();
         SceneName = m_player.currentScene;
-        m_player.SaveTemprarily();
+        m_player.SaveBeforeBattle();
         SceneManager.LoadScene(m_SceneName);
     }
 

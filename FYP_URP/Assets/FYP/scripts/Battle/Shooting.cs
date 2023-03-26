@@ -44,4 +44,9 @@ public class Shooting : MonoBehaviour
             isShooted = false;
         }
     }
+
+    public void resetSoul()
+    {
+
+    }
 }

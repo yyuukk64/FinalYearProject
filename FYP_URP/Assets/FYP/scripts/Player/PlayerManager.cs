@@ -60,6 +60,12 @@ public class PlayerManager : Singleton<PlayerManager>
         m_temporarilySave.TemporarilyData(this);
     }
 
+    public void SaveBeforeBattle()
+    {
+        SaveTemprarily();
+        m_temporarilySave.posBeforeBattle = this.transform.position;
+    }
+
     public void LoadOnSceneLoaded()
     {
         LoadOnEnterBattle();
