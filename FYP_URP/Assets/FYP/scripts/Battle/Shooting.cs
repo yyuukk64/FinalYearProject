@@ -26,10 +26,9 @@ public class Shooting : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy" && isShooted)
+        if (other.tag == "Enemy")
         {
-            this.gameObject.SetActive(false);
-            isShooted = false;
+            resetSoul();
 
             //hurt Enemy...
 
@@ -38,15 +37,16 @@ public class Shooting : MonoBehaviour
         }
 
         //if the shooted soul touch the barrier
-        if (other.tag == "Boundary" && isShooted)
+        if (other.tag == "Boundary")
         {
-            this.gameObject.SetActive(false);
-            isShooted = false;
+            resetSoul();
+            return;
         }
     }
 
     public void resetSoul()
     {
-
+        this.gameObject.SetActive(false);
+        isShooted = false;
     }
 }

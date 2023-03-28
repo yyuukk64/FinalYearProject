@@ -25,6 +25,7 @@ public class SoulPooling : MonoBehaviour
             soul.SetActive(false);
             soul.transform.SetParent(parent);
             soul.transform.position = Vector3.zero;
+            soul.tag = "soul_" + i;
             allSoul[i] = soul;
         }
     }
@@ -32,6 +33,10 @@ public class SoulPooling : MonoBehaviour
     public void callSoulSpawn(Vector3 position)
     {
         GameObject soul = SoulPooling.SharedInstance.GetPooledSoul();
+        if(soul == null)
+        {
+            return;
+        }
         soul.transform.position = position;
         soul.transform.rotation = spawnPoint.rotation;
         soul.SetActive(true);
