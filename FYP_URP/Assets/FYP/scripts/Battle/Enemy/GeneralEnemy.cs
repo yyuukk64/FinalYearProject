@@ -16,7 +16,7 @@ public class GeneralEnemy : MonoBehaviour
 
     [Space()]
 
-    public int SoulNumberReq;
+    public int health;
 
     [Space()]
 
@@ -36,16 +36,11 @@ public class GeneralEnemy : MonoBehaviour
         Initially();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player" && 
-            _Player.GetComponent<TheQueue>()._Queue.Count - 1 >= SoulNumberReq)
+            _Player.GetComponent<TheQueue>()._Queue.Count - 1 >= health)
         {
             BMNG.isWin = true;
             Debug.Log("You win!!!");
@@ -53,7 +48,7 @@ public class GeneralEnemy : MonoBehaviour
             BMNG.Win();
         }
     }
-
+    */
     private void Initially()
     {
         _Enemy.transform.position = _EnemyPos;
@@ -63,4 +58,17 @@ public class GeneralEnemy : MonoBehaviour
         }
         
     }
+
+    public void hurtEnemy(int damage)
+    {
+        this.health -= damage;
+        if (health <= 0)
+        {
+            BMNG.isWin = true;
+            Debug.Log("You win!!!");
+            //Do something...
+            BMNG.Win();
+        }
+    }
+
 }

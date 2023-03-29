@@ -5,14 +5,21 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     SoulPooling m_soulPooling;
+    Collect m_collect;
+    
 
     [HideInInspector] public bool isShooted = false;
 
     public float speedSetoff = 100f;
+    public GameObject Enemy;
+    public GameObject Player;
 
     private void Start()
     {
         m_soulPooling = FindObjectOfType<SoulPooling>();
+        m_collect = FindObjectOfType<Collect>();
+        Enemy = GameObject.FindWithTag("Enemy");
+        Player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -31,7 +38,7 @@ public class Shooting : MonoBehaviour
             resetSoul();
 
             //hurt Enemy...
-
+            Enemy.GetComponent<GeneralEnemy>().hurtEnemy(Player.GetComponent<PlayerManager>().attack);
 
             return;
         }
@@ -47,6 +54,7 @@ public class Shooting : MonoBehaviour
     public void resetSoul()
     {
         this.gameObject.SetActive(false);
+        this.GetComponent<Collect>().canCollect = true;
         isShooted = false;
     }
 }

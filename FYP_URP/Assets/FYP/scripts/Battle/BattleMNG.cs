@@ -80,7 +80,7 @@ public class BattleMNG : MonoBehaviour
         }
 
         //show souls requirement number
-        txt_SoulReq.text = "Souls Requirement: " + _Enemy.GetComponent<GeneralEnemy>().SoulNumberReq.ToString();
+        txt_SoulReq.text = "Souls Requirement: " + _Enemy.GetComponent<GeneralEnemy>().health.ToString();
     }
 
     // Update is called once per frame
@@ -121,7 +121,7 @@ public class BattleMNG : MonoBehaviour
         PM.coin += getMoney;
 
         //Stop Battle BGM
-        BattleBGM.SetActive(false);
+        Destroy(BattleBGM);
     }
 
     [System.Obsolete]
@@ -137,8 +137,10 @@ public class BattleMNG : MonoBehaviour
             getMoney = PM.coin;
         txt_LostCoin.text = "-" + getMoney.ToString();
         PM.coin -= getMoney;
-        
-        BattleBGM.SetActive(false);
+
+        m_SceneChanging.inBattle = false;
+
+        Destroy(BattleBGM);
     }
 
     public void Back2Wild()

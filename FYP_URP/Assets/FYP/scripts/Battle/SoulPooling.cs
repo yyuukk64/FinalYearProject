@@ -25,7 +25,7 @@ public class SoulPooling : MonoBehaviour
             soul.SetActive(false);
             soul.transform.SetParent(parent);
             soul.transform.position = Vector3.zero;
-            soul.tag = "soul_" + i;
+            //soul.tag = "soul_" + i;
             allSoul[i] = soul;
         }
     }

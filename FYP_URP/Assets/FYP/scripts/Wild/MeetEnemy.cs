@@ -48,8 +48,8 @@ public class MeetEnemy : MonoBehaviour
 
         if(walkedDistance > 20)
         {
-            EnterBattle();
             walkedDistance = 0;
+            EnterBattle();
         }
     }
 

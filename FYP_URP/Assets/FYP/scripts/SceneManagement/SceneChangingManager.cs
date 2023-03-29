@@ -48,6 +48,7 @@ public class SceneChangingManager : Singleton<SceneChangingManager>
         m_player = player.GetComponent<PlayerManager>();
         SceneName = m_player.currentScene;
         m_player.SaveBeforeBattle();
+        inBattle = true;
         SceneManager.LoadScene(m_SceneName);
     }
 

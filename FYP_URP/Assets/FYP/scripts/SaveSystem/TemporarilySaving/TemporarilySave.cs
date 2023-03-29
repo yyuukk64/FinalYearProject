@@ -6,6 +6,7 @@ public class TemporarilySave : Singleton<TemporarilySave>
 {
     public int health;
     public int maxHealth;
+    public int attack;
     public int coin;
 
     public string sceneBeforeBattle;
@@ -21,9 +22,10 @@ public class TemporarilySave : Singleton<TemporarilySave>
     {
         health = player.health;
         maxHealth = player.maxHealth;
+        attack = player.attack;
         coin = player.coin;
 
         sceneBeforeBattle = player.currentScene;
-        posBeforeBattle = player.transform.position;
+        //posBeforeBattle = player.transform.position;
     }
 }

@@ -17,6 +17,8 @@ public class PlayerManager : Singleton<PlayerManager>
     [SerializeField] TextMeshProUGUI txtCoin;
 
     public int health, maxHealth = 6;
+    public int attack = 1;
+
     public Sprite heartFull, heartHalf, heartEmpty;
 
     public string currentScene;
@@ -24,6 +26,7 @@ public class PlayerManager : Singleton<PlayerManager>
     //public bool showEBtnCanvas = false;
     
     [SerializeField] TemporarilySave m_temporarilySave;
+    SceneChangingManager m_Scene;
 
     #region Real Save
     public void SavePlayer()
@@ -37,6 +40,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
         health = data.health;
         maxHealth = data.maxHealth;
+        attack = data.attack;
         coin = data.coin;
 
         //Location
@@ -65,6 +69,13 @@ public class PlayerManager : Singleton<PlayerManager>
         SaveTemprarily();
         m_temporarilySave.posBeforeBattle = this.transform.position;
     }
+    public void LoadOnEnterBattle()
+    {
+        this.health = m_temporarilySave.health;
+        this.maxHealth = m_temporarilySave.maxHealth;
+        this.coin = m_temporarilySave.coin;
+        this.attack = m_temporarilySave.attack;
+    }
 
     public void LoadOnSceneLoaded()
     {
@@ -73,17 +84,10 @@ public class PlayerManager : Singleton<PlayerManager>
         this.transform.position = m_temporarilySave.posForGate;
     }
 
-    public void LoadOnEnterBattle()
-    {
-        this.health = m_temporarilySave.health;
-        this.maxHealth = m_temporarilySave.maxHealth;
-        this.coin = m_temporarilySave.coin;
-    }
-
     public void LoadExitFromBattle()
     {
-        LoadOnEnterBattle(); 
-
+        LoadOnEnterBattle();
+        m_Scene.inBattle = false;
         this.transform.position = new Vector3(m_temporarilySave.posBeforeBattle[0], m_temporarilySave.posBeforeBattle[1], m_temporarilySave.posBeforeBattle[2]);
     }
 
@@ -110,6 +114,7 @@ public class PlayerManager : Singleton<PlayerManager>
     public void Init()
     {
         m_temporarilySave = FindObjectOfType<TemporarilySave>();
+        m_Scene = FindObjectOfType<SceneChangingManager>();
         currentScene = SceneManager.GetActiveScene().name;
         for (int i = 0; i<3; i++)
         {

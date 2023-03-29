@@ -4237,7 +4237,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220857909}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 10.033193, z: 77.420654}
@@ -8336,7 +8336,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 312109795463828412, guid: 633594a858a023f4fbe9ff9f7233e70c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 97649.09
+      value: 102180.484
       objectReference: {fileID: 0}
     - target: {fileID: 312109795476397095, guid: 633594a858a023f4fbe9ff9f7233e70c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8412,7 +8412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 312109796436525481, guid: 633594a858a023f4fbe9ff9f7233e70c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 97649.09
+      value: 102180.484
       objectReference: {fileID: 0}
     - target: {fileID: 312109797073236711, guid: 633594a858a023f4fbe9ff9f7233e70c, type: 3}
       propertyPath: m_Pivot.x
@@ -23273,7 +23273,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223391333}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 10.033193, z: 112.482376}
@@ -31583,6 +31583,7 @@ MonoBehaviour:
   txtCoin: {fileID: 414416855}
   health: 6
   maxHealth: 6
+  attack: 1
   heartFull: {fileID: -5403747216940433073, guid: 56167208a4ef74c49b54703f7965869a, type: 3}
   heartHalf: {fileID: 9140446846260144330, guid: 56167208a4ef74c49b54703f7965869a, type: 3}
   heartEmpty: {fileID: 7917636480495289721, guid: 56167208a4ef74c49b54703f7965869a, type: 3}
@@ -32066,7 +32067,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668467185}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 10.033193, z: 77.420654}
@@ -32781,7 +32782,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703329626}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 10.033193, z: 112.482376}

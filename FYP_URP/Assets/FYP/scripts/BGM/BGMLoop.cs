@@ -17,12 +17,6 @@ public class BGMLoop : MonoBehaviour
         StartCoroutine(PlayerLoop());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     IEnumerator PlayerLoop()
     {
         yield return new WaitForSeconds(introLengthSec);

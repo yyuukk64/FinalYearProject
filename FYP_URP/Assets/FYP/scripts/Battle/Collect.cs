@@ -7,7 +7,7 @@ public class Collect : MonoBehaviour
     TheQueue theQueue;
 
     [SerializeField] GameObject thisGameObject;
-    bool canCollect = true;
+    public bool canCollect = true;
 
     // Start is called before the first frame update
     void Start()
