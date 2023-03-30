@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Enemy: {fileID: 100196035286655259}
-  _Soul: {fileID: 8497196292866482847, guid: cfcf04ea0b2be7040a88931ffd4efd0c, type: 3}
   _Player: {fileID: 0}
   _EnemyPos: {x: 14.2, y: 2.17, z: -26.8}
   _SoulPos:
@@ -134,7 +133,7 @@ MonoBehaviour:
   - {x: 30, y: 2, z: 20}
   - {x: -30, y: 2, z: 20}
   - {x: -30, y: 2, z: -20}
-  SoulNumberReq: 4
+  health: 5
   MinMoney: 40
   MaxMoney: 100
 --- !u!114 &764593210942032490

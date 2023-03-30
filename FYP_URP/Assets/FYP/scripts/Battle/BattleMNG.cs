@@ -29,7 +29,9 @@ public class BattleMNG : MonoBehaviour
     
 
     //show souls requirement number
-    [SerializeField] TextMeshProUGUI txt_SoulReq;
+    public Image imgEnemyHealth;
+    public float floatEnemyMaxHealth;
+    public float floatEnemyHealth;
 
     //Lost Animation
     public bool isLost = false;
@@ -80,7 +82,7 @@ public class BattleMNG : MonoBehaviour
         }
 
         //show souls requirement number
-        txt_SoulReq.text = "Souls Requirement: " + _Enemy.GetComponent<GeneralEnemy>().health.ToString();
+        floatEnemyMaxHealth = _Enemy.GetComponent<GeneralEnemy>().health;
     }
 
     // Update is called once per frame

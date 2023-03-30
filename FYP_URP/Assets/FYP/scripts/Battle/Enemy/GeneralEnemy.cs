@@ -36,19 +36,6 @@ public class GeneralEnemy : MonoBehaviour
         Initially();
     }
 
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player" && 
-            _Player.GetComponent<TheQueue>()._Queue.Count - 1 >= health)
-        {
-            BMNG.isWin = true;
-            Debug.Log("You win!!!");
-            //Do something...
-            BMNG.Win();
-        }
-    }
-    */
     private void Initially()
     {
         _Enemy.transform.position = _EnemyPos;

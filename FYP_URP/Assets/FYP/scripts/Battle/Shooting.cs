@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
     SoulPooling m_soulPooling;
     Collect m_collect;
+    BattleMNG m_battleMNG;
     
 
     [HideInInspector] public bool isShooted = false;
@@ -18,6 +20,8 @@ public class Shooting : MonoBehaviour
     {
         m_soulPooling = FindObjectOfType<SoulPooling>();
         m_collect = FindObjectOfType<Collect>();
+        m_battleMNG = FindObjectOfType<BattleMNG>();
+
         Enemy = GameObject.FindWithTag("Enemy");
         Player = GameObject.FindWithTag("Player");
     }
@@ -39,6 +43,9 @@ public class Shooting : MonoBehaviour
 
             //hurt Enemy...
             Enemy.GetComponent<GeneralEnemy>().hurtEnemy(Player.GetComponent<PlayerManager>().attack);
+
+            Debug.Log(Enemy.GetComponent<GeneralEnemy>().health + " / " + m_battleMNG.floatEnemyMaxHealth);
+            m_battleMNG.imgEnemyHealth.GetComponent<Image>().fillAmount = (Enemy.GetComponent<GeneralEnemy>().health / m_battleMNG.floatEnemyMaxHealth);
 
             return;
         }
