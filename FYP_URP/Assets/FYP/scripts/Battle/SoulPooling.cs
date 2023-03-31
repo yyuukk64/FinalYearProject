@@ -13,6 +13,11 @@ public class SoulPooling : MonoBehaviour
     public Transform parent;
     public GameObject instanceSoul;
 
+    [Space()]
+
+    [SerializeField] GameObject Spawn_Effect;
+
+
     private void Awake()
     {
         SharedInstance = this;
@@ -40,6 +45,7 @@ public class SoulPooling : MonoBehaviour
         soul.transform.position = position;
         soul.transform.rotation = spawnPoint.rotation;
         soul.SetActive(true);
+        Instantiate(Spawn_Effect, position, Quaternion.identity);
     }
 
     public GameObject GetPooledSoul()
