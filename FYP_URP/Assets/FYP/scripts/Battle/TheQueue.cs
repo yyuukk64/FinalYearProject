@@ -9,6 +9,9 @@ public class TheQueue : MonoBehaviour
     public Vector3 worldPosition;
     Plane plane = new Plane(new Vector3(0, 2, 0), 0);
 
+    [SerializeField]
+    AudioSource InShooting;
+
     public void AddToQueue(GameObject _new)
     {
         _Queue.Add(_new);
@@ -52,5 +55,7 @@ public class TheQueue : MonoBehaviour
         _Queue[1].transform.LookAt(worldPosition);
 
         _Queue[1].GetComponent<Shooting>().isShooted = true;
+
+        InShooting.Play();
     }
 }

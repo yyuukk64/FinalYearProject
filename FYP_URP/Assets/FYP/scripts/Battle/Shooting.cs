@@ -16,6 +16,9 @@ public class Shooting : MonoBehaviour
     public GameObject Enemy;
     public GameObject Player;
 
+    [SerializeField]
+    AudioSource AttackedEnemySFX;
+
     private void Start()
     {
         m_soulPooling = FindObjectOfType<SoulPooling>();
@@ -40,6 +43,8 @@ public class Shooting : MonoBehaviour
         if (other.tag == "Enemy")
         {
             resetSoul();
+
+            this.AttackedEnemySFX.Play();
 
             //hurt Enemy...
             Enemy.GetComponent<GeneralEnemy>().hurtEnemy(Player.GetComponent<PlayerManager>().attack);
