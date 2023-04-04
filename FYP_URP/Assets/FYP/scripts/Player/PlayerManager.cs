@@ -132,6 +132,7 @@ public class PlayerManager : Singleton<PlayerManager>
         ShowHeart();
         ShowHealth();
         txtCoin.text = coin.ToString();
+
     }
 
     public void AddMaxHealth(int MaxHealthToAdd)

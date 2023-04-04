@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     [HideInInspector] public float sprintSpeed;
 
     [SerializeField] GameObject PlayerBody;
+    [SerializeField] Animator anim;
 
     public Transform orientation;
 
@@ -38,7 +39,6 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
     }
 
     private void Update()
@@ -129,6 +129,15 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         {
             horizontalInput = Input.GetAxisRaw("Horizontal");
             verticalInput = Input.GetAxisRaw("Vertical");
+
+            if(horizontalInput != 0 || verticalInput != 0)
+            {
+                anim.SetBool("isWalking", true);
+            }
+            else
+            {
+                anim.SetBool("isWalking", false);
+            }
         }
 
 
