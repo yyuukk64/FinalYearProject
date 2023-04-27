@@ -5,8 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new dialogue", menuName = "Dialogue")]
 public class Dialogue : ScriptableObject
 {
-    public string dialoguerName;
+    public string[] dialoguerName;
     public string[] dialoguerSentences;
+    public string[] dialoguerStructure;
     public int[] loadDialogueNo;
 
     // Start is called before the first frame update

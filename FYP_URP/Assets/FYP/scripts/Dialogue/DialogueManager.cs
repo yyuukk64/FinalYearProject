@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     public Text worldDialogue;
     public bool isAllow = true;
 
-    private string myName;
+    private string[] myName;
     private string[] mySentences;
     private int sentencesNo = 0;
 
@@ -34,7 +34,6 @@ public class DialogueManager : MonoBehaviour
         
         myName = dialogue.dialoguerName;
         mySentences = dialogue.dialoguerSentences;
-        nameText.text = myName;
 
         //assign the last sentence of the conversation and show in world space
         worldDialogue.text = dialogue.dialoguerSentences[dialogue.dialoguerSentences.Length - 1];
@@ -49,6 +48,7 @@ public class DialogueManager : MonoBehaviour
             playerMovement.canMove = false;
             canvas.SetActive(true);
             dialogueText.text = mySentences[sentencesNo];
+            nameText.text = myName[sentencesNo];
             sentencesNo++;
         }
         else if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo == mySentences.Length)

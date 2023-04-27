@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ea9afcff591f6e45bb414472e131201, type: 3}
-  m_Name: BossInside_Dialogue
+  m_Name: BossOutside_Dialogue
   m_EditorClassIdentifier: 
-  dialoguerName: Boss
+  dialoguerName:
+  - Boss
+  - Boss
   dialoguerSentences:
-  - Please get out here...
+  - I'm sorry >.<|||
+  - 'The shop is out of service... '
+  dialoguerStructure: []
   loadDialogueNo: 
