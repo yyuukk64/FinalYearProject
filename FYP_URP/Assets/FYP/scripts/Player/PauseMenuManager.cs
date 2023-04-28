@@ -5,6 +5,7 @@ public class PauseMenuManager : MonoBehaviour
 {
 
     public static bool GameIsPaused = false;
+    public bool CanPause = true;
 
     public GameObject pauseMenuUI;
 
@@ -15,6 +16,11 @@ public class PauseMenuManager : MonoBehaviour
 
     void Update()
     {
+        if (!CanPause)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)

@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    private PlayerMovement playerMovement;
+    private PlayerMovement m_playerMovement;
+    private PauseMenuManager m_pauseMenu;
 
     public Dialogue dialogue;
     public GameObject canvas;
@@ -28,7 +29,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        playerMovement = FindObjectOfType<PlayerMovement>();
+        m_playerMovement = FindObjectOfType<PlayerMovement>();
 
         //EBtn_Canvas.SetActive(false);
         
@@ -45,7 +46,8 @@ public class DialogueManager : MonoBehaviour
         if (talking && Input.GetKeyDown(KeyCode.E)&& sentencesNo < mySentences.Length)
         {
             EBtn_Canvas.SetActive(false);
-            playerMovement.canMove = false;
+            m_playerMovement.canMove = false;
+            m_pauseMenu.CanPause = false;
             canvas.SetActive(true);
             dialogueText.text = mySentences[sentencesNo];
             nameText.text = myName[sentencesNo];
@@ -53,7 +55,8 @@ public class DialogueManager : MonoBehaviour
         }
         else if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo == mySentences.Length)
         {
-            playerMovement.canMove = true;
+            m_playerMovement.canMove = true;
+            m_pauseMenu.CanPause = true;
             //EBtn_Canvas.SetActive(true);
             canvas.SetActive(false);
             talking = false;
