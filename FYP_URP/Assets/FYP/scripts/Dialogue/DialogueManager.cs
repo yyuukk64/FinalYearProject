@@ -9,8 +9,13 @@ public class DialogueManager : MonoBehaviour
     private PauseMenuManager m_pauseMenu;
 
     public Dialogue dialogue;
+    public GameObject[] Ima_Char;
+
+    [Space()]
     public GameObject canvas;
     public GameObject EBtn_Canvas;
+
+    [Space()]
     public Text dialogueText;
     public Text nameText;
 
@@ -26,10 +31,14 @@ public class DialogueManager : MonoBehaviour
     private bool talking = false;
     private bool taked = false;
 
+    [Header("Animation")]
+    public Animator anim;
+
     // Start is called before the first frame update
     private void Start()
     {
         m_playerMovement = FindObjectOfType<PlayerMovement>();
+        m_pauseMenu = FindObjectOfType<PauseMenuManager>();
 
         //EBtn_Canvas.SetActive(false);
         
@@ -51,6 +60,16 @@ public class DialogueManager : MonoBehaviour
             canvas.SetActive(true);
             dialogueText.text = mySentences[sentencesNo];
             nameText.text = myName[sentencesNo];
+
+            if(myName[sentencesNo] == "Memoria")
+            {
+                anim.SetTrigger("_Memoria");
+            }
+            else
+            {
+                anim.SetTrigger("_NPC");
+            }
+
             sentencesNo++;
         }
         else if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo == mySentences.Length)

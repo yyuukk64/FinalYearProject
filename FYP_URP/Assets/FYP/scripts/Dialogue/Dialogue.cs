@@ -7,18 +7,6 @@ public class Dialogue : ScriptableObject
 {
     public string[] dialoguerName;
     public string[] dialoguerSentences;
-    public string[] dialoguerStructure;
+    public string[] dialoguerEmotion;
     public int[] loadDialogueNo;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

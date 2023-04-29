@@ -32,17 +32,43 @@ public class CatchPlayer : MonoBehaviour
     {
         m_movement.canMove = false;
         m_pauseMenu.CanPause = false;
+
+        myName = dialogue.dialoguerName;
+        mySentences = dialogue.dialoguerSentences;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && sentencesNo < mySentences.Length)
+        if ((Input.GetKeyDown(KeyCode.E)||Input.GetMouseButtonDown(0)) && sentencesNo < mySentences.Length)
         {
             dialogueText.text = mySentences[sentencesNo];
             nameText.text = myName[sentencesNo];
+            anim.SetInteger("SentanceNo", sentencesNo);
+            if(myName[sentencesNo] == "Memoria")
+            {
+                anim.SetTrigger("_Memoria");
+            }
+            else if (myName[sentencesNo] == "Angel")
+            {
+                anim.SetTrigger("_Angel");
+            }
+            else if(myName[sentencesNo] == "Devid")
+            {
+                anim.SetTrigger("_Devid");
+            }
+
             sentencesNo++;
-
-
         }
+        else if ((Input.GetKeyDown(KeyCode.E) || Input.GetMouseButton(0)) && sentencesNo == mySentences.Length)
+        {
+            endOftheAnimation();
+        }
+    }
+
+    void endOftheAnimation()
+    {
+        m_movement.canMove = true;
+        m_pauseMenu.CanPause = true;
+        Destroy(this.gameObject);
     }
 }
