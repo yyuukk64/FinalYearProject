@@ -16,6 +16,8 @@ public class Shooting : MonoBehaviour
     public GameObject Enemy;
     public GameObject Player;
 
+    public GameObject Impact;
+
     [SerializeField]
     AudioSource AttackedEnemySFX;
 
@@ -43,6 +45,7 @@ public class Shooting : MonoBehaviour
         if (other.tag == "Enemy")
         {
             resetSoul();
+            Instantiate(Impact, this.gameObject.transform.position, Quaternion.identity);
 
             this.AttackedEnemySFX.Play();
 
