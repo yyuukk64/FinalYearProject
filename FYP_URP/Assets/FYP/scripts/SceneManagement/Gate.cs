@@ -15,13 +15,11 @@ public class Gate : MonoBehaviour
     private PlayerManager m_Player;
     private GameObject player;
     private SceneChangingManager m_sceneManager;
-    private TemporarilySave m_temporarilySave;
 
 
     void Start()
     {
         m_sceneManager = FindObjectOfType<SceneChangingManager>();
-        m_temporarilySave = FindObjectOfType<TemporarilySave>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,7 +27,6 @@ public class Gate : MonoBehaviour
         if (other.tag == "Player")
         {
             m_sceneManager = FindObjectOfType<SceneChangingManager>();
-            m_temporarilySave = FindObjectOfType<TemporarilySave>();
 
             player = GameObject.FindWithTag("Player");
             m_Player = player.GetComponent<PlayerManager>();
@@ -37,9 +34,6 @@ public class Gate : MonoBehaviour
             m_sceneManager.canChange = true;
             m_sceneManager.SceneName = SceneName;
 
-            m_temporarilySave.posForGate[0] = EntryPos.x;
-            m_temporarilySave.posForGate[1] = EntryPos.y;
-            m_temporarilySave.posForGate[2] = EntryPos.z;
         }
     }
 
@@ -48,7 +42,7 @@ public class Gate : MonoBehaviour
         if (other.tag == "Player")
         {
             m_sceneManager = FindObjectOfType<SceneChangingManager>();
-            m_temporarilySave = FindObjectOfType<TemporarilySave>();
+
 
             player = GameObject.FindWithTag("Player");
             m_Player = player.GetComponent<PlayerManager>();

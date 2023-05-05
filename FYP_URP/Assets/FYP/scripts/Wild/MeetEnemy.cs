@@ -21,7 +21,6 @@ public class MeetEnemy : MonoBehaviour
     PlayerMovement PMove;
     BGMLoop bGMLoop;
     SceneChangingManager m_sceneChangingManager;
-    TemporarilySave m_temporarilySave;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +30,6 @@ public class MeetEnemy : MonoBehaviour
         PMove = FindObjectOfType<PlayerMovement>();
         bGMLoop = FindObjectOfType<BGMLoop>();
         m_sceneChangingManager = FindObjectOfType<SceneChangingManager>();
-        m_temporarilySave = FindObjectOfType<TemporarilySave>();
 
         //make sure player can move
         PMove.canMove = true;

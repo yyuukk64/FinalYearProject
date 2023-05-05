@@ -32,6 +32,7 @@ public class SaveSlotsMenu : Menu
         // case - loading game
         if (isLoadingGame) 
         {
+            
             DataPersistenceManager.instance.ChangeSelectedProfileId(saveSlot.GetProfileId());
             SaveGameAndLoadScene();
         }
@@ -55,8 +56,11 @@ public class SaveSlotsMenu : Menu
         // case - new game, and the save slot has no data
         else 
         {
+            Debug.Log("WORK TILL HERE03");
             DataPersistenceManager.instance.ChangeSelectedProfileId(saveSlot.GetProfileId());
+            Debug.Log("WORK TILL HERE02");
             DataPersistenceManager.instance.NewGame();
+            Debug.Log("WORK TILL HERE01");
             SaveGameAndLoadScene();
         }
     }

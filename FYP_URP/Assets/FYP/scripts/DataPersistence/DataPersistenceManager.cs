@@ -10,14 +10,13 @@ public class DataPersistenceManager : MonoBehaviour
     [SerializeField] private bool disableDataPersistence = false;
     [SerializeField] private bool initializeDataIfNull = false;
     [SerializeField] private bool overrideSelectedProfileId = false;
-    [SerializeField] private string testSelectedProfileId = "test";
+    [SerializeField] private string testSelectedProfileId = "1234";
 
     [Header("File Storage Config")]
     [SerializeField] private string fileName;
     [SerializeField] private bool useEncryption;
 
     [Header("Auto Saving Configuration")]
-    [SerializeField] public bool autoSaveAllow = true;
     [SerializeField] private float autoSaveTimeSeconds = 60f;
 
     private GameData gameData;
@@ -29,10 +28,6 @@ public class DataPersistenceManager : MonoBehaviour
     private Coroutine autoSaveCoroutine;
 
     public static DataPersistenceManager instance { get; private set; }
-
-    private void Start()
-    {
-    }
 
     private void Awake() 
     {
@@ -67,20 +62,15 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode) 
     {
-        
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
 
-        if (!autoSaveAllow)
-            return;
-        
         // start up the auto saving coroutine
         if (autoSaveCoroutine != null) 
         {
             StopCoroutine(autoSaveCoroutine);
         }
         autoSaveCoroutine = StartCoroutine(AutoSave());
-        
     }
 
     public void ChangeSelectedProfileId(string newProfileId) 

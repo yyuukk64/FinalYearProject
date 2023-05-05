@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class SceneChangingManager : Singleton<SceneChangingManager>
 {
     [SerializeField]private PlayerManager m_player;
-    private TemporarilySave m_temp;
     private GameObject player;
 
     public bool canChange = false;
@@ -16,7 +15,6 @@ public class SceneChangingManager : Singleton<SceneChangingManager>
 
     private void Start()
     {
-        m_temp = FindObjectOfType<TemporarilySave>();
         m_player = FindObjectOfType<PlayerManager>();
         DontDestroyOnLoad(this);
     }

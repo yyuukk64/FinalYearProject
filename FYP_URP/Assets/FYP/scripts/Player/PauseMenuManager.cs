@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class PauseMenuManager : MonoBehaviour
 {
 
@@ -30,7 +32,7 @@ public class PauseMenuManager : MonoBehaviour
 
     public void Save()
     {
-
+        Debug.Log("on progress");
     }
 
     public void Resume()
@@ -48,7 +50,11 @@ public class PauseMenuManager : MonoBehaviour
     }
     public void QuitGame()
     {
-        Debug.Log("on progress");
+        SceneManager.LoadSceneAsync("MainMenu");
+    }
+    public void DeactivateMenu()
+    {
+        this.gameObject.SetActive(false);
     }
 }
 

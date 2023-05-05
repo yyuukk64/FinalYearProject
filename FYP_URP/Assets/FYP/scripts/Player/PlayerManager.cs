@@ -25,33 +25,32 @@ public class PlayerManager : Singleton<PlayerManager>
 
     //public bool showEBtnCanvas = false;
     
-    [SerializeField] TemporarilySave m_temporarilySave;
     SceneChangingManager m_Scene;
 
     #region Real Save
     public void SavePlayer()
     {
-        SaveSystem.SavePlayer(this);
+        /////////SaveSystem.SavePlayer(this);
     }
 
     public void LoadPlayer()
     {
-        PlayerData data = SaveSystem.LoadPlayer();
+        /////////PlayerData data = SaveSystem.LoadPlayer();
 
-        health = data.health;
-        maxHealth = data.maxHealth;
-        attack = data.attack;
-        coin = data.coin;
+        /////////health = data.health;
+        /////////maxHealth = data.maxHealth;
+        /////////attack = data.attack;
+        /////////coin = data.coin;
 
         //Location
-        currentScene = data.currentScene;
+        /////////currentScene = data.currentScene;
         //changingScene
 
         Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-        transform.position = position;
+        /////////position.x = data.position[0];
+        /////////position.y = data.position[1];
+        /////////position.z = data.position[2];
+        /////////transform.position = position;
     }
 
     #endregion
@@ -60,35 +59,35 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public void SaveTemprarily()
     {
-        m_temporarilySave = FindObjectOfType<TemporarilySave>();
-        m_temporarilySave.TemporarilyData(this);
+        ///////m_temporarilySave = FindObjectOfType<TemporarilySave>();
+        ///////m_temporarilySave.TemporarilyData(this);
     }
 
     public void SaveBeforeBattle()
     {
         SaveTemprarily();
-        m_temporarilySave.posBeforeBattle = this.transform.position;
+        ///////m_temporarilySave.posBeforeBattle = this.transform.position;
     }
     public void LoadOnEnterBattle()
     {
-        this.health = m_temporarilySave.health;
-        this.maxHealth = m_temporarilySave.maxHealth;
-        this.coin = m_temporarilySave.coin;
-        this.attack = m_temporarilySave.attack;
+        ///////this.health = m_temporarilySave.health;
+        ///////this.maxHealth = m_temporarilySave.maxHealth;
+        ///////this.coin = m_temporarilySave.coin;
+        ///////this.attack = m_temporarilySave.attack;
     }
 
     public void LoadOnSceneLoaded()
     {
         LoadOnEnterBattle();
 
-        this.transform.position = m_temporarilySave.posForGate;
+        /////this.transform.position = m_temporarilySave.posForGate;
     }
 
     public void LoadExitFromBattle()
     {
         LoadOnEnterBattle();
         m_Scene.inBattle = false;
-        this.transform.position = new Vector3(m_temporarilySave.posBeforeBattle[0], m_temporarilySave.posBeforeBattle[1], m_temporarilySave.posBeforeBattle[2]);
+        /////this.transform.position = new Vector3(m_temporarilySave.posBeforeBattle[0], m_temporarilySave.posBeforeBattle[1], m_temporarilySave.posBeforeBattle[2]);
     }
 
     public void LoadOnLoadGame()
@@ -113,7 +112,6 @@ public class PlayerManager : Singleton<PlayerManager>
     // Start is called before the first frame update
     public void Init()
     {
-        m_temporarilySave = FindObjectOfType<TemporarilySave>();
         m_Scene = FindObjectOfType<SceneChangingManager>();
         currentScene = SceneManager.GetActiveScene().name;
         for (int i = 0; i<3; i++)
