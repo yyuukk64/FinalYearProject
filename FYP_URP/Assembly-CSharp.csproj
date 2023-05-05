@@ -53,7 +53,7 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\FYP\scripts\BGM\Dialogue\DialogueManager.cs" />
+    <Compile Include="Assets\FYP\scripts\Dialogue\DialogueManager.cs" />
     <Compile Include="Assets\StandloneSample\Scripts\Standalone\StandaloneEasySample.cs" />
     <Compile Include="Assets\StandloneSample\Scripts\Hololens\MicrosoftSample\Singleton.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
@@ -109,7 +109,7 @@
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\FYP\scripts\Haert.cs" />
     <Compile Include="Assets\FYP\scripts\Inventories\InventoryItem.cs" />
-    <Compile Include="Assets\FYP\scripts\BGM\Dialogue\Dialogue.cs" />
+    <Compile Include="Assets\FYP\scripts\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\FYP\scripts\BGM\BattleBGM.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\StandloneSample\Scripts\Hololens\HololensEasyReaderSample.cs" />
@@ -134,7 +134,7 @@
     <Compile Include="Assets\StandloneSample\Scripts\Hololens\MicrosoftSample\QRCodesSetup.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
-    <Compile Include="Assets\FYP\scripts\BGM\Dialogue\Compulsary\CatchPlayer.cs" />
+    <Compile Include="Assets\FYP\scripts\Dialogue\Compulsary\CatchPlayer.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\FYP\scripts\SceneManagement\Gate.cs" />
     <Compile Include="Assets\DataPersistence\DataPersistenceManager.cs" />
@@ -156,6 +156,7 @@
     <Compile Include="Assets\FYP\scripts\Battle\Enemy\Attack\AttackPattern\E_BetaPattern.cs" />
     <Compile Include="Assets\FYP\scripts\Battle\Following.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\FYP\scripts\Dialogue\CharacterEmotion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fantasy Adventure Environment\Shaders\VS_InstancedIndirect.cginc" />
