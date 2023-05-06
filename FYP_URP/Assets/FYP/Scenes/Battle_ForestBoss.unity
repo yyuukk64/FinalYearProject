@@ -8357,7 +8357,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 312109795463828412, guid: 633594a858a023f4fbe9ff9f7233e70c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 490955.5
+      value: 509935.53
       objectReference: {fileID: 0}
     - target: {fileID: 312109795476397095, guid: 633594a858a023f4fbe9ff9f7233e70c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8433,7 +8433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 312109796436525481, guid: 633594a858a023f4fbe9ff9f7233e70c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 490955.5
+      value: 509935.53
       objectReference: {fileID: 0}
     - target: {fileID: 312109797073236711, guid: 633594a858a023f4fbe9ff9f7233e70c, type: 3}
       propertyPath: m_Pivot.x
@@ -22198,13 +22198,39 @@ GameObject:
   - component: {fileID: 1157338789}
   - component: {fileID: 1157338790}
   - component: {fileID: 1157338791}
+  - component: {fileID: 1157338788}
   m_Layer: 0
-  m_Name: BattleMNG
+  m_Name: BattleMNG_Boss_GetScissor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1157338788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157338787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621c15570fea74f4eb6d5b567103bee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Player: {fileID: 0}
+  _Enemy: {fileID: 0}
+  _EmenyPosition: {fileID: 0}
+  _Soul: {fileID: 0}
+  isWin: 0
+  BattleBGM: {fileID: 0}
+  winningCanvas: {fileID: 0}
+  txt_GetCoin: {fileID: 0}
+  imgEnemyHealth: {fileID: 0}
+  floatEnemyMaxHealth: 0
+  floatEnemyHealth: 0
+  isLost: 0
+  txt_LostCoin: {fileID: 0}
 --- !u!4 &1157338789
 Transform:
   m_ObjectHideFlags: 0
