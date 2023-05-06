@@ -59,6 +59,7 @@
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\StandloneSample\Scripts\Hololens\MicrosoftSample\QRCodesVisualizer.cs" />
+    <Compile Include="Assets\FYP\scripts\Dialogue\CharacterEmotion.cs" />
     <Compile Include="Assets\StandloneSample\Scripts\Standalone\StandaloneReworkedSampleWithoutQRCode.cs" />
     <Compile Include="Assets\FYP\scripts\MoveCamera.cs" />
     <Compile Include="Assets\FYP\scripts\MainMenu\ConfirmationPopupMenu.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Assets\FYP\scripts\SaveSystem\TemporarilySaving\TemporarilySave.cs" />
     <Compile Include="Assets\Mystical Forest\Prefabs\Props\magic crystal\MagicCrystalRotation.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\FYP\scripts\Wild\Cut_Ivy.cs" />
     <Compile Include="Assets\FYP\scripts\LobbyManager.cs" />
     <Compile Include="Assets\DataPersistence\SerializableTypes\SerializableDictionary.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
@@ -156,8 +158,7 @@
     <Compile Include="Assets\FYP\scripts\Battle\Enemy\Attack\AttackPattern\E_BetaPattern.cs" />
     <Compile Include="Assets\FYP\scripts\Battle\Following.cs" />
     <Compile Include="Assets\FYP\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\FYP\scripts\Dialogue\CharacterEmotion.cs" />
-    <Compile Include="Assets\FYP\scripts\Wild\Cut_Ivy.cs" />
+    <Compile Include="Assets\FYP\scripts\SceneManagement\TransInSameMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fantasy Adventure Environment\Shaders\VS_InstancedIndirect.cginc" />
