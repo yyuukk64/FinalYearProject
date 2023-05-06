@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TriggerTheStoryAndBattle : MonoBehaviour
 {
-    public bool Passed = false;
-
     [Header("BGM")]
     public GameObject ForestBGM;
     public GameObject BattleBGM;
@@ -23,14 +21,17 @@ public class TriggerTheStoryAndBattle : MonoBehaviour
 
     private void Start()
     {
-
+        if (m_Player.Passed_and_Get_Scissor)
+        {
+            Destroy(this.gameObject);
+        }
 
         //For animation [Enter Battle]
         anim = _enterBattle.GetComponent<Animator>();
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && !m_Player.Passed_and_Get_Scissor)
         {
             //Animation (Fade Out)...
 
