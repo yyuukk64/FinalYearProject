@@ -55,6 +55,7 @@ public class MeetEnemy : MonoBehaviour
 
     void EnterBattle()
     {
+        //Randomize a number to decide that is it enter to battle.
         float i = Random.Range(0.0f, 100f);
         Debug.Log("i is " + i);
         if (i > 60)

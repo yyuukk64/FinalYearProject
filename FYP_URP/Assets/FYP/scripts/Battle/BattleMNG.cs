@@ -120,7 +120,7 @@ public class BattleMNG : MonoBehaviour
         //get Money
         getMoney = Random.RandomRange(_Enemy.GetComponent<GeneralEnemy>().MinMoney, _Enemy.GetComponent<GeneralEnemy>().MaxMoney);
         txt_GetCoin.text = getMoney.ToString();
-        PM.coin += getMoney;
+        PM.AddMoney(getMoney);
 
         //Stop Battle BGM
         Destroy(BattleBGM);
@@ -138,7 +138,7 @@ public class BattleMNG : MonoBehaviour
         if (getMoney >= PM.coin)
             getMoney = PM.coin;
         txt_LostCoin.text = "-" + getMoney.ToString();
-        PM.coin -= getMoney;
+        PM.PayMoney(getMoney);
 
         m_SceneChanging.inBattle = false;
 

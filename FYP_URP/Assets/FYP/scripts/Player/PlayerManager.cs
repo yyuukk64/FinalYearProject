@@ -23,6 +23,11 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public string currentScene;
 
+    [Header("process")]
+    public bool EnteredForest1_1 = false;
+    public bool EnteredForest1_4 = false;
+    public bool Passed_and_Get_Scissor = false;
+
     //public bool showEBtnCanvas = false;
     
     [SerializeField] TemporarilySave m_temporarilySave;
@@ -44,14 +49,13 @@ public class PlayerManager : Singleton<PlayerManager>
         coin = data.coin;
 
         //Location
-        currentScene = data.currentScene;
-        //changingScene
-
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-        transform.position = position;
+            currentScene = data.currentScene;
+            //changingScene
+            Vector3 position;
+            position.x = data.position[0];
+            position.y = data.position[1];
+            position.z = data.position[2];
+            transform.position = position;
     }
 
     #endregion
@@ -398,5 +402,15 @@ public class PlayerManager : Singleton<PlayerManager>
                 heartState[i].sprite = heartEmpty;
             }
         }
+    }
+
+    public void AddMoney(int getMoney)
+    {
+        coin += getMoney;
+    }
+
+    public void PayMoney(int payMoney)
+    {
+        coin -= payMoney;
     }
 }
