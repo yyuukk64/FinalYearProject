@@ -10,20 +10,9 @@ public class Attack : MonoBehaviour
 
     [SerializeField] GameObject BlueBeam;
     [SerializeField] GameObject IncinerateSpell;
+    [SerializeField] GameObject FireArea;
 
     Transform a;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void BeamAttack_V(int i)
     {
@@ -47,5 +36,11 @@ public class Attack : MonoBehaviour
     {
         var position = new Vector3(Random.Range(-40.0f, 40.0f), 2, Random.Range(-30.0f, 30.0f));
         Instantiate(IncinerateSpell, position, Quaternion.identity);
+    }
+
+    public void FireAreaAttack()
+    {
+        var position = new Vector3(Random.Range(-40.0f, 40.0f), 2, Random.Range(-30.0f, 30.0f));
+        Instantiate(FireArea, position, Quaternion.identity);
     }
 }

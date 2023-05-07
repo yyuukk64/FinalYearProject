@@ -9,7 +9,6 @@ public class BattleMNG_Boss_GetScissor : MonoBehaviour
 {
     public GameObject _Player;
 
-    //[HideInInspector]
     public GameObject _Enemy;
     public Transform _EmenyPosition;
 
