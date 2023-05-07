@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Disappare : MonoBehaviour
 {
-    float Daley_Time = 15f;
+    float Daley_Time = 7f;
 
-    Animator anim;
+    [SerializeField] Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = this.GetComponent<Animator>();
         StartCoroutine(DaleyToDisappare());
     }
 

@@ -23,6 +23,9 @@ public class TriggerTheStoryAndBattle : MonoBehaviour
     {
         m_Player = FindObjectOfType<PlayerManager>();
         m_Movement = FindObjectOfType<PlayerMovement>();
+        m_sceneChangingManager = FindObjectOfType<SceneChangingManager>();
+        m_temporarilySave = FindObjectOfType<TemporarilySave>();
+        bGMLoop = FindObjectOfType<BGMLoop>();
 
         //For animation [Enter Battle]
         anim = _enterBattle.GetComponent<Animator>();

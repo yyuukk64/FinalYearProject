@@ -5,7 +5,7 @@ using UnityEngine;
 public class Boss_ScissorPattern : MonoBehaviour
 {
     Attack attack;
-    BattleMNG BMNG;
+    BattleMNG_Boss_GetScissor BMNG;
 
     bool CD;    //is in Cool Down?
 
@@ -13,7 +13,7 @@ public class Boss_ScissorPattern : MonoBehaviour
     void Start()
     {
         attack = FindObjectOfType<Attack>();
-        BMNG = FindObjectOfType<BattleMNG>();
+        BMNG = FindObjectOfType<BattleMNG_Boss_GetScissor>();
         Pattern4();
     }
 

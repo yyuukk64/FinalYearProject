@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 835868405053352464}
   - component: {fileID: 5890760449209876548}
   - component: {fileID: -3727489559139885330}
+  - component: {fileID: 6803811646982937728}
   m_Layer: 0
   m_Name: Fire Shield
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c14574dd996a35d40ba724bdc8c2a76b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 835868405053352464}
+--- !u!135 &6803811646982937728
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835868405053352430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1516268666646962202
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +203,6 @@ GameObject:
   - component: {fileID: 1932052385425817989}
   - component: {fileID: 1053026756346470676}
   - component: {fileID: 4663876254987461050}
-  - component: {fileID: 908853810879194109}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -259,19 +273,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &908853810879194109
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2742613324899557393}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.1
-  m_Center: {x: 0, y: -0.00000023841852, z: 2.8421701e-14}
 --- !u!1 &5339761463948096185
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,14 +5,14 @@ using UnityEngine;
 public class GeneralEnemy : MonoBehaviour
 {
     [Header("Game Object")]
-    [SerializeField] GameObject _Enemy;
-    [SerializeField] GameObject _Player; 
+    public GameObject _Enemy;
+    public GameObject _Player; 
 
     [Space()]
 
     [Header("Initail Setting")]
-    [SerializeField] Vector3 _EnemyPos;
-    [SerializeField] List<Vector3> _SoulPos;
+    public Vector3 _EnemyPos;
+    public List<Vector3> _SoulPos;
 
     [Space()]
 
@@ -24,7 +24,7 @@ public class GeneralEnemy : MonoBehaviour
     public int MaxMoney;
 
     BattleMNG BMNG;
-    SoulPooling m_soulPooling;
+     protected  SoulPooling m_soulPooling;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,7 @@ public class GeneralEnemy : MonoBehaviour
         Initially();
     }
 
-    private void Initially()
+    public void Initially()
     {
         _Enemy.transform.position = _EnemyPos;
         for (int i = 0; i < _SoulPos.Count; i++)
