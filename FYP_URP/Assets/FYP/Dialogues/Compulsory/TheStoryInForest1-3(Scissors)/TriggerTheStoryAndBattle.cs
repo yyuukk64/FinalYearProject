@@ -19,16 +19,27 @@ public class TriggerTheStoryAndBattle : MonoBehaviour
     SceneChangingManager m_sceneChangingManager;
     TemporarilySave m_temporarilySave;
 
-    private void Start()
+    private void Awake()
     {
+        m_Player = FindObjectOfType<PlayerManager>();
+        m_Movement = FindObjectOfType<PlayerMovement>();
+
+        //For animation [Enter Battle]
+        anim = _enterBattle.GetComponent<Animator>();
+
         if (m_Player.Passed_and_Get_Scissor)
         {
             Destroy(this.gameObject);
         }
 
-        //For animation [Enter Battle]
-        anim = _enterBattle.GetComponent<Animator>();
+        
     }
+
+    private void Start()
+    {
+        
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player" && !m_Player.Passed_and_Get_Scissor)
@@ -53,13 +64,12 @@ public class TriggerTheStoryAndBattle : MonoBehaviour
             anim.SetBool("isEnter", true);
 
             StartCoroutine(DelayEnterScene());
-
         }
     }
 
     IEnumerator DelayEnterScene()
     {
         yield return new WaitForSeconds(2);
-        m_sceneChangingManager.EnterBattleScene("Battle_Forest");
+        m_sceneChangingManager.EnterBattleScene("Battle_ForestBoss");
     }
 }

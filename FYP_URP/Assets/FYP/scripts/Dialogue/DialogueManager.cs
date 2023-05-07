@@ -104,6 +104,8 @@ public class DialogueManager : MonoBehaviour
         if (other.tag == "Player" && taked)
         {
             ConvBubbleCanva.SetActive(true);
+            talking = true;
+            sentencesNo = 0;
         }
     }
 

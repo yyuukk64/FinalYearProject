@@ -10,7 +10,6 @@ public class BattleMNG_Boss_GetScissor : MonoBehaviour
     public GameObject _Player;
 
     public GameObject _Enemy;
-    public Transform _EmenyPosition;
 
     [SerializeField] GameObject _Soul;
 
@@ -66,8 +65,7 @@ public class BattleMNG_Boss_GetScissor : MonoBehaviour
         _Player.GetComponent<PlayerManager>().Init();
         _Player.GetComponent<PlayerManager>().LoadOnEnterBattle();
 
-
-            Instantiate(_Enemy, _EmenyPosition.position, Quaternion.identity);
+            Instantiate(_Enemy);
 
         //show souls requirement number
         floatEnemyMaxHealth = _Enemy.GetComponent<GeneralEnemy>().health;
@@ -124,7 +122,7 @@ public class BattleMNG_Boss_GetScissor : MonoBehaviour
         PMove.canMove = false;
 
         //Lost money
-        getMoney = Random.RandomRange(_Enemy.GetComponent<GeneralEnemy>().MinMoney, _Enemy.GetComponent<GeneralEnemy>().MaxMoney);
+        getMoney = Random.RandomRange(90, 110);
         if (getMoney >= PM.coin)
             getMoney = PM.coin;
         txt_LostCoin.text = "-" + getMoney.ToString();
