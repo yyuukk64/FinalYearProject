@@ -9,6 +9,10 @@ public class TemporarilySave : Singleton<TemporarilySave>
     public int attack;
     public int coin;
 
+    public int[] Consumables = new int[7];
+
+    public int ScanCD;
+
     public string sceneBeforeBattle;
     public Vector3 posBeforeBattle;
     public Vector3 posForGate;
@@ -29,6 +33,10 @@ public class TemporarilySave : Singleton<TemporarilySave>
         maxHealth = player.maxHealth;
         attack = player.attack;
         coin = player.coin;
+
+        Consumables = player.Consumables;
+
+        ScanCD = player.ScanCD;
 
         //process
         EnteredForest1_1 = player.EnteredForest1_1;

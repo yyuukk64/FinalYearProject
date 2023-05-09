@@ -19,6 +19,9 @@ public class PlayerManager : Singleton<PlayerManager>
     public int health, maxHealth = 6;
     public int attack = 1;
 
+    public bool canScan = true;
+    public int ScanCD = 3600;
+
     public Sprite heartFull, heartHalf, heartEmpty;
 
     public string currentScene;
@@ -60,6 +63,8 @@ public class PlayerManager : Singleton<PlayerManager>
             Consumables[i] = data.Consumables[i];
         }
 
+        ScanCD = data.ScanCD;
+
 
         //Location
         currentScene = data.currentScene;
@@ -92,6 +97,12 @@ public class PlayerManager : Singleton<PlayerManager>
         this.maxHealth = m_temporarilySave.maxHealth;
         this.coin = m_temporarilySave.coin;
         this.attack = m_temporarilySave.attack;
+        this.ScanCD = m_temporarilySave.ScanCD;
+
+        for (int i = 0; i < 7; i++)
+        {
+            Consumables[i] = m_temporarilySave.Consumables[i];
+        }
     }
 
     public void LoadOnSceneLoaded()
@@ -156,14 +167,27 @@ public class PlayerManager : Singleton<PlayerManager>
         ShowHealth();
         txtCoin.text = coin.ToString();
 
+        if (canScan)
+        {
+            return;
+        }
+        ScanCD -= 1;
+        if (ScanCD <= 0)
+        {
+            canScan = true;
+        }
+    }
+
+    public void cannotScan()
+    {
+        canScan = false;
+        ScanCD = 3600;
     }
 
     public void AddMaxHealth(int MaxHealthToAdd)
     {
         maxHealth += MaxHealthToAdd;
-        health = maxHealth;     //fully recover
-
-        
+        health = maxHealth;     //fully recover        
     }
     void ShowHeart()
     {

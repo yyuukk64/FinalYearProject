@@ -14,6 +14,7 @@ public class PlayerData
     public int coin;
 
     public int[] Consumables = new int[7];
+    public int ScanCD;
 
     [Header("Process")]
     public bool EnteredForest1_1 = false;
@@ -32,6 +33,7 @@ public class PlayerData
         attack = player.attack;
         coin = player.coin;
         Consumables = player.Consumables;
+        ScanCD = player.ScanCD;
 
         //Save process...
         EnteredForest1_1 = player.EnteredForest1_1;

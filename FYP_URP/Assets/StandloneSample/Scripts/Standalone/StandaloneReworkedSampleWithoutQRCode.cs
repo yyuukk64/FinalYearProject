@@ -133,6 +133,8 @@ public class StandaloneReworkedSampleWithoutQRCode : MonoBehaviour
                 result = barcodeReader.Decode(cameraColorData, width, height);
                 if (result != null)
                 {
+                    //Send result.Text to BarcodeCheck
+
                     lastResult = result.Text + " " + result.BarcodeFormat;
                     print(lastResult);
                     startEncoding = true;

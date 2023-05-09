@@ -2134,7 +2134,6 @@ RectTransform:
   m_Children:
   - {fileID: 2145593560541844397}
   - {fileID: 6836448961187736352}
-  - {fileID: 4307877886874256209}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2222,7 +2221,7 @@ MonoBehaviour:
   btn_Save: {fileID: 3098257958014477561}
   QuitNotification: {fileID: 6475812306792246752}
   SuccessNotifacation: {fileID: 8088507693226852863}
-  barcodeReader: {fileID: 4307877886874256215}
+  barcodeReader: {fileID: 0}
 --- !u!1 &2145593560541844396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,7 +2239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2145593560541844397
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4136,8 +4135,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2145593560475462641}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: openBarcodeReader
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9819,70 +9818,3 @@ MonoBehaviour:
   ShieldCrystle: {fileID: 0}
   ShieldCrystlex0: {fileID: 0}
   Consumables: 00000000000000000000000000000000000000000000000000000000
---- !u!1001 &6732000834424577376
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2145593560475462640}
-    m_Modifications:
-    - target: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396167374852070967, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-      propertyPath: m_Name
-      value: StandaloneReworkedSampleWithoutQRCode
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
---- !u!1 &4307877886874256215 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7396167374852070967, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-  m_PrefabInstance: {fileID: 6732000834424577376}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4307877886874256209 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7396167374852070961, guid: ad2841b78a9ce6646bc2021a1d05a20d, type: 3}
-  m_PrefabInstance: {fileID: 6732000834424577376}
-  m_PrefabAsset: {fileID: 0}

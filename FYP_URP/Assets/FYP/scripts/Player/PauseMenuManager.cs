@@ -17,6 +17,7 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject InventoryUI;
 
     public Button btn_Save;
+    public Button btn_BarcodeReader;
 
 
     void Update()
@@ -49,13 +50,26 @@ public class PauseMenuManager : MonoBehaviour
     }
     void Pause()
     {
+        m_Scene = FindObjectOfType<SceneChangingManager>();
+        m_Player = FindObjectOfType<PlayerManager>();
+
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
 
+        if (m_Player.canScan)
+        {
+            btn_BarcodeReader.interactable = true;
+        }
+        else
+        {
+            btn_BarcodeReader.interactable = false;
+        }
+
         if (m_Scene.inBattle)
         {
             btn_Save.interactable = false;
+            btn_BarcodeReader.interactable = false;
         }
         else
         {
@@ -114,14 +128,12 @@ public class PauseMenuManager : MonoBehaviour
 
     public void openBarcodeReader()
     {
-        pauseMenuUI.SetActive(false);
         barcodeReader.SetActive(true);
     }
 
     public void closeBarcodeReader()
     {
         barcodeReader.SetActive(false);
-        pauseMenuUI.SetActive(true);
     }
 }
 
