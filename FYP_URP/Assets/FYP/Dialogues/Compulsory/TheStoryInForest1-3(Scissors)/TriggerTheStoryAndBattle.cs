@@ -9,6 +9,7 @@ public class TriggerTheStoryAndBattle : MonoBehaviour
     public GameObject BattleBGM;
 
     [Header("Animation")]
+    [SerializeField] GameObject StoyrObject;
     [SerializeField] GameObject _enterBattle;
     Animator anim;
 
@@ -34,40 +35,31 @@ public class TriggerTheStoryAndBattle : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        
-    }
-
-    private void Start()
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player" && !m_Player.Passed_and_Get_Scissor)
         {
-            //Animation (Fade Out)...
-
-            //Make Player can't move
-
-            //Make Player can't call Pause menu
-
-            //Player the Dialogue...
-
-            //Enter the Battle
-            //Stop and Play 
-            ForestBGM.SetActive(false);
-            BattleBGM.SetActive(true);
-            m_Movement.canMove = false;
-
-            //Back to other scene is not allowed
-            m_sceneChangingManager.canChange = false;
-
-            anim.SetBool("isEnter", true);
-
-            StartCoroutine(DelayEnterScene());
+            Instantiate(StoyrObject);
         }
+    }
+
+    public void EnterBossBattle()
+    {
+        //Enter the Battle
+        Destroy(GameObject.Find("BeforeScissorBoss"));
+        //Stop and Play 
+        ForestBGM.SetActive(false);
+        BattleBGM.SetActive(true);
+        m_Movement.canMove = false;
+
+        //Back to other scene is not allowed
+        m_sceneChangingManager.canChange = false;
+
+        anim.SetBool("isEnter", true);
+
+        StartCoroutine(DelayEnterScene());
     }
 
     IEnumerator DelayEnterScene()
