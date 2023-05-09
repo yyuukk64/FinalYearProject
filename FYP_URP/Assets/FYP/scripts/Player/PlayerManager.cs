@@ -22,6 +22,7 @@ public class PlayerManager : Singleton<PlayerManager>
     public Sprite heartFull, heartHalf, heartEmpty;
 
     public string currentScene;
+    public int[] Consumables = new int[7];
 
     [Header("process")]
     public bool EnteredForest1_1 = false;
@@ -32,33 +33,6 @@ public class PlayerManager : Singleton<PlayerManager>
     
     [SerializeField] TemporarilySave m_temporarilySave;
     SceneChangingManager m_Scene;
-
-    #region Real Save
-    public void SavePlayer()
-    {
-        SaveSystem.SavePlayer(this);
-    }
-
-    public void LoadPlayer()
-    {
-        PlayerData data = SaveSystem.LoadPlayer();
-
-        health = data.health;
-        maxHealth = data.maxHealth;
-        attack = data.attack;
-        coin = data.coin;
-
-        //Location
-            currentScene = data.currentScene;
-            //changingScene
-            Vector3 position;
-            position.x = data.position[0];
-            position.y = data.position[1];
-            position.z = data.position[2];
-            transform.position = position;
-    }
-
-    #endregion
 
     #region Temporarily Save
 

@@ -8,11 +8,8 @@ public class PauseMenuManager : MonoBehaviour
     public bool CanPause = true;
 
     public GameObject pauseMenuUI;
+    public GameObject InventoryUI;
 
-    private void Start()
-    {
-
-    }
 
     void Update()
     {
@@ -34,14 +31,10 @@ public class PauseMenuManager : MonoBehaviour
         }
     }
 
-    public void Save()
-    {
-
-    }
-
     public void Resume()
 
     {
+        InventoryUI.SetActive(false);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -52,9 +45,26 @@ public class PauseMenuManager : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+
     public void QuitGame()
     {
         Debug.Log("on progress");
+    }
+
+    public void Setting()
+    {
+        Debug.Log("on progress");
+    }
+
+    public void Save()
+    {
+        Debug.Log("on progress");
+    }
+
+    public void Inventory()
+    {
+        pauseMenuUI.SetActive(false);
+        InventoryUI.SetActive(true);
     }
 }
 

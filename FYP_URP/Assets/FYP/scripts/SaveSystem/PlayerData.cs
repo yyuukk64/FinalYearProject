@@ -13,6 +13,8 @@ public class PlayerData
 
     public int coin;
 
+    public int[] Consumables = new int[7];
+
     [Header("Location")]
     public string currentScene;
     public float[] position;
@@ -24,6 +26,7 @@ public class PlayerData
         maxHealth = player.maxHealth;
         attack = player.attack;
         coin = player.coin;
+        Consumables = player.Consumables;
 
         //Save location
         currentScene = player.currentScene;
