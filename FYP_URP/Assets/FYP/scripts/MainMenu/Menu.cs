@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
-{
+{/*
     [Header("First Selected Button")]
     [SerializeField] private Button firstSelected;
 
@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
     {
         SetFirstSelected(firstSelected);
     }
-
+*/
     public void SetFirstSelected(Button firstSelectedButton) 
     {
         firstSelectedButton.Select();

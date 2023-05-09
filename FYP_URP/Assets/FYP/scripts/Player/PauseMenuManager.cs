@@ -1,8 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+
 public class PauseMenuManager : MonoBehaviour
 {
+    PlayerManager m_Player;
 
     public static bool GameIsPaused = false;
     public bool CanPause = true;
@@ -46,9 +50,19 @@ public class PauseMenuManager : MonoBehaviour
         GameIsPaused = true;
     }
 
+    [SerializeField] GameObject QuitNotification;
     public void QuitGame()
     {
-        Debug.Log("on progress");
+        QuitNotification.SetActive(true);
+    }
+
+    public void YesQuit()
+    {
+        InventoryUI.SetActive(false);
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Setting()
@@ -56,9 +70,18 @@ public class PauseMenuManager : MonoBehaviour
         Debug.Log("on progress");
     }
 
+    [SerializeField] GameObject SuccessNotifacation;
+
     public void Save()
     {
-        Debug.Log("on progress");
+        m_Player = FindObjectOfType<PlayerManager>();
+        m_Player.SavePlayer();
+        SuccessNotifacation.SetActive(true);
+    }
+
+    public void CloseNotifacation(GameObject Notification)
+    {
+        Notification.SetActive(false);
     }
 
     public void Inventory()

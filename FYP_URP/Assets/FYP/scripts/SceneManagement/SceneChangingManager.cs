@@ -12,6 +12,8 @@ public class SceneChangingManager : Singleton<SceneChangingManager>
     public bool canChange = false;
     public bool inBattle = false;
 
+    public bool Load = false;
+
     public string SceneName;
 
     private void Start()

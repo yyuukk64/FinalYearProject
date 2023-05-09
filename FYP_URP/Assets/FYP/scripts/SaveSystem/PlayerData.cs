@@ -28,6 +28,9 @@ public class PlayerData
         coin = player.coin;
         Consumables = player.Consumables;
 
+        //Save process...
+
+
         //Save location
         currentScene = player.currentScene;
         position = new float[3];
@@ -35,5 +38,28 @@ public class PlayerData
         position[1] = player.transform.position.y;
         position[2] = player.transform.position.z;
     }
+/*
+    public void ResetPlayerData()
+    {
+        //Reset Player state
+        health = 6;
+        maxHealth = 6;
+        attack = 1;
+        coin = 0;
+        for(int i = 0; 1 < 6; i++)
+        {
+            Consumables[i] = 0;
+        }
 
+        //Reset process
+
+
+        //Reset location
+        currentScene = "Lobby";
+        position = new float[3];
+        position[0] = 0;
+        position[1] = 0;
+        position[2] = 0;
+    }
+*/
 }

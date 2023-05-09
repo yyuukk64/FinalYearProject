@@ -6,16 +6,12 @@ using UnityEngine.UI;
 
 public class MainMenu : Menu
 {
-    [Header("Menu Navigation")]
-    [SerializeField] private SaveSlotsMenu saveSlotsMenu;
-
     [Header("Menu Object")]
     [SerializeField] GameObject Title;
 
     [Header("Menu Buttons")]
     [SerializeField] private Button newGameButton;
     [SerializeField] private Button continueGameButton;
-    [SerializeField] private Button loadGameButton;
 
     [SerializeField] GameObject m_initialize;
 
@@ -26,36 +22,26 @@ public class MainMenu : Menu
         //DisableButtonsDependingOnData();
     }
 
-    /*
-    private void DisableButtonsDependingOnData() 
-    {
-        if (!DataPersistenceManager.instance.HasGameData()) 
-        {
-            continueGameButton.interactable = false;
-            loadGameButton.interactable = false;
-        }
-    }
-    */
-
     public void OnBtnNewGameClicked()
     {
         m_initialize.GetComponent<Initialize>().Init();
         SceneManager.LoadScene("Lobby");
     }
 
-    public void OnNewGameClicked() 
-    {
-        saveSlotsMenu.ActivateMenu(false);
-        this.DeactivateMenu();
-    }
-
     public void OnLoadGameClicked() 
     {
-        saveSlotsMenu.ActivateMenu(true);
-        this.DeactivateMenu();
+        m_initialize.GetComponent<Initialize>().Init();
+        SceneChangingManager m_Scene;
+        m_Scene = FindObjectOfType<SceneChangingManager>();
+
+        m_Scene.Load = true;
+
+        PlayerData data = SaveSystem.LoadPlayer();
+        Debug.Log(data.currentScene);
+        SceneManager.LoadScene(data.currentScene);
     }
 
-    public void OnContinueGameClicked() 
+    /*public void OnContinueGameClicked() 
     {
         DisableMenuButtons();
         // save the game anytime before loading a new scene
@@ -70,7 +56,7 @@ public class MainMenu : Menu
         newGameButton.interactable = false;
         continueGameButton.interactable = false;
     }
-
+*/
     public void ActivateMenu() 
     {
         this.gameObject.SetActive(true);

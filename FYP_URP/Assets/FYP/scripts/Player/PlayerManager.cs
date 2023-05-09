@@ -34,6 +34,39 @@ public class PlayerManager : Singleton<PlayerManager>
     [SerializeField] TemporarilySave m_temporarilySave;
     SceneChangingManager m_Scene;
 
+    #region Real Save
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        health = data.health;
+        maxHealth = data.maxHealth;
+        attack = data.attack;
+        coin = data.coin;
+
+        for (int i = 0; i < 6; i++)
+        {
+            Consumables[i] = data.Consumables[i];
+        }
+
+
+        //Location
+        currentScene = data.currentScene;
+        //changingScene
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
+    }
+
+    #endregion
+
     #region Temporarily Save
 
     public void SaveTemprarily()
@@ -93,6 +126,13 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         m_temporarilySave = FindObjectOfType<TemporarilySave>();
         m_Scene = FindObjectOfType<SceneChangingManager>();
+
+        if (m_Scene.Load)
+        {
+            LoadPlayer();
+            m_Scene.Load = false;
+        }
+
         currentScene = SceneManager.GetActiveScene().name;
         for (int i = 0; i<3; i++)
         {
