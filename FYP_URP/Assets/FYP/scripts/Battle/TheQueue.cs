@@ -54,7 +54,14 @@ public class TheQueue : MonoBehaviour
         }
         _Queue[1].transform.LookAt(worldPosition);
 
-        _Queue[1].GetComponent<Shooting>().isShooted = true;
+        if (_Queue[1].tag == "Soul")
+        {
+            _Queue[1].GetComponent<Shooting>().isShooted = true;
+        }
+        else if(_Queue[1].tag == "SoulBoss")
+        {
+            _Queue[1].GetComponent<ShootingBoss>().isShooted = true;
+        }
 
         InShooting.Play();
     }
