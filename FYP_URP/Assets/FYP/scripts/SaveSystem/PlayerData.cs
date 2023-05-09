@@ -15,6 +15,11 @@ public class PlayerData
 
     public int[] Consumables = new int[7];
 
+    [Header("Process")]
+    public bool EnteredForest1_1 = false;
+    public bool EnteredForest1_4 = false;
+    public bool Passed_and_Get_Scissor = false;
+
     [Header("Location")]
     public string currentScene;
     public float[] position;
@@ -29,7 +34,9 @@ public class PlayerData
         Consumables = player.Consumables;
 
         //Save process...
-
+        EnteredForest1_1 = player.EnteredForest1_1;
+        EnteredForest1_4 = player.EnteredForest1_4;
+        Passed_and_Get_Scissor = player.Passed_and_Get_Scissor;
 
         //Save location
         currentScene = player.currentScene;

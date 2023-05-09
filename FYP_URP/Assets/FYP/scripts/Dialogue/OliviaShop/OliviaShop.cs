@@ -31,12 +31,15 @@ public class OliviaShop : MonoBehaviour
 
     private bool talking = false;
     private bool talked = false;
+    private bool Close = false;
 
     [Header("Animation")]
     public Animator anim;
 
     public Image Memoria;
     public Image NPC;
+
+    public GameObject CanvasShop;
 
     // Start is called before the first frame update
     private void Start()
@@ -51,7 +54,7 @@ public class OliviaShop : MonoBehaviour
         emotion = dialogue.dialoguerEmotion[0];
 
         //assign the last sentence of the conversation and show in world space
-        worldDialogue.text = dialogue.dialoguerSentences[dialogue.dialoguerSentences.Length - 1];
+        worldDialogue.text = "Welcome! Memoria";
     }
 
     // Update is called once per frame
@@ -91,7 +94,12 @@ public class OliviaShop : MonoBehaviour
             ConvBubbleCanva.SetActive(true);
         }
 
-        if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo < mySentences.Length && talked)
+        if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo == 1 && talked)
+        {
+            canvas.SetActive(false);
+            CanvasShop.SetActive(true);
+        }
+        else if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo < mySentences.Length && talked)
         {
             EBtn_Canvas.SetActive(false);
             m_playerMovement.canMove = false;
@@ -113,14 +121,17 @@ public class OliviaShop : MonoBehaviour
             }
             sentencesNo++;
         }
-        else if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo == mySentences.Length && talked)
+
+        if (Close && Input.GetKeyDown(KeyCode.E))
         {
             m_playerMovement.canMove = true;
             m_pauseMenu.CanPause = true;
+            //EBtn_Canvas.SetActive(true);
             canvas.SetActive(false);
             talking = false;
             talked = true;
             ConvBubbleCanva.SetActive(true);
+            Close = false;
         }
     }
 
@@ -156,5 +167,21 @@ public class OliviaShop : MonoBehaviour
             talking = false;
             ConvBubbleCanva.SetActive(false);
         }
+    }
+
+    public void CloseShop()
+    {
+        CanvasShop.SetActive(false);
+        canvas.SetActive(true);
+
+        sentencesNo++;
+
+        dialogueText.text = mySentences[sentencesNo];
+        nameText.text = myName[sentencesNo];
+        emotion = ShopDialogue.dialoguerEmotion[sentencesNo];
+
+        NPC.sprite = NPC.GetComponent<CharacterEmotion>().illustrat[emotion];
+        anim.SetTrigger("_NPC");
+        Close = true;
     }
 }

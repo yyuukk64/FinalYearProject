@@ -109,5 +109,19 @@ public class PauseMenuManager : MonoBehaviour
         pauseMenuUI.SetActive(false);
         InventoryUI.SetActive(true);
     }
+
+    public GameObject barcodeReader;
+
+    public void openBarcodeReader()
+    {
+        pauseMenuUI.SetActive(false);
+        barcodeReader.SetActive(true);
+    }
+
+    public void closeBarcodeReader()
+    {
+        barcodeReader.SetActive(false);
+        pauseMenuUI.SetActive(true);
+    }
 }
 

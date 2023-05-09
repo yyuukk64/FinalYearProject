@@ -13,9 +13,6 @@ public class SaveSystem
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlayerData data = new PlayerData(player);
-
-        Debug.Log(data.currentScene);
-        Debug.Log(data.coin);
         for(int i = 0; i < 3; i++)
         {
             Debug.Log(data.position[i]);

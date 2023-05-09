@@ -75,4 +75,9 @@ public class MainMenu : Menu
     {
         this.gameObject.SetActive(false);
     }
+
+    public void OnClickBtnQuit()
+    {
+        Application.Quit();
+    }
 }
