@@ -69,6 +69,10 @@ public class BeforeTheScissorBoss : MonoBehaviour
                 Devid.sprite = Devid.GetComponent<CharacterEmotion>().illustrat[emotion];
                 anim.SetTrigger("_Devid");
             }
+            else
+            {
+                anim.SetTrigger("_Other");
+            }
 
             sentencesNo++;
         }
