@@ -6,16 +6,18 @@ public class Cut_Ivy : MonoBehaviour
 {
     bool canCut = false;
 
+    PlayerManager m_Player;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_Player = FindObjectOfType<PlayerManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(canCut && Input.GetKeyDown(KeyCode.E))
+        if(canCut && Input.GetKeyDown(KeyCode.E) && m_Player.Passed_and_Get_Scissor)
         {
             this.gameObject.SetActive(false);
 
