@@ -50,10 +50,10 @@ public class ShootingBoss : MonoBehaviour
             this.AttackedEnemySFX.Play();
 
             //hurt Enemy...
-            Enemy.GetComponent<GeneralEnemy>().hurtEnemy(Player.GetComponent<PlayerManager>().attack);
+            Enemy.GetComponent<BossScissor>().hurtEnemy(Player.GetComponent<PlayerManager>().attack);
 
-            Debug.Log(Enemy.GetComponent<GeneralEnemy>().health + " / " + m_battleMNG.floatEnemyMaxHealth);
-            m_battleMNG.imgEnemyHealth.GetComponent<Image>().fillAmount = (Enemy.GetComponent<GeneralEnemy>().health / m_battleMNG.floatEnemyMaxHealth);
+            Debug.Log(Enemy.GetComponent<BossScissor>().health + " / " + m_battleMNG.floatEnemyMaxHealth);
+            m_battleMNG.imgEnemyHealth.GetComponent<Image>().fillAmount = (Enemy.GetComponent<BossScissor>().health / m_battleMNG.floatEnemyMaxHealth);
 
             return;
         }

@@ -68,7 +68,7 @@ public class BattleMNG_Boss_GetScissor : MonoBehaviour
             Instantiate(_Enemy);
 
         //show souls requirement number
-        floatEnemyMaxHealth = _Enemy.GetComponent<GeneralEnemy>().health;
+        floatEnemyMaxHealth = _Enemy.GetComponent<BossScissor>().health;
     }
 
     // Update is called once per frame
@@ -104,7 +104,7 @@ public class BattleMNG_Boss_GetScissor : MonoBehaviour
         PMove.canMove = false;
 
         //get Money
-        getMoney = Random.RandomRange(_Enemy.GetComponent<GeneralEnemy>().MinMoney, _Enemy.GetComponent<GeneralEnemy>().MaxMoney);
+        getMoney = Random.RandomRange(_Enemy.GetComponent<BossScissor>().MinMoney, _Enemy.GetComponent<BossScissor>().MaxMoney);
         txt_GetCoin.text = getMoney.ToString();
         PM.AddMoney(getMoney);
 
