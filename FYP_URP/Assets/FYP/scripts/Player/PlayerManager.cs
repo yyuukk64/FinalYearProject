@@ -44,12 +44,18 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         PlayerData data = SaveSystem.LoadPlayer();
 
+
+        for (int i = 0; i < 3; i++)
+        {
+            Debug.Log(data.position[i]);
+        }
+
         health = data.health;
         maxHealth = data.maxHealth;
         attack = data.attack;
         coin = data.coin;
 
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 7; i++)
         {
             Consumables[i] = data.Consumables[i];
         }
@@ -104,7 +110,12 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public void LoadOnLoadGame()
     {
-
+        if (m_Scene.Load)
+        {
+            LoadPlayer();
+            m_Scene.Load = false;
+            SaveBeforeBattle();
+        }
     }
 
     #endregion
@@ -126,12 +137,6 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         m_temporarilySave = FindObjectOfType<TemporarilySave>();
         m_Scene = FindObjectOfType<SceneChangingManager>();
-
-        if (m_Scene.Load)
-        {
-            LoadPlayer();
-            m_Scene.Load = false;
-        }
 
         currentScene = SceneManager.GetActiveScene().name;
         for (int i = 0; i<3; i++)

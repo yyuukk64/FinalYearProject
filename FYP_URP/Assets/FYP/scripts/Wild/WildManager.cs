@@ -18,7 +18,14 @@ public class WildManager : MonoBehaviour
         _player.GetComponent<PlayerManager>().Init();
 
         //load Temporarily data
-        if(m_SceneChangingManager.inBattle)
+
+        if (m_SceneChangingManager.Load)
+        {
+            _player.GetComponent<PlayerManager>().LoadOnLoadGame();
+            return;
+        }
+
+        if (m_SceneChangingManager.inBattle)
         {
             _player.GetComponent<PlayerManager>().LoadExitFromBattle();
         }
@@ -26,7 +33,6 @@ public class WildManager : MonoBehaviour
         {
             _player.GetComponent<PlayerManager>().LoadOnSceneLoaded();
         }
-        
     }
 
     // Update is called once per frame

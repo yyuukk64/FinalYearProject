@@ -14,6 +14,14 @@ public class SaveSystem
 
         PlayerData data = new PlayerData(player);
 
+        Debug.Log(data.currentScene);
+        Debug.Log(data.coin);
+        for(int i = 0; i < 3; i++)
+        {
+            Debug.Log(data.position[i]);
+        }
+        
+
         formatter.Serialize(stream, data);
         stream.Close();
     }

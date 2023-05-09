@@ -30,15 +30,23 @@ public class MainMenu : Menu
 
     public void OnLoadGameClicked() 
     {
-        m_initialize.GetComponent<Initialize>().Init();
-        SceneChangingManager m_Scene;
-        m_Scene = FindObjectOfType<SceneChangingManager>();
-
-        m_Scene.Load = true;
 
         PlayerData data = SaveSystem.LoadPlayer();
-        Debug.Log(data.currentScene);
-        SceneManager.LoadScene(data.currentScene);
+        if(data != null)
+        {
+            m_initialize.GetComponent<Initialize>().Init();
+            SceneChangingManager m_Scene;
+            m_Scene = FindObjectOfType<SceneChangingManager>();
+
+            m_Scene.Load = true;
+
+            Debug.Log(data.currentScene);
+            SceneManager.LoadScene(data.currentScene);
+        }
+        else
+        {
+            return;
+        }
     }
 
     /*public void OnContinueGameClicked() 

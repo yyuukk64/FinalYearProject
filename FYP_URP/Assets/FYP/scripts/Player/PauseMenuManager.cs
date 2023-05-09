@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
 public class PauseMenuManager : MonoBehaviour
 {
     PlayerManager m_Player;
+    SceneChangingManager m_Scene;
 
     public static bool GameIsPaused = false;
     public bool CanPause = true;
 
     public GameObject pauseMenuUI;
     public GameObject InventoryUI;
+
+    public Button btn_Save;
 
 
     void Update()
@@ -48,6 +52,15 @@ public class PauseMenuManager : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+
+        if (m_Scene.inBattle)
+        {
+            btn_Save.interactable = false;
+        }
+        else
+        {
+            btn_Save.interactable = true;
+        }
     }
 
     [SerializeField] GameObject QuitNotification;
@@ -62,6 +75,13 @@ public class PauseMenuManager : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+
+        GameObject TemporarilySaveObject = GameObject.Find("TemporarilySaveObject(Clone)");
+        GameObject SceneChengingManager = GameObject.Find("SceneChengingManager(Clone)");
+
+        Destroy(TemporarilySaveObject);
+        Destroy(SceneChengingManager);
+
         SceneManager.LoadScene("MainMenu");
     }
 
