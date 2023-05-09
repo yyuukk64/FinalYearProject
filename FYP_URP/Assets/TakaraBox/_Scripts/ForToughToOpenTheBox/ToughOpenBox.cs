@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tough_Open : MonoBehaviour
+public class ToughOpenBox : MonoBehaviour
 {
     bool canOpen = false;
 
