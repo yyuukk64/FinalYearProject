@@ -38,6 +38,8 @@ public class MeetEnemy : MonoBehaviour
 
         //For animation [Enter Battle]
         anim = _enterBattle.GetComponent<Animator>();
+
+        walkedDistance = 0;
     }
 
     // Update is called once per frame
@@ -46,7 +48,7 @@ public class MeetEnemy : MonoBehaviour
         walkedDistance += Vector3.Distance(_Player.transform.position, oldPosition);
         oldPosition = _Player.transform.position;
 
-        if(walkedDistance > 20)
+        if(walkedDistance > 40)
         {
             walkedDistance = 0;
             EnterBattle();
@@ -58,7 +60,7 @@ public class MeetEnemy : MonoBehaviour
         //Randomize a number to decide that is it enter to battle.
         float i = Random.Range(0.0f, 100f);
         Debug.Log("i is " + i);
-        if (i > 60)
+        if (i > 70)
         {
             //Stop and Play 
             ForestBGM.SetActive(false);
