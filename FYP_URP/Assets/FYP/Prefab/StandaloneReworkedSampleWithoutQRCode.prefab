@@ -119,7 +119,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3388264715411481953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 816840328578557953}
+        m_TargetAssemblyTypeName: BarcodeChecker, Assembly-CSharp
+        m_MethodName: CheckEnterCode
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7396167374428605483}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &555469661106570792
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,13 +487,13 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7396167374852070966}
-        m_TargetAssemblyTypeName: StandaloneReworkedSampleWithoutQRCode, Assembly-CSharp
-        m_MethodName: OnEndInput
-        m_Mode: 1
+      - m_Target: {fileID: 816840328578557953}
+        m_TargetAssemblyTypeName: BarcodeChecker, Assembly-CSharp
+        m_MethodName: CheckEnterCode
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 7396167374428605483}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -738,6 +750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7396167374852070961}
   - component: {fileID: 7396167374852070966}
+  - component: {fileID: 816840328578557953}
   m_Layer: 0
   m_Name: StandaloneReworkedSampleWithoutQRCode
   m_TagString: Untagged
@@ -776,3 +789,21 @@ MonoBehaviour:
   inputField: {fileID: 7396167373619847421}
   rawImage: {fileID: 7396167373942704344}
   previewInput: 
+--- !u!114 &816840328578557953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7396167374852070967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5013d1e861da64891d7e3f07a4d3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CleanWater:
+  - 6937761805169
+  - 4891379161265
+  CupNoodles:
+  - 4897878100033
+  - 4897878100101

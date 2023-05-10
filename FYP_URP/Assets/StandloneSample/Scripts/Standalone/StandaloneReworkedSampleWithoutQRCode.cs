@@ -39,6 +39,8 @@ public class StandaloneReworkedSampleWithoutQRCode : MonoBehaviour
     private BarcodeWriter writer;
     private Result result;
 
+    private BarcodeChecker m_barcodeChecker;
+
     private bool startEncoding;
     private bool startDecoding;
 
@@ -46,6 +48,8 @@ public class StandaloneReworkedSampleWithoutQRCode : MonoBehaviour
     {
         SetupWebcamTexture();
         PlayWebcamTexture();
+
+        m_barcodeChecker = FindObjectOfType<BarcodeChecker>();
 
         lastResult = "http://www.google.com";
         previewInput = "";
@@ -133,11 +137,12 @@ public class StandaloneReworkedSampleWithoutQRCode : MonoBehaviour
                 result = barcodeReader.Decode(cameraColorData, width, height);
                 if (result != null)
                 {
-                    //Send result.Text to BarcodeCheck
-
                     lastResult = result.Text + " " + result.BarcodeFormat;
                     print(lastResult);
                     startEncoding = true;
+
+                    //Send result.Text to BarcodeCheck
+                    m_barcodeChecker.CheckCode(result.Text);
                 }
                 startDecoding = !startDecoding;
             }
