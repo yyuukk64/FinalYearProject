@@ -13,6 +13,8 @@ public class BGMLoop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         beContinue = true;
         StartCoroutine(PlayerLoop());
     }

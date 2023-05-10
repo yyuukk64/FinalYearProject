@@ -93,9 +93,15 @@ public class PauseMenuManager : MonoBehaviour
 
         GameObject TemporarilySaveObject = GameObject.Find("TemporarilySaveObject(Clone)");
         GameObject SceneChengingManager = GameObject.Find("SceneChengingManager(Clone)");
+        GameObject BattleBGM = GameObject.Find("BattleBGM");
 
         Destroy(TemporarilySaveObject);
         Destroy(SceneChengingManager);
+
+        if(BattleBGM != null)
+        {
+            Destroy(BattleBGM);
+        }
 
         SceneManager.LoadScene("MainMenu");
     }

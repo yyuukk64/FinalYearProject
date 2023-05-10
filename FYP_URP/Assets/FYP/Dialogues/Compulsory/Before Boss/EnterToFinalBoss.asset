@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea9afcff591f6e45bb414472e131201, type: 3}
+  m_Name: EnterToFinalBoss
+  m_EditorClassIdentifier: 
+  dialoguerName:
+  - Memoria
+  - Luna
+  - Angel
+  - Devid
+  - Memoria
+  - Evil
+  - Memoria
+  - Evil
+  - Memoria
+  - Evil
+  - Angel
+  - Devid
+  - Memoria
+  - Memoria
+  dialoguerSentences:
+  - Luna! Are you okay?
+  - Memoria... I'm sorry... I couldn't hold on...
+  - Memoria, be careful. There's a powerful evil presence here.
+  - Yeah, don't let your guard down.
+  - I have to do this. I have to face it. approaches the Evil
+  - 'Welcome, Memoria. I''ve been waiting for you.  Memoria: Who are you?'
+  - Who are you?
+  - I am the source of your negative emotions. I am the reason why you lost your
+    memory.
+  - I won't let you get away with this!
+  - 'You think you can defeat me? I am more powerful than you can imagine. '
+  - You can do it, Memoria. Believe in yourself.
+  - Yeah, we're here to support you.
+  - I will do this. For Luna... and for myself.
+  - I will do this. For Luna... and for myself.
+  dialoguerEmotion: 0200000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000
+  loadDialogueNo: 

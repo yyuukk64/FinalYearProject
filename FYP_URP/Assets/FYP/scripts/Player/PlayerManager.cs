@@ -28,7 +28,7 @@ public class PlayerManager : Singleton<PlayerManager>
     public int[] Consumables = new int[7];
 
     [Header("process")]
-    public bool FirstIn = true;
+    public bool FirstIn = false;
     public bool EnteredForest1_1 = false;
     public bool EnteredForest1_4 = false;
     public bool Passed_and_Get_Scissor = false;

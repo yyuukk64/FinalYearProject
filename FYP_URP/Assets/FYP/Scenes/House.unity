@@ -6844,8 +6844,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1157338788}
-        m_TargetAssemblyTypeName: BattleMNG, Assembly-CSharp
-        m_MethodName: Back2Wild
+        m_TargetAssemblyTypeName: BattleMNG_Boss_GetScissor, Assembly-CSharp
+        m_MethodName: WinAndGotoFinalScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23338,7 +23338,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1157338788}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BattleMNG, Assembly-CSharp
         m_MethodName: Back2Lobby
         m_Mode: 1
@@ -23845,11 +23845,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157338789}
-  - component: {fileID: 1157338788}
   - component: {fileID: 1157338790}
   - component: {fileID: 1157338791}
+  - component: {fileID: 1157338788}
   m_Layer: 0
-  m_Name: BattleMNG
+  m_Name: BattleMNG_Boss_GetScissor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23864,15 +23864,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1157338787}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2435da7354dc4442a36ed7d2658662e, type: 3}
+  m_Script: {fileID: 11500000, guid: 621c15570fea74f4eb6d5b567103bee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _Player: {fileID: 245797685}
-  _EnemyList:
-  - {fileID: 100196035286655259, guid: c3ba453bd77ad254183c2c16144b6293, type: 3}
-  - {fileID: 5982214542171473023, guid: 41f38f1bfc45c864ebff4c82f67d70b4, type: 3}
-  _Enemy: {fileID: 0}
-  _Soul: {fileID: 8497196292866482847, guid: cfcf04ea0b2be7040a88931ffd4efd0c, type: 3}
+  _Enemy: {fileID: 7319938806982763001, guid: 425927fbb70b43c4d8291404a6f80f2e, type: 3}
+  _Soul: {fileID: 636915303581262948, guid: 887ded184afce7542b228e1b822abe4a, type: 3}
   isWin: 0
   BattleBGM: {fileID: 0}
   winningCanvas: {fileID: 4296040}
@@ -23926,9 +23923,9 @@ MonoBehaviour:
   - {fileID: 994870134}
   - {fileID: 643125746}
   - {fileID: 1757237472}
-  BlueBeam: {fileID: 5453526971982300326, guid: 4551e8bc3b86df942b220c0a3b0cc7d1, type: 3}
-  IncinerateSpell: {fileID: 5596503320885209267, guid: 287b2e8cd1fc94745adf5fdc87fdc2e9, type: 3}
-  FireArea: {fileID: 835868405053352430, guid: f61360e89a4b99444871c443c46e59b3, type: 3}
+  BlueBeam: {fileID: 6727942526915148190, guid: 178992d85df68c8499cdaa7e169cc889, type: 3}
+  IncinerateSpell: {fileID: 1749228527168856754, guid: 2881202a129afb64b9806aa2ef4eeffd, type: 3}
+  FireArea: {fileID: 8871654537001705603, guid: 8b51e25bbbd860449bb937678c4f4914, type: 3}
 --- !u!114 &1157338791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23941,10 +23938,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5096a929c5af8ba4dafc6a5ba450eecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quanLimited: 10
+  quanLimited: 20
   spawnPoint: {fileID: 165975606}
   parent: {fileID: 1034679996}
-  instanceSoul: {fileID: 8497196292866482847, guid: cfcf04ea0b2be7040a88931ffd4efd0c, type: 3}
+  instanceSoul: {fileID: 636915303581262948, guid: 887ded184afce7542b228e1b822abe4a, type: 3}
   Spawn_Effect: {fileID: 1996815043310994508, guid: ca168918dcbdf16499c659dd970e55c3, type: 3}
 --- !u!95 &1159478230
 Animator:
@@ -26247,7 +26244,7 @@ RectTransform:
   m_Children:
   - {fileID: 1598142244}
   m_Father: {fileID: 414416876}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -42926,7 +42923,7 @@ Transform:
   m_Children:
   - {fileID: 2042634578538918941}
   m_Father: {fileID: 245797684}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6466091272536166142
 GameObject:

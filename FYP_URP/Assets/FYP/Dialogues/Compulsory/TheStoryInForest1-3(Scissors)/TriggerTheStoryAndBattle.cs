@@ -43,7 +43,13 @@ public class TriggerTheStoryAndBattle : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
+    private void Start()
+    {
+        if (m_Player.EnteredForest1_4)
+        {
+            Forest1_3Block.SetActive(false);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {

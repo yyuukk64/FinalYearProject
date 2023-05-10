@@ -21,6 +21,8 @@ public class ShootingBoss : MonoBehaviour
     [SerializeField]
     AudioSource AttackedEnemySFX;
 
+    public float ResetTime = 30.0f;
+
     private void Start()
     {
         m_soulPooling = FindObjectOfType<SoulPooling>();

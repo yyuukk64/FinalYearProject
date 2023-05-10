@@ -24,11 +24,12 @@ public class LobbyManager : MonoBehaviour
 
         if (m_SceneChangingManager.Load)
         {
-            _Player.GetComponent<PlayerManager>().LoadOnLoadGame();
-            if (_Player.GetComponent<PlayerManager>().FirstIn)
-            {
-                Instantiate(BeginningStory);
-            }
+            _Player.GetComponent<PlayerManager>().LoadOnLoadGame();            
+        }
+
+        if (!_Player.GetComponent<PlayerManager>().FirstIn)
+        {
+            Instantiate(BeginningStory);
         }
     }
 }

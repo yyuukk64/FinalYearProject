@@ -148,4 +148,13 @@ public class BattleMNG_Boss_GetScissor : MonoBehaviour
     {
         m_SceneChanging.ChangeScene("Lobby");
     }
+
+    public void WinAndGotoFinalScene()
+    {
+        m_temporarily.posBeforeBattle[0] = 123;
+        m_temporarily.posBeforeBattle[1] = 1.53f;
+        m_temporarily.posBeforeBattle[2] = 13;
+
+        m_SceneChanging.ChangeScene("NewForest1-4");
+    }
 }

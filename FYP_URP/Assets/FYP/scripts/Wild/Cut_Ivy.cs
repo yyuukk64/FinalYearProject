@@ -11,6 +11,8 @@ public class Cut_Ivy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_Player = FindObjectOfType<PlayerManager>();
+
         if (m_Player.Cuted_Ivy)
         {
             this.gameObject.SetActive(false);
