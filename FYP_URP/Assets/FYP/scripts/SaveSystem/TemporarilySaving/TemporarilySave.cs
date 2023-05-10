@@ -22,6 +22,9 @@ public class TemporarilySave : Singleton<TemporarilySave>
     public bool EnteredForest1_1;
     public bool EnteredForest1_4;
     public bool Passed_and_Get_Scissor;
+    public bool WinTheFirstBoss;
+    public bool Cuted_Ivy;
+    public bool FirstBeforeHouse;
 
     void Start()
     {
@@ -47,12 +50,12 @@ public class TemporarilySave : Singleton<TemporarilySave>
         EnteredForest1_1 = player.EnteredForest1_1;
         EnteredForest1_4 = player.EnteredForest1_4;
         Passed_and_Get_Scissor = player.Passed_and_Get_Scissor;
+        WinTheFirstBoss = player.WinTheFirstBoss;
+        Cuted_Ivy = player.Cuted_Ivy;
+        FirstBeforeHouse = player.FirstBeforeHouse;
 
         sceneBeforeBattle = player.currentScene;
         //posBeforeBattle = player.transform.position;
 
-        EnteredForest1_1 = player.EnteredForest1_1;
-        EnteredForest1_4 = player.EnteredForest1_4;
-        Passed_and_Get_Scissor = player.Passed_and_Get_Scissor;
     }
 }

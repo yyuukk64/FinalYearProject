@@ -17,6 +17,8 @@ public class MeetEnemy : MonoBehaviour
     //public Vector3 beforeBatPos;
     float walkedDistance;
 
+    bool Debug_DoubleBattle = true;
+
     PlayerManager PM;
     PlayerMovement PMove;
     BGMLoop bGMLoop;
@@ -39,6 +41,7 @@ public class MeetEnemy : MonoBehaviour
         //For animation [Enter Battle]
         anim = _enterBattle.GetComponent<Animator>();
 
+        Debug_DoubleBattle = true;
         walkedDistance = 0;
     }
 
@@ -51,6 +54,12 @@ public class MeetEnemy : MonoBehaviour
         if(walkedDistance > 40)
         {
             walkedDistance = 0;
+
+            if (Debug_DoubleBattle)
+            {
+                Debug_DoubleBattle = false;
+                return;
+            }
             EnterBattle();
         }
     }

@@ -13,6 +13,8 @@ public class TriggerTheStoryAndBattle : MonoBehaviour
     [SerializeField] GameObject _enterBattle;
     Animator anim;
 
+    [SerializeField] GameObject Forest1_3Block;
+
     //Script
     PlayerManager m_Player;
     PlayerMovement m_Movement;
@@ -31,15 +33,21 @@ public class TriggerTheStoryAndBattle : MonoBehaviour
         //For animation [Enter Battle]
         anim = _enterBattle.GetComponent<Animator>();
 
-        if (m_Player.Passed_and_Get_Scissor)
+        if (m_Player.EnteredForest1_4)
+        {
+            Forest1_3Block.SetActive(false);
+        }
+
+        if (m_temporarilySave.WinTheFirstBoss)
         {
             Destroy(this.gameObject);
         }
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && !m_Player.Passed_and_Get_Scissor)
+        if(other.tag == "Player" && !m_Player.WinTheFirstBoss)
         {
             Instantiate(StoyrObject);
         }

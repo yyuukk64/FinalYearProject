@@ -42,6 +42,8 @@ public class BattleMNG_Boss_GetScissor : MonoBehaviour
     SceneChangingManager m_SceneChanging;
     SoulPooling m_soulPooling;
 
+    TemporarilySave m_temporarily;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +51,7 @@ public class BattleMNG_Boss_GetScissor : MonoBehaviour
         PM = FindObjectOfType<PlayerManager>();
         m_SceneChanging = FindObjectOfType<SceneChangingManager>();
         m_soulPooling = this.GetComponent<SoulPooling>();
+        m_temporarily = FindObjectOfType<TemporarilySave>();
 
         //For Stop the BGM while winning
         BattleBGM = GameObject.FindWithTag("BattleBGM");
@@ -108,7 +111,7 @@ public class BattleMNG_Boss_GetScissor : MonoBehaviour
         txt_GetCoin.text = getMoney.ToString();
         PM.AddMoney(getMoney);
 
-        PM.Passed_and_Get_Scissor = true;
+        PM.WinTheFirstBoss = true;
 
         //Stop Battle BGM
         Destroy(BattleBGM);
@@ -135,6 +138,9 @@ public class BattleMNG_Boss_GetScissor : MonoBehaviour
 
     public void Back2Wild()
     {
+        m_temporarily.posBeforeBattle[0] = -224;
+        m_temporarily.posBeforeBattle[2] = -60;
+
         m_SceneChanging.LoadSceneExitFromBattle();
     }
 

@@ -27,10 +27,11 @@ public class WildManager : MonoBehaviour
 
         if (m_SceneChangingManager.inBattle)
         {
+            Debug.Log("Right");
             _player.GetComponent<PlayerManager>().LoadExitFromBattle();
         }
         else
-        {
+        {            
             _player.GetComponent<PlayerManager>().LoadOnSceneLoaded();
         }
     }

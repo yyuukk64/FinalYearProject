@@ -32,6 +32,9 @@ public class PlayerManager : Singleton<PlayerManager>
     public bool EnteredForest1_1 = false;
     public bool EnteredForest1_4 = false;
     public bool Passed_and_Get_Scissor = false;
+    public bool WinTheFirstBoss = false;
+    public bool Cuted_Ivy = false;
+    public bool FirstBeforeHouse = false;
 
     //public bool showEBtnCanvas = false;
     
@@ -48,11 +51,6 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         PlayerData data = SaveSystem.LoadPlayer();
 
-        for (int i = 0; i < 3; i++)
-        {
-            Debug.Log(data.position[i]);
-        }
-
         health = data.health;
         maxHealth = data.maxHealth;
         attack = data.attack;
@@ -66,6 +64,14 @@ public class PlayerManager : Singleton<PlayerManager>
 
         ScanCD = data.ScanCD;
 
+        //Load process
+        FirstIn = data.FirstIn;
+        EnteredForest1_1 = data.EnteredForest1_1;
+        EnteredForest1_4 = data.EnteredForest1_4;
+        Passed_and_Get_Scissor = data.Passed_and_Get_Scissor;
+        WinTheFirstBoss = data.WinTheFirstBoss;
+        Cuted_Ivy = data.Cuted_Ivy;
+        FirstBeforeHouse = data.FirstBeforeHouse;
 
         //Location
         currentScene = data.currentScene;
@@ -99,11 +105,19 @@ public class PlayerManager : Singleton<PlayerManager>
         this.coin = m_temporarilySave.coin;
         this.attack = m_temporarilySave.attack;
         this.ScanCD = m_temporarilySave.ScanCD;
+        this.Cuted_Ivy = m_temporarilySave.Cuted_Ivy;
 
         for (int i = 0; i < 7; i++)
         {
             Consumables[i] = m_temporarilySave.Consumables[i];
         }
+
+        this.FirstIn = m_temporarilySave.FirstIn;
+        this.EnteredForest1_1 = m_temporarilySave.EnteredForest1_1;
+        this.EnteredForest1_4 = m_temporarilySave.EnteredForest1_4;
+        this.Passed_and_Get_Scissor = m_temporarilySave.Passed_and_Get_Scissor;
+        this.WinTheFirstBoss = m_temporarilySave.WinTheFirstBoss;
+        Debug.Log("Right_2");
     }
 
     public void LoadOnSceneLoaded()

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ToughOpenBox : MonoBehaviour
 {
     bool canOpen = false;
+    bool Opened = false;
 
     private PlayerManager m_Player;
 
@@ -14,17 +16,15 @@ public class ToughOpenBox : MonoBehaviour
     public int getMoney = 0;
     public GameObject item = null;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject Notice;
 
     // Update is called once per frame
     void Update()
     {
-        if (canOpen && Input.GetKeyDown(KeyCode.E))
+        if (canOpen && Input.GetKeyDown(KeyCode.E) && !Opened)
         {
+            Opened = true;
+
             //Get Coins
             m_Player.AddMoney(getMoney);
 
@@ -34,9 +34,16 @@ public class ToughOpenBox : MonoBehaviour
                 return;
             }
 
+            Notice.SetActive(true);
+
             //Animation (Open the Box) ...
 
         }
+    }
+
+    public void closeNotice()
+    {
+        Notice.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)

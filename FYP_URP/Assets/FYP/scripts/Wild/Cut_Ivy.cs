@@ -11,6 +11,12 @@ public class Cut_Ivy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (m_Player.Cuted_Ivy)
+        {
+            this.gameObject.SetActive(false);
+            return;
+        }
+
         m_Player = FindObjectOfType<PlayerManager>();
     }
 
@@ -20,12 +26,16 @@ public class Cut_Ivy : MonoBehaviour
         if(canCut && Input.GetKeyDown(KeyCode.E) && m_Player.Passed_and_Get_Scissor)
         {
             this.gameObject.SetActive(false);
+            m_Player.Cuted_Ivy = true;
 
             //save...
-        }else if (Input.GetKeyDown(KeyCode.E))
+            m_Player.SavePlayer();
+
+        }
+        else if (canCut && Input.GetKeyDown(KeyCode.E))
         {
             //Dialogue...
-
+            m_Player.activeEBtnCanvas(false);
             Debug.Log("You can't do it");
         }
     }
@@ -35,11 +45,13 @@ public class Cut_Ivy : MonoBehaviour
         if(other.tag == "Player")
         {
             canCut = true;
+            m_Player.activeEBtnCanvas(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        m_Player.activeEBtnCanvas(false);
         canCut = false;
     }
 }
