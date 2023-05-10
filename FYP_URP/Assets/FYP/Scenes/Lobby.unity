@@ -39089,6 +39089,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 674263452296507894, guid: a1234fcca635243408663921e7e971c1, type: 3}
+      propertyPath: inputField
+      value: 
+      objectReference: {fileID: 1957421103}
     - target: {fileID: 894732225932528397, guid: a1234fcca635243408663921e7e971c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.001305241
@@ -65606,6 +65610,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957081462}
   m_Mesh: {fileID: 9023125140953924243, guid: 2479c7b16103dfe4da1d0c7f4aff4282, type: 3}
+--- !u!114 &1957421103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7253891559513127178, guid: a1234fcca635243408663921e7e971c1, type: 3}
+  m_PrefabInstance: {fileID: 1187407790}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1958992406
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,10 @@ public class StandaloneReworkedSampleWithoutQRCode : MonoBehaviour
     private RawImage rawImage;
     [SerializeField]
     private string previewInput;
+    [SerializeField]
+    private Text txt_show;
+
+
 
     private WebCamTexture camTexture;
     private Color32[] cameraColorData;
@@ -137,12 +141,13 @@ public class StandaloneReworkedSampleWithoutQRCode : MonoBehaviour
                 result = barcodeReader.Decode(cameraColorData, width, height);
                 if (result != null)
                 {
-                    lastResult = result.Text + " " + result.BarcodeFormat;
-                    print(lastResult);
-                    startEncoding = true;
+                    lastResult = result.Text;
 
-                    //Send result.Text to BarcodeCheck
-                    m_barcodeChecker.CheckCode(result.Text);
+                    print(lastResult);
+
+                    //m_barcodeChecker.CheckCode(lastResult);
+                    inputField.text = lastResult;
+                    startEncoding = true;
                 }
                 startDecoding = !startDecoding;
             }

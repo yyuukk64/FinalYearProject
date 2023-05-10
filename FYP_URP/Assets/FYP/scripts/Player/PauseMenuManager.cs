@@ -136,6 +136,7 @@ public class PauseMenuManager : MonoBehaviour
     {
         barcodeReader.SetActive(false);
         pauseMenuUI.SetActive(true);
+        Debug.Log("Closed!");
     }
 }
 

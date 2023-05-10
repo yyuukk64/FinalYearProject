@@ -180,6 +180,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public void cannotScan()
     {
+
         canScan = false;
         ScanCD = 3600;
     }

@@ -11,6 +11,11 @@ public class BarcodeChecker : MonoBehaviour
     PlayerManager m_Player;
     PauseMenuManager m_Pause;
 
+    [SerializeField]
+    Text txt_show;
+    [SerializeField]
+    InputField inputField;
+
     private void Start()
     {
         m_Player = FindObjectOfType<PlayerManager>();
@@ -19,7 +24,8 @@ public class BarcodeChecker : MonoBehaviour
 
     public void CheckCode(string result)
     {
-        for(int i = CleanWater.Length - 1; i >=0; i--)
+        Debug.Log("Start!");
+        for (int i = CleanWater.Length - 1; i >=0; i--)
         {
             if(result == CleanWater[i])
             {
@@ -29,7 +35,6 @@ public class BarcodeChecker : MonoBehaviour
                 //close the camera
                 m_Pause.closeBarcodeReader();
 
-                Debug.Log("Complete");
 
                 m_Player.SavePlayer();
                 return;
@@ -46,10 +51,16 @@ public class BarcodeChecker : MonoBehaviour
                 //close the camera
                 m_Pause.closeBarcodeReader();
 
+
+                Debug.Log("Pass");
                 m_Player.SavePlayer();
+
+                Debug.Log("Pass2");
                 return;
             }
         }
+
+        Debug.Log("Complete");
     }
 
     public void CheckEnterCode(Text result)
@@ -83,5 +94,10 @@ public class BarcodeChecker : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void ChangeShownText()
+    {
+        txt_show.text = inputField.text;
     }
 }
