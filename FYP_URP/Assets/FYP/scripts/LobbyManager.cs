@@ -5,6 +5,7 @@ using UnityEngine;
 public class LobbyManager : MonoBehaviour
 {
     [SerializeField] GameObject _Player;
+    [SerializeField] GameObject BeginningStory;
 
     SceneChangingManager m_SceneChangingManager;
 
@@ -24,7 +25,10 @@ public class LobbyManager : MonoBehaviour
         if (m_SceneChangingManager.Load)
         {
             _Player.GetComponent<PlayerManager>().LoadOnLoadGame();
-            return;
+            if (_Player.GetComponent<PlayerManager>().FirstIn)
+            {
+                Instantiate(BeginningStory);
+            }
         }
     }
 }

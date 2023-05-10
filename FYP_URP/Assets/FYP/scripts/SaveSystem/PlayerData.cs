@@ -17,6 +17,7 @@ public class PlayerData
     public int ScanCD;
 
     [Header("Process")]
+    public bool FirstIn = true;
     public bool EnteredForest1_1 = false;
     public bool EnteredForest1_4 = false;
     public bool Passed_and_Get_Scissor = false;
@@ -41,6 +42,7 @@ public class PlayerData
         ScanCD = player.ScanCD;
 
         //Save process...
+        FirstIn = player.FirstIn;
         EnteredForest1_1 = player.EnteredForest1_1;
         EnteredForest1_4 = player.EnteredForest1_4;
         Passed_and_Get_Scissor = player.Passed_and_Get_Scissor;

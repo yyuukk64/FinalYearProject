@@ -18,6 +18,7 @@ public class TemporarilySave : Singleton<TemporarilySave>
     public Vector3 posForGate;
 
     //process
+    public bool FirstIn;
     public bool EnteredForest1_1;
     public bool EnteredForest1_4;
     public bool Passed_and_Get_Scissor;
@@ -42,6 +43,7 @@ public class TemporarilySave : Singleton<TemporarilySave>
         ScanCD = player.ScanCD;
 
         //process
+        FirstIn = player.FirstIn;
         EnteredForest1_1 = player.EnteredForest1_1;
         EnteredForest1_4 = player.EnteredForest1_4;
         Passed_and_Get_Scissor = player.Passed_and_Get_Scissor;

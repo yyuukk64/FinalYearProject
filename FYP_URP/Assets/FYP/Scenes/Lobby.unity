@@ -30865,6 +30865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_UpMaxHealth: {fileID: 1555322579}
   int_UpgrateCost: 200
+  flt_UpgrateRate: 1.5
   txt_Cost: {fileID: 1456162100}
   btn_RecoverPosion: {fileID: 1860702854}
   int_RecoverPosion: 100
@@ -91407,6 +91408,10 @@ PrefabInstance:
       propertyPath: _Player
       value: 
       objectReference: {fileID: 185870777}
+    - target: {fileID: 4713498606235359613, guid: 72c7cda6b39cec044a063cc5d5128426, type: 3}
+      propertyPath: BeginningStory
+      value: 
+      objectReference: {fileID: 3362853473012647315, guid: 935bcd1d90579634ebc8098ab7b0d79a, type: 3}
     - target: {fileID: 4713498606235359614, guid: 72c7cda6b39cec044a063cc5d5128426, type: 3}
       propertyPath: m_Name
       value: LobbyManager

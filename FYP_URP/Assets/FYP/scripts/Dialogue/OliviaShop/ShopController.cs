@@ -11,7 +11,7 @@ public class ShopController : MonoBehaviour
     [Header("Product")]
     public Button btn_UpMaxHealth;
     public int int_UpgrateCost = 200;
-    public static float flt_UpgrateRate = 1.5f;
+    public float flt_UpgrateRate = 1.5f;
     public TextMeshProUGUI txt_Cost;
 
     [Header("Item")]
@@ -62,6 +62,8 @@ public class ShopController : MonoBehaviour
         m_player.PayMoney(int_UpgrateCost);
         //update the cost
         int_UpgrateCost = Mathf.RoundToInt(int_UpgrateCost * flt_UpgrateRate);
+
+        txt_Cost.text = int_UpgrateCost.ToString();
 
         //Upgrate Player's Maximun Health
         m_player.AddMaxHealth(2);
