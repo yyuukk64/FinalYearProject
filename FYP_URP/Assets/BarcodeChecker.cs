@@ -10,6 +10,7 @@ public class BarcodeChecker : MonoBehaviour
 
     PlayerManager m_Player;
     PauseMenuManager m_Pause;
+    StandaloneReworkedSampleWithoutQRCode m_StandaloneReworkedSampleWithoutQRCode;
 
     [SerializeField]
     Text txt_show;
@@ -20,8 +21,18 @@ public class BarcodeChecker : MonoBehaviour
     {
         m_Player = FindObjectOfType<PlayerManager>();
         m_Pause = FindObjectOfType<PauseMenuManager>();
+        m_StandaloneReworkedSampleWithoutQRCode = FindObjectOfType<StandaloneReworkedSampleWithoutQRCode>();
     }
-
+    private void Update()
+    {
+        if (m_StandaloneReworkedSampleWithoutQRCode.canRead)
+        {
+            CheckCode(m_StandaloneReworkedSampleWithoutQRCode.lastResult);
+            m_StandaloneReworkedSampleWithoutQRCode.lastResult = "";
+            m_StandaloneReworkedSampleWithoutQRCode.canRead = false;
+            m_Pause.openBarcodeReader();
+        }
+    }
     public void CheckCode(string result)
     {
         Debug.Log("Start!");

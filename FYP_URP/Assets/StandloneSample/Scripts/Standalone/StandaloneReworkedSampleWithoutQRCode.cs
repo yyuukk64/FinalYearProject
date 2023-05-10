@@ -10,15 +10,15 @@ public class StandaloneReworkedSampleWithoutQRCode : MonoBehaviour
     private const int encodingWidth = 256;
 
     [SerializeField]
-    private string lastResult;
+    public string lastResult;
     [SerializeField]
     private InputField inputField;
     [SerializeField]
     private RawImage rawImage;
     [SerializeField]
     private string previewInput;
-    [SerializeField]
-    private Text txt_show;
+
+    public bool canRead = false;
 
 
 
@@ -146,7 +146,7 @@ public class StandaloneReworkedSampleWithoutQRCode : MonoBehaviour
                     print(lastResult);
 
                     //m_barcodeChecker.CheckCode(lastResult);
-                    inputField.text = lastResult;
+                    canRead = true;
                     startEncoding = true;
                 }
                 startDecoding = !startDecoding;
