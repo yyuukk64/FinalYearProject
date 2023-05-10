@@ -27,10 +27,8 @@ public class BarcodeChecker : MonoBehaviour
     {
         if (m_StandaloneReworkedSampleWithoutQRCode.canRead)
         {
-            CheckCode(m_StandaloneReworkedSampleWithoutQRCode.lastResult);
-            m_StandaloneReworkedSampleWithoutQRCode.lastResult = "";
+            txt_show.text = m_StandaloneReworkedSampleWithoutQRCode.lastResult;
             m_StandaloneReworkedSampleWithoutQRCode.canRead = false;
-            m_Pause.openBarcodeReader();
         }
     }
     public void CheckCode(string result)
