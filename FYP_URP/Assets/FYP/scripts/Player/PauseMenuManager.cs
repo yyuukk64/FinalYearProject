@@ -38,6 +38,7 @@ public class PauseMenuManager : MonoBehaviour
                 Pause();
             }
         }
+
     }
 
     public void Resume()
@@ -136,7 +137,15 @@ public class PauseMenuManager : MonoBehaviour
     {
         barcodeReader.SetActive(false);
         pauseMenuUI.SetActive(true);
-        Debug.Log("Closed!");
+
+        if (m_Player.canScan)
+        {
+            btn_BarcodeReader.interactable = true;
+        }
+        else
+        {
+            btn_BarcodeReader.interactable = false;
+        }
     }
 }
 

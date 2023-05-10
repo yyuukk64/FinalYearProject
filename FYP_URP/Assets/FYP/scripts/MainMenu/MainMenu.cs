@@ -39,8 +39,6 @@ public class MainMenu : Menu
             m_Scene = FindObjectOfType<SceneChangingManager>();
 
             m_Scene.Load = true;
-
-            Debug.Log(data.currentScene);
             SceneManager.LoadScene(data.currentScene);
         }
         else

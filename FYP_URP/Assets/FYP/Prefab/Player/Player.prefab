@@ -924,7 +924,7 @@ PrefabInstance:
       objectReference: {fileID: 8485352540422312005}
     - target: {fileID: 612915423927530245, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 727048026822472669, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: m_Sprite
@@ -982,6 +982,14 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 8485352540422312005}
+    - target: {fileID: 845028478648797993, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 929593600738053751, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_text
+      value: Clean Water
+      objectReference: {fileID: 0}
     - target: {fileID: 1111371662577732180, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: Player
       value: 
@@ -1050,6 +1058,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 8485352540422312005}
+    - target: {fileID: 2123344462221402007, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_text
+      value: Recover Potion
+      objectReference: {fileID: 0}
     - target: {fileID: 2145593560475462640, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1186,6 +1198,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.33962262
       objectReference: {fileID: 0}
+    - target: {fileID: 2365451809067056271, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599222050397299130, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aa526d33e049dca45b9514b288fd8a40, type: 3}
     - target: {fileID: 2700875609101198520, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: Player
       value: 
@@ -1246,9 +1266,29 @@ PrefabInstance:
       propertyPath: HyperRecoverPotionx0
       value: 
       objectReference: {fileID: 6831848776302872449}
+    - target: {fileID: 3166269135551957929, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b13f441d6fdda81429807b5238b54474, type: 3}
+    - target: {fileID: 3241403214516461934, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3321561172850925815, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435011837333783364, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fa64d8a7f84acbe4fb7603d2010af13c, type: 3}
+    - target: {fileID: 3488012259487033234, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_text
+      value: CupNoodles
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493359223784468946, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3546793492829517624, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
@@ -1294,6 +1334,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3765959377665409498, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3936788220757620553, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: Player
       value: 
@@ -1318,6 +1362,26 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 8485352540422312005}
+    - target: {fileID: 5339850658490175863, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c93a36d8340f927489e26eb969830d8d, type: 3}
+    - target: {fileID: 5339850658490175863, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Color.a
+      value: 0.49019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339850658490175863, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339850658490175863, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Color.g
+      value: 0.93979645
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339850658490175863, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5353806976952740778, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
       value: 0
@@ -1382,6 +1446,14 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 8485352540422312005}
+    - target: {fileID: 5773558074586675839, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f39f448d4f231644b6bb7740d99da27, type: 3}
+    - target: {fileID: 5810538642166266404, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6282805073161997103, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: Player
       value: 
@@ -1498,6 +1570,22 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 8485352540422312005}
+    - target: {fileID: 7315181482458141513, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c93a36d8340f927489e26eb969830d8d, type: 3}
+    - target: {fileID: 7315181482458141513, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315181482458141513, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Color.g
+      value: 0.93979645
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315181482458141513, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7357055112787451420, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: Player
       value: 
@@ -1510,6 +1598,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 8485352540422312005}
+    - target: {fileID: 7673729295811124689, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fd0bf251067296489c31c5f86da7b9f, type: 3}
     - target: {fileID: 7819410649871517034, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: m_Color.a
       value: 0.22745098
@@ -1525,6 +1617,46 @@ PrefabInstance:
     - target: {fileID: 7819410649871517034, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: m_Color.r
       value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907565327859734407, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207551923005809472, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218085451954099890, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 826.8272
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218085451954099890, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 422.5763
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218085451954099890, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218085451954099890, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 11.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218085451954099890, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18.999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 8562694600097776271, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912366873410898105, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8920859130925120673, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8998540316932829952, guid: 6ee6f86267a77ca458f946d40a896028, type: 3}
       propertyPath: Player

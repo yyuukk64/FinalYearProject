@@ -13,11 +13,11 @@ public class SaveSystem
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlayerData data = new PlayerData(player);
-        for(int i = 0; i < 3; i++)
+
+        for (int i = 0; i < 7; i++)
         {
-            Debug.Log(data.position[i]);
+            Debug.Log(data.Consumables[i]);
         }
-        
 
         formatter.Serialize(stream, data);
         stream.Close();

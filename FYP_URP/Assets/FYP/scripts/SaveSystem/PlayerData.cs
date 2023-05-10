@@ -32,7 +32,12 @@ public class PlayerData
         maxHealth = player.maxHealth;
         attack = player.attack;
         coin = player.coin;
-        Consumables = player.Consumables;
+
+        for (int i = 0; i < 7; i++)
+        {
+            Consumables[i] = player.Consumables[i];
+        }
+
         ScanCD = player.ScanCD;
 
         //Save process...

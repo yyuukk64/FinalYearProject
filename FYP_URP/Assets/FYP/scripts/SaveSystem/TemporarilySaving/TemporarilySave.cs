@@ -34,7 +34,10 @@ public class TemporarilySave : Singleton<TemporarilySave>
         attack = player.attack;
         coin = player.coin;
 
-        Consumables = player.Consumables;
+        for (int i = 0; i < 7; i++)
+        {
+            Consumables[i] = player.Consumables[i];
+        }
 
         ScanCD = player.ScanCD;
 

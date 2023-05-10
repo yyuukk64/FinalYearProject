@@ -47,7 +47,6 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         PlayerData data = SaveSystem.LoadPlayer();
 
-
         for (int i = 0; i < 3; i++)
         {
             Debug.Log(data.position[i]);
@@ -61,6 +60,7 @@ public class PlayerManager : Singleton<PlayerManager>
         for (int i = 0; i < 7; i++)
         {
             Consumables[i] = data.Consumables[i];
+            Debug.Log(Consumables[i]);
         }
 
         ScanCD = data.ScanCD;
