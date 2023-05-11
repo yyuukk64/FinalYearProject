@@ -18,6 +18,7 @@ public class PlayerData
 
     [Header("Process")]
     public bool FirstIn = true;
+    public bool FirstTalkWhithOlivia = true;
     public bool EnteredForest1_1 = false;
     public bool EnteredForest1_4 = false;
     public bool Passed_and_Get_Scissor = false;

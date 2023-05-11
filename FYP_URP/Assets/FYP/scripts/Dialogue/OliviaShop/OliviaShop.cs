@@ -7,6 +7,7 @@ public class OliviaShop : MonoBehaviour
 {
     private PlayerMovement m_playerMovement;
     private PauseMenuManager m_pauseMenu;
+    private PlayerManager m_Player;
 
     public Dialogue dialogue;
     public Dialogue ShopDialogue;
@@ -30,7 +31,6 @@ public class OliviaShop : MonoBehaviour
     private int sentencesNo = 0;
 
     private bool talking = false;
-    private bool talked = false;
     private bool Close = false;
 
     [Header("Animation")]
@@ -46,6 +46,7 @@ public class OliviaShop : MonoBehaviour
     {
         m_playerMovement = FindObjectOfType<PlayerMovement>();
         m_pauseMenu = FindObjectOfType<PauseMenuManager>();
+        m_Player = FindObjectOfType<PlayerManager>();
 
         //EBtn_Canvas.SetActive(false);
 
@@ -61,7 +62,7 @@ public class OliviaShop : MonoBehaviour
     private void Update()
     {
 
-        if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo < mySentences.Length && !talked)
+        if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo < mySentences.Length && !m_Player.FirstTalkWhithOlivia)
         {
             EBtn_Canvas.SetActive(false);
             m_playerMovement.canMove = false;
@@ -83,23 +84,23 @@ public class OliviaShop : MonoBehaviour
             }
             sentencesNo++;
         }
-        else if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo == mySentences.Length && !talked)
+        else if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo == mySentences.Length && !m_Player.FirstTalkWhithOlivia)
         {
             m_playerMovement.canMove = true;
             m_pauseMenu.CanPause = true;
             //EBtn_Canvas.SetActive(true);
             canvas.SetActive(false);
             talking = false;
-            talked = true;
+            m_Player.FirstTalkWhithOlivia = true;
             ConvBubbleCanva.SetActive(true);
         }
 
-        if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo == 1 && talked)
+        if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo == 1 && m_Player.FirstTalkWhithOlivia)
         {
             canvas.SetActive(false);
             CanvasShop.SetActive(true);
         }
-        else if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo < mySentences.Length && talked)
+        else if (talking && Input.GetKeyDown(KeyCode.E) && sentencesNo < mySentences.Length && m_Player.FirstTalkWhithOlivia)
         {
             EBtn_Canvas.SetActive(false);
             m_playerMovement.canMove = false;
@@ -129,7 +130,7 @@ public class OliviaShop : MonoBehaviour
             //EBtn_Canvas.SetActive(true);
             canvas.SetActive(false);
             talking = false;
-            talked = true;
+            m_Player.FirstTalkWhithOlivia = true;
             ConvBubbleCanva.SetActive(true);
             Close = false;
         }
@@ -138,14 +139,14 @@ public class OliviaShop : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger success!");
-        if (other.tag == "Player" && !talked)
+        if (other.tag == "Player" && !m_Player.FirstTalkWhithOlivia)
         {
             EBtn_Canvas.SetActive(true);
             talking = true;
             sentencesNo = 0;
         }
 
-        if (other.tag == "Player" && talked)
+        if (other.tag == "Player" && m_Player.FirstTalkWhithOlivia)
         {
             ConvBubbleCanva.SetActive(true);
             EBtn_Canvas.SetActive(true);

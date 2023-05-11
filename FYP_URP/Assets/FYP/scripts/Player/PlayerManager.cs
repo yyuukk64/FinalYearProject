@@ -29,6 +29,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     [Header("process")]
     public bool FirstIn = false;
+    public bool FirstTalkWhithOlivia = false;
     public bool EnteredForest1_1 = false;
     public bool EnteredForest1_4 = false;
     public bool Passed_and_Get_Scissor = false;
@@ -66,6 +67,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
         //Load process
         FirstIn = data.FirstIn;
+        FirstTalkWhithOlivia = data.FirstTalkWhithOlivia;
         EnteredForest1_1 = data.EnteredForest1_1;
         EnteredForest1_4 = data.EnteredForest1_4;
         Passed_and_Get_Scissor = data.Passed_and_Get_Scissor;
@@ -105,7 +107,6 @@ public class PlayerManager : Singleton<PlayerManager>
         this.coin = m_temporarilySave.coin;
         this.attack = m_temporarilySave.attack;
         this.ScanCD = m_temporarilySave.ScanCD;
-        this.Cuted_Ivy = m_temporarilySave.Cuted_Ivy;
 
         for (int i = 0; i < 7; i++)
         {
@@ -113,10 +114,13 @@ public class PlayerManager : Singleton<PlayerManager>
         }
 
         this.FirstIn = m_temporarilySave.FirstIn;
+        this.FirstTalkWhithOlivia = m_temporarilySave.FirstTalkWhithOlivia;
         this.EnteredForest1_1 = m_temporarilySave.EnteredForest1_1;
         this.EnteredForest1_4 = m_temporarilySave.EnteredForest1_4;
         this.Passed_and_Get_Scissor = m_temporarilySave.Passed_and_Get_Scissor;
         this.WinTheFirstBoss = m_temporarilySave.WinTheFirstBoss;
+        this.Cuted_Ivy = m_temporarilySave.Cuted_Ivy;
+        this.FirstBeforeHouse = m_temporarilySave.FirstBeforeHouse;
         Debug.Log("Right_2");
     }
 

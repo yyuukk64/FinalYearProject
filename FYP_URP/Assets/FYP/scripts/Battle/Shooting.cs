@@ -8,7 +8,8 @@ public class Shooting : MonoBehaviour
     SoulPooling m_soulPooling;
     Collect m_collect;
     BattleMNG m_battleMNG;
-    
+    PlayerManager m_Player;
+    GeneralEnemy m_Enemy;
 
     [HideInInspector] public bool isShooted = false;
 
@@ -26,9 +27,8 @@ public class Shooting : MonoBehaviour
         m_soulPooling = FindObjectOfType<SoulPooling>();
         m_collect = FindObjectOfType<Collect>();
         m_battleMNG = FindObjectOfType<BattleMNG>();
-
-        Enemy = GameObject.FindWithTag("Enemy");
-        Player = GameObject.FindWithTag("Player");
+        m_Player = FindObjectOfType<PlayerManager>();
+        m_Enemy = FindObjectOfType<GeneralEnemy>();
     }
 
     // Update is called once per frame
@@ -50,10 +50,10 @@ public class Shooting : MonoBehaviour
             this.AttackedEnemySFX.Play();
 
             //hurt Enemy...
-            Enemy.GetComponent<GeneralEnemy>().hurtEnemy(Player.GetComponent<PlayerManager>().attack);
+            m_Enemy.hurtEnemy(m_Player.attack);
 
-            Debug.Log(Enemy.GetComponent<GeneralEnemy>().health + " / " + m_battleMNG.floatEnemyMaxHealth);
-            m_battleMNG.imgEnemyHealth.GetComponent<Image>().fillAmount = (Enemy.GetComponent<GeneralEnemy>().health / m_battleMNG.floatEnemyMaxHealth);
+            Debug.Log(m_Enemy.health + " / " + m_battleMNG.floatEnemyMaxHealth);
+            m_battleMNG.imgEnemyHealth.GetComponent<Image>().fillAmount = (m_Enemy.health / m_battleMNG.floatEnemyMaxHealth);
 
             return;
         }

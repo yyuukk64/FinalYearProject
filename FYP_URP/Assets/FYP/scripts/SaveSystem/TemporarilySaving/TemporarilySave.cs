@@ -19,6 +19,7 @@ public class TemporarilySave : Singleton<TemporarilySave>
 
     //process
     public bool FirstIn;
+    public bool FirstTalkWhithOlivia;
     public bool EnteredForest1_1;
     public bool EnteredForest1_4;
     public bool Passed_and_Get_Scissor;

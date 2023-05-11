@@ -13,7 +13,6 @@ public class Gate : MonoBehaviour
     public Vector3 EntryPos;
 
     private PlayerManager m_Player;
-    private GameObject player;
     private SceneChangingManager m_sceneManager;
     private TemporarilySave m_temporarilySave;
 
@@ -31,8 +30,7 @@ public class Gate : MonoBehaviour
             m_sceneManager = FindObjectOfType<SceneChangingManager>();
             m_temporarilySave = FindObjectOfType<TemporarilySave>();
 
-            player = GameObject.FindWithTag("Player");
-            m_Player = player.GetComponent<PlayerManager>();
+            m_Player = FindObjectOfType<PlayerManager>();
             m_Player.activeEBtnCanvas(true);
             m_sceneManager.canChange = true;
             m_sceneManager.SceneName = SceneName;
@@ -50,8 +48,7 @@ public class Gate : MonoBehaviour
             m_sceneManager = FindObjectOfType<SceneChangingManager>();
             m_temporarilySave = FindObjectOfType<TemporarilySave>();
 
-            player = GameObject.FindWithTag("Player");
-            m_Player = player.GetComponent<PlayerManager>();
+            m_Player = FindObjectOfType<PlayerManager>();
             m_Player.activeEBtnCanvas(false);
             m_sceneManager.canChange = false;
             m_sceneManager.SceneName = null;

@@ -4,31 +4,30 @@ using UnityEngine;
 
 public class LobbyManager : MonoBehaviour
 {
-    [SerializeField] GameObject _Player;
     [SerializeField] GameObject BeginningStory;
 
     SceneChangingManager m_SceneChangingManager;
+    PlayerManager m_Player ;
 
     // Start is called before the first frame update
     void Start()
     {
         //Init
         m_SceneChangingManager = FindObjectOfType<SceneChangingManager>();
-
-
-        _Player = GameObject.FindWithTag("Player");
-        _Player.GetComponent<PlayerManager>().Init();
-        _Player.GetComponent<PlayerManager>().LoadOnSceneLoaded();
-        _Player.transform.position = new Vector3(0f, 1.53f, -70f);
-        _Player.GetComponent<PlayerManager>().health = _Player.GetComponent<PlayerManager>().maxHealth;
+        m_Player = FindObjectOfType<PlayerManager>();
+        m_Player.Init();
+        m_Player.LoadOnSceneLoaded();
+        m_Player.gameObject.transform.position = new Vector3(0f, 1.53f, -70f);
+        m_Player.health = m_Player.maxHealth;
 
         if (m_SceneChangingManager.Load)
         {
-            _Player.GetComponent<PlayerManager>().LoadOnLoadGame();            
+            m_Player.LoadOnLoadGame();            
         }
 
-        if (!_Player.GetComponent<PlayerManager>().FirstIn)
+        if (!m_Player.FirstIn)
         {
+            m_Player.FirstIn = true;
             Instantiate(BeginningStory);
         }
     }

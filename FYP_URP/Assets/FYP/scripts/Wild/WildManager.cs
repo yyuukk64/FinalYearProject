@@ -6,33 +6,33 @@ public class WildManager : MonoBehaviour
 {
     MeetEnemy m_meetEnemy;
     SceneChangingManager m_SceneChangingManager;
-
-    GameObject _player;
+    PlayerManager m_Player;
 
     // Start is called before the first frame update
     void Start()
     {
         m_meetEnemy = this.GetComponent<MeetEnemy>();
         m_SceneChangingManager = FindObjectOfType<SceneChangingManager>();
-        _player = GameObject.FindWithTag("Player");
-        _player.GetComponent<PlayerManager>().Init();
+        m_Player = FindObjectOfType<PlayerManager>();
+
+        m_Player.Init();
 
         //load Temporarily data
 
         if (m_SceneChangingManager.Load)
         {
-            _player.GetComponent<PlayerManager>().LoadOnLoadGame();
+            m_Player.LoadOnLoadGame();
             return;
         }
 
         if (m_SceneChangingManager.inBattle)
         {
             Debug.Log("Right");
-            _player.GetComponent<PlayerManager>().LoadExitFromBattle();
+            m_Player.LoadExitFromBattle();
         }
         else
-        {            
-            _player.GetComponent<PlayerManager>().LoadOnSceneLoaded();
+        {
+            m_Player.LoadOnSceneLoaded();
         }
     }
 
