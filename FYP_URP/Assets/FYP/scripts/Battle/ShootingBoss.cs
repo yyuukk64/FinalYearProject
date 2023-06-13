@@ -8,6 +8,8 @@ public class ShootingBoss : MonoBehaviour
     SoulPooling m_soulPooling;
     Collect m_collect;
     BattleMNG_Boss_GetScissor m_battleMNG;
+    BossScissor m_Boss;
+    PlayerManager m_Player;
 
 
     public bool isShooted = false;
@@ -28,6 +30,8 @@ public class ShootingBoss : MonoBehaviour
         m_soulPooling = FindObjectOfType<SoulPooling>();
         m_collect = FindObjectOfType<Collect>();
         m_battleMNG = FindObjectOfType<BattleMNG_Boss_GetScissor>();
+        m_Boss = FindObjectOfType<BossScissor>();
+        m_Player = FindObjectOfType<PlayerManager>();
 
         Enemy = GameObject.FindWithTag("Enemy");
         Player = GameObject.FindWithTag("Player");
@@ -52,10 +56,10 @@ public class ShootingBoss : MonoBehaviour
             this.AttackedEnemySFX.Play();
 
             //hurt Enemy...
-            Enemy.GetComponent<BossScissor>().hurtEnemy(Player.GetComponent<PlayerManager>().attack);
+            m_Boss.hurtEnemy(m_Player.attack);
 
-            Debug.Log(Enemy.GetComponent<BossScissor>().health + " / " + m_battleMNG.floatEnemyMaxHealth);
-            m_battleMNG.imgEnemyHealth.GetComponent<Image>().fillAmount = (Enemy.GetComponent<BossScissor>().health / m_battleMNG.floatEnemyMaxHealth);
+            Debug.Log(m_Boss.health + " / " + m_battleMNG.floatEnemyMaxHealth);
+            m_battleMNG.imgEnemyHealth.GetComponent<Image>().fillAmount = (m_Boss.health / m_battleMNG.floatEnemyMaxHealth);
 
             return;
         }

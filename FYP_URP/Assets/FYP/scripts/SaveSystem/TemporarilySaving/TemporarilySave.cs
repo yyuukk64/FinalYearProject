@@ -48,6 +48,7 @@ public class TemporarilySave : Singleton<TemporarilySave>
 
         //process
         FirstIn = player.FirstIn;
+        FirstTalkWhithOlivia = player.FirstTalkWhithOlivia;
         EnteredForest1_1 = player.EnteredForest1_1;
         EnteredForest1_4 = player.EnteredForest1_4;
         Passed_and_Get_Scissor = player.Passed_and_Get_Scissor;
@@ -56,7 +57,6 @@ public class TemporarilySave : Singleton<TemporarilySave>
         FirstBeforeHouse = player.FirstBeforeHouse;
 
         sceneBeforeBattle = player.currentScene;
-        //posBeforeBattle = player.transform.position;
 
     }
 }

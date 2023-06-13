@@ -30,5 +30,7 @@ public class LobbyManager : MonoBehaviour
             m_Player.FirstIn = true;
             Instantiate(BeginningStory);
         }
+
+        m_SceneChangingManager.canChange = false;
     }
 }

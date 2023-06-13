@@ -18,9 +18,10 @@ public class Checker_Forest1_4 : MonoBehaviour
 
         if (!m_Player.EnteredForest1_4)
         {
-
             m_Player.EnteredForest1_4 = true;
             Instantiate(StoryObject);
+            Debug.LogError("The state of EnteredForest1_4 is " + m_Player.EnteredForest1_4.ToString());
         }
+        
     }
 }

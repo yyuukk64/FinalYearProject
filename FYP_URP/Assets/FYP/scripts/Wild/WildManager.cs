@@ -16,6 +16,7 @@ public class WildManager : MonoBehaviour
         m_Player = FindObjectOfType<PlayerManager>();
 
         m_Player.Init();
+        m_SceneChangingManager.canChange = false;
 
         //load Temporarily data
 
